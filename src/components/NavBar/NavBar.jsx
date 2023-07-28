@@ -82,7 +82,7 @@ const NavBar = () => {
               CONTACTO
             </Link>
           </li>
-          <hr style={{margin: "0px 10px 0px 30px", height: "60px", fontWeight: "bold" } } />
+          <hr style={{margin: "0px 10px -20px 30px", height: "40px", fontWeight: "bold" } } />
           <li className={style.nav__item}>
             <button className={style.btn_traduce}
             style={{marginRight: "-50px"}}

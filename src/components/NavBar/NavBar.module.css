@@ -5,7 +5,7 @@
   z-index: 100;
   width: 100%;
   /* background-color: #130e0efd;  */
-  background-color: #100f0ff7;
+  /* background-color: #100f0ff7; */
   /* background-color: transparent; */
   height: 100px;
 }
@@ -213,10 +213,11 @@
     display: flex;
     flex-direction: row;
     margin-right: 100px;
-    /* justify-content: center; */
+    justify-content: flex-end;
     align-items: center;
     letter-spacing: 1px;
     font-family: "Inter", sans-serif;
+    margin-top: -30px;
   }
 
   .nav-open {
