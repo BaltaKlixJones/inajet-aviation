@@ -56,13 +56,15 @@ const NavBar = () => {
           </button>
         </div>
         <div className={style.img_logo}>
-          <img
+          {/* <img
             className={style.imgLogo}
             style={{ height: "100px", width: "300px" }}
             src={logo}
             alt=""
-          />
-          {/* <h1 style={{color:"white", marginTop:"20px", display: "flex", justifyContent:"center", alignItems:"center"}}>INAJET</h1> */}
+          /> */}
+          <Link to="/">
+          <h1 className={style.logo_h1}>ınaȷet</h1>
+          </Link>
         </div>
         <ul className={style.nav__ul}>
           <li className={style.nav__item}>
@@ -80,11 +82,16 @@ const NavBar = () => {
               CONTACTO
             </Link>
           </li>
+          <hr style={{margin: "0px 10px 0px 30px", height: "60px", fontWeight: "bold" } } />
           <li className={style.nav__item}>
-            <button style={{ fontSize: "35px", display: "flex", float:"right" }} >🇪🇸</button>
+            <button className={style.btn_traduce}
+            style={{marginRight: "-50px"}}
+             >ES</button>
           </li>
           <li className={style.nav__item}>
-            <button  style={{ fontSize: "35px", display: "flex", float:"right" }}> 🇺🇸</button>
+            <button className={style.btn_traduce} 
+            style={{marginRight: "-80px"}}
+            >EN</button>
           </li>
         </ul>
       </nav>

@@ -3,7 +3,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="container-home">
-      <h1>Home</h1>
+      <h1>Injet Aviation</h1>
     </div>
   );
 };
