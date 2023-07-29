@@ -68,7 +68,7 @@ const NavBar = () => {
         </div>
         <ul className={style.nav__ul}>
           <li className={style.nav__item}>
-            <Link to="/flot" className={style.nav__link} onClick={closeNav}>
+            <Link to="/flota" className={style.nav__link} onClick={closeNav}>
               FLOTA
             </Link>
           </li>
@@ -78,17 +78,17 @@ const NavBar = () => {
             </Link>
           </li>
           <li className={style.nav__item}>
-            <Link to="/Cuenta" className={style.nav__link} onClick={closeNav}>
+            <Link to="/contacto" className={style.nav__link} onClick={closeNav}>
               CONTACTO
             </Link>
           </li>
-          <hr style={{margin: "0px 10px -20px 30px", height: "40px", fontWeight: "bold" } } />
-          <li className={style.nav__item}>
+          <hr className={style.hr} style={{margin: "0px 10px -20px 30px", height: "40px", fontWeight: "bold" } } />
+          <li className={style.nav__item_btn}>
             <button className={style.btn_traduce}
             style={{marginRight: "-50px"}}
              >ES</button>
           </li>
-          <li className={style.nav__item}>
+          <li className={style.nav__item_btn}>
             <button className={style.btn_traduce} 
             style={{marginRight: "-80px"}}
             >EN</button>

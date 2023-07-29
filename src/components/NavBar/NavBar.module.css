@@ -4,15 +4,10 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  /* background-color: #130e0efd;  */
-  /* background-color: #100f0ff7; */
-  /* background-color: transparent; */
   height: 100px;
 }
 .scrolled {
-  /* background-color: #232323;  */
   background-color: #070505eb;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.8s ease-in-out;
 }
@@ -72,15 +67,10 @@
   justify-content: center;
   align-items: center;
   width: 600px;
-  /* height: 260px; */
-  /* width: 600px;
-     margin-left: -150px;
-     margin-right: 400px; */
-
   margin-top: 0px;
   float: left;
-  /* background-color: red; */
 }
+
 .imgLogo {
   height: 500px;
 }
@@ -98,8 +88,29 @@
     background-color: #02020200;
   }
   .img_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-top: 100px;
+    color: white;
+  }
+  .logo_h1 {
+    color: white;
+    font-size:55px;
+    margin-bottom: -60px;
+  }
+
+  .hr {
     display: none;
   }
+  .btn_traduce  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px ;
+  }
+
 
   .nav {
     position: fixed;
@@ -149,6 +160,14 @@
   }
   .nav__item {
     margin: 20px 0;
+  }
+
+  .nav__item_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    margin-right: 100px;
   }
 
   .nav__link {
@@ -223,7 +242,7 @@
   .nav-open {
     overflow: hidden;
   }
-  .nav__item {
+  .nav__item, .nav__item_btn {
     margin: 0 10px;
   }
   .nav__link {

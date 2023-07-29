@@ -22,10 +22,18 @@
   align-items: center;
   background-color: #020202;
   width: 400px;
-  height: 400px;
+  height: auto;
   border-radius: 10px;
   opacity: 0.8;
  
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+}
+
+.spam {
+  color: white;;
 }
 
 .form-group {
@@ -48,7 +56,7 @@
   color: white;
 }
 
-.input-field {
+.input-field, .input-field-passenger {
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -56,6 +64,10 @@
   color: white;
   outline: none;
   width: 200px;
+}
+.input-field-passenger {
+  width: auto;
+  margin: 0 10px 0 10px
 }
 
 .input-field::placeholder {
@@ -84,7 +96,7 @@
 }
 
 .form-group {
-margin-top: 40px;
+margin-top: 20px;
   justify-content: center;
   align-items: center;
 }
