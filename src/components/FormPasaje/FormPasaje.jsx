@@ -26,6 +26,10 @@ const FormPasaje = () => {
     setCount(count - 1);
   };
 
+ const handleSubmit = (e) => {
+    e.preventDefault()
+}
+
   const handleOriginChange = async (e) => {
     const value = e.target.value;
     setOrigin(value);
@@ -61,7 +65,7 @@ const FormPasaje = () => {
   return (
     <div className="container-home">
       <div className="form">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>
               <input

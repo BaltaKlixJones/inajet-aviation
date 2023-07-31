@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/lgo-inajet.png";
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

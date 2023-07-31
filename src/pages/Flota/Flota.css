@@ -1,9 +1,55 @@
 .container-flota {
-    /* background-image: url("../../assets/images/sunset-wallpaper.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    */
-    height: 100vh; 
-    background-color: #2e2e2e;
+  position: relative;
+  background-image: url("../../assets/images/wallpaper/sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient-overlay {
+  position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
+  background-image: linear-gradient(to top,  #242424 ,  rgba(9, 9, 9, 0.176));
+}
+.container-titulo {
+  text-align: center;
+  /* Propiedades de la animación */
+  opacity: 0;
+  animation-name: fade-up;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.titulo-flota {
+  color: transparent;
+  font-size: 36px;
+  color: white;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parrafo-flota {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.container-cards {
+ height: auto;
 }
