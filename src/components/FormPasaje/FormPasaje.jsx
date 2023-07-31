@@ -3,8 +3,9 @@ import axios from "axios";
 import "./FormPasaje.css";
 import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
-import {GrFormNextLink} from "react-icons/gr";
+import { GrFormNextLink } from "react-icons/gr";
 import { BiUserCircle } from "react-icons/bi";
+import { BsFillAirplaneFill } from "react-icons/bs";
 
 const FormPasaje = () => {
   const [count, setCount] = useState(0);
@@ -26,9 +27,9 @@ const FormPasaje = () => {
     setCount(count - 1);
   };
 
- const handleSubmit = (e) => {
-    e.preventDefault()
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   const handleOriginChange = async (e) => {
     const value = e.target.value;
@@ -74,7 +75,7 @@ const FormPasaje = () => {
                 checked={tripType === "Ida"}
                 onChange={handleTripTypeChange}
               />
-              <spam className="spam">Ida</spam>
+              <span className="span">IDA</span>
             </label>
             &nbsp;
             <label>
@@ -84,7 +85,7 @@ const FormPasaje = () => {
                 checked={tripType === "idayvuelta"}
                 onChange={handleTripTypeChange}
               />
-              <spam className="spam">Ida y Vuelta</spam>
+              <span className="span">IDA Y VUELTA</span>
             </label>{" "}
             &nbsp;
             <label>
@@ -94,7 +95,7 @@ const FormPasaje = () => {
                 checked={tripType === "Multileg"}
                 onChange={handleTripTypeChange}
               />
-              <spam className="spam">Multileg</spam>
+              <span className="span">MULTILEG</span>
             </label>
           </div>
           <div className="form-group">
@@ -109,11 +110,6 @@ const FormPasaje = () => {
               list="origin-suggestions"
               className="input-field"
             />
-            <datalist id="origin-suggestions">
-              {suggestions.map((cityName, index) => (
-                <option key={index} value={cityName} />
-              ))}
-            </datalist>
           </div>
           <div className="form-group">
             <label className="label-icon">
@@ -121,20 +117,49 @@ const FormPasaje = () => {
             </label>
             <input type="text" placeholder="DESTINO" className="input-field" />
           </div>
-          <div className="form-group">
-            <label className="label-icon">
-              <BsFillCalendarRangeFill className="icon" />
-            </label>
-            {tripType === "idayvuelta" && (
-              <div>
+
+          {tripType === "idayvuelta" && (
+            <div>
+              <div className="form-group">
+                <label className="label-icon">
+                  <BsFillCalendarRangeFill className="icon" />
+                </label>
                 <input
                   type="date"
                   placeholder="FECHA DE IDA"
                   className="input-field"
                   min={minDate}
-                  style={{ marginBottom: "15px" }}
-                />{" "}
-                <br />
+                />
+              </div>
+              <hr style={{ margin: "25px" }} />
+
+              <div className="form-group">
+                <label className="label-icon">
+                  <GiAirplaneDeparture className="icon" />
+                </label>
+                <input
+                  type="text"
+                  placeholder="ORIGEN"
+                  value={origin}
+                  onChange={handleOriginChange}
+                  list="origin-suggestions"
+                  className="input-field"
+                />
+              </div>
+              <div className="form-group">
+                <label className="label-icon">
+                  <GiAirplaneArrival className="icon" />
+                </label>
+                <input
+                  type="text"
+                  placeholder="DESTINO"
+                  className="input-field"
+                />
+              </div>
+              <div className="form-group">
+                <label className="label-icon">
+                  <BsFillCalendarRangeFill className="icon" />
+                </label>
                 <input
                   type="date"
                   placeholder="FECHA DE REGRESO"
@@ -142,16 +167,23 @@ const FormPasaje = () => {
                   className="input-field"
                 />
               </div>
-            )}
-            {tripType !== "idayvuelta" && (
+            </div>
+          )}
+
+          {tripType !== "idayvuelta" && (
+            <div className="form-group">
+              <label className="label-icon">
+                <BsFillCalendarRangeFill className="icon" />
+              </label>
               <input
                 type="date"
                 placeholder="FECHA DE IDA"
                 min={minDate}
                 className="input-field"
               />
-            )}
-          </div>
+            </div>
+          )}
+
           <div className="form-group">
             <label className="label-icon">
               <BiUserCircle className="icon" />
@@ -168,9 +200,10 @@ const FormPasaje = () => {
               <input
                 type="text"
                 className="input-field-passenger"
+                style={{ width: "15px", textAlign: "center" }}
                 min="0"
                 readOnly
-                value={`${count} ${count === 1 ? "pasajero" : "pasajeros"}`}
+                value={`${count}`}
               />
               <button
                 type="button"
@@ -180,10 +213,25 @@ const FormPasaje = () => {
                 +
               </button>
             </div>
+            <select name="avion" id="avion">
+              <option value="" disabled selected>
+                Seleccionar avión
+              </option>
+              <option value="avion1">AVION 1</option>
+              <option value="avion2">AVION 2</option>
+              <option value="avion3">AVION 3</option>
+              <option value="avion4">AVION 4</option>
+            </select>
           </div>
 
           <div className="form-group">
-            <button className="submit-button">Siguiente <GrFormNextLink className="icon"/> </button>
+            <button className="submit-button">
+              Siguiente{" "}
+              <GrFormNextLink
+                className="icon"
+                style={{ borderRadius: "none" }}
+              />{" "}
+            </button>
           </div>
         </form>
       </div>

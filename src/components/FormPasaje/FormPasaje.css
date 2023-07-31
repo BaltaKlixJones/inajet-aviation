@@ -1,99 +1,110 @@
 .container-home {
-    display: flex;
-    height: 100dvh;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-    background-image:url( "../../assets/images/wallpaperhome.webp");
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-   
-   }
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/wallpaperhome.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #020202;
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-    opacity: 0.8;
-   
-  }
-  
-  input[type="radio"] {
-    margin-left: 15px;
-  }
-  
-  .spam {
-    color: white;;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .label-icon {
-    background-color: #ffffff51;
-    padding: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    font-size: 25px;
-    color: white;
-  }
-  
-  .input-field, .input-field-passenger {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.38);
-    color: white;
-    outline: none;
-    width: 200px;
-  }
-  .input-field-passenger {
-    width: auto;
-    margin: 0 10px 0 10px
-  }
-  
-  .input-field::placeholder {
-    color: white;
-    opacity: 0.7;
-  }
-  
-  .submit-button {
-    background-color: #2e3031;
-    display: flex;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    outline: none;
-    
-  }
-  
-  .submit-button:hover {
-    background-color: #000000;
-    border: 2px solid black;
-  }
-  
-  .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #020202;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+}
+
+.spam {
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.span {
+  color: white;
+}
+.label-icon {
+  background-color: #ffffff51;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 25px;
+  color: white;
+}
+
+.input-field,
+.input-field-passenger {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.38);
+  color: white;
+  outline: none;
+  width: 200px;
+}
+.input-field-passenger {
+  width: auto;
+  margin: 0 1px 0 1px;
+}
+#avion {
+  margin-left: 10px;
+}
+
+#avion :focus {
+  outline: none;
+}
+
+.select-group {
+  width: 30%;
+}
+
+.input-field::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.submit-button {
+  background-color: #2e3031;
+  display: flex;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: #d8d8d8c1;
+  color: black;
+}
+
+.form-group {
   margin-top: 20px;
-    justify-content: center;
-    align-items: center;
-  }
+  justify-content: center;
+  align-items: center;
+}
