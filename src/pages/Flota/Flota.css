@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100dvh;
+  height: 70dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +52,13 @@
 
 .container-cards {
  height: auto;
+}
+
+#form2 {
+   /* Propiedades de la animación */
+   opacity: 0;
+   animation-name: fade-up;
+   animation-duration: 1s;
+   animation-delay: 0.3s;
+   animation-fill-mode: forwards;
 }
