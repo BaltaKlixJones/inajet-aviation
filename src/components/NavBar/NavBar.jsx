@@ -56,14 +56,8 @@ const NavBar = () => {
           </button>
         </div>
         <div className={style.img_logo}>
-          {/* <img
-            className={style.imgLogo}
-            style={{ height: "100px", width: "300px" }}
-            src={logo}
-            alt=""
-          /> */}
-          <Link to="/">
-          <h1 className={style.logo_h1}>ınaȷet</h1>
+          <Link to="/" onClick={closeNav}>
+          <h1 className={style.logo_h1} >ınaȷet</h1>
           </Link>
         </div>
         <ul className={style.nav__ul}>

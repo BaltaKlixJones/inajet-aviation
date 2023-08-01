@@ -3,8 +3,8 @@ import axios from "axios";
 import "./FormPasaje.css";
 import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
-import { GrFormNextLink } from "react-icons/gr";
-import { BiUserCircle } from "react-icons/bi";
+import {  GrLinkNext } from "react-icons/gr";
+import { BiUserCircle , BiArrowBack} from "react-icons/bi";
 import {MdOutlinePhoneIphone} from "react-icons/md";
 import {HiOutlineMail} from "react-icons/hi";
 import {CgCheckO} from "react-icons/cg";
@@ -79,6 +79,7 @@ const FormPasaje = () => {
                   value="Ida"
                   checked={tripType === "Ida"}
                   onChange={handleTripTypeChange}
+                  required
                 />
                 <span className="span">IDA</span>
               </label>
@@ -89,6 +90,7 @@ const FormPasaje = () => {
                   value="idayvuelta"
                   checked={tripType === "idayvuelta"}
                   onChange={handleTripTypeChange}
+                  required
                 />
                 <span className="span">IDA Y VUELTA</span>
               </label>{" "}
@@ -99,6 +101,7 @@ const FormPasaje = () => {
                   value="Multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}
+                  required
                 />
                 <span className="span">MULTILEG</span>
               </label>
@@ -114,6 +117,7 @@ const FormPasaje = () => {
                 onChange={handleOriginChange}
                 list="origin-suggestions"
                 className="input-field"
+                required
               />
             </div>
             <div className="form-group">
@@ -124,6 +128,7 @@ const FormPasaje = () => {
                 type="text"
                 placeholder="DESTINO"
                 className="input-field"
+                required
               />
             </div>
 
@@ -138,6 +143,7 @@ const FormPasaje = () => {
                     placeholder="FECHA DE IDA"
                     className="input-field"
                     min={minDate}
+                    required
                   />
                 </div>
                 <hr style={{ margin: "25px" }} />
@@ -147,6 +153,7 @@ const FormPasaje = () => {
                     <GiAirplaneDeparture className="icon" />
                   </label>
                   <input
+                  required
                     type="text"
                     placeholder="ORIGEN"
                     value={origin}
@@ -163,6 +170,7 @@ const FormPasaje = () => {
                     type="text"
                     placeholder="DESTINO"
                     className="input-field"
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -174,6 +182,7 @@ const FormPasaje = () => {
                     placeholder="FECHA DE REGRESO"
                     min={minDate}
                     className="input-field"
+                    required
                   />
                 </div>
               </div>
@@ -189,6 +198,7 @@ const FormPasaje = () => {
                   placeholder="FECHA DE IDA"
                   min={minDate}
                   className="input-field"
+                  required
                 />
               </div>
             )}
@@ -213,6 +223,7 @@ const FormPasaje = () => {
                   min="0"
                   readOnly
                   value={`${count}`}
+                  required= {count === 0}
                 />
                 <button
                   type="button"
@@ -222,7 +233,7 @@ const FormPasaje = () => {
                   +
                 </button>
               </div>
-              <select name="avion" id="avion">
+              <select name="avion" id="avion" required>
                 <option value="" disabled selected>
                   Seleccionar avión
                 </option>
@@ -236,9 +247,9 @@ const FormPasaje = () => {
             <div className="form-group">
               <button className="submit-button">
                 Siguiente{" "}
-                <GrFormNextLink
+                <GrLinkNext
                   className="icon"
-                  style={{ borderRadius: "none" }}
+                  style={{ borderRadius: "none", color:"white" , marginLeft:"15px" }}
                 />{" "}
               </button>
             </div>
@@ -291,6 +302,7 @@ const FormPasaje = () => {
                 <textarea rows="8"  style={{ resize: "none", width:"100%" }}  className="input-field" placeholder="MENSAJE"  />
               </div>
               <div className="form-group">
+                <button className="submit-button"  style={{marginRight:"10px" }}onClick={() => setSecondForm(false)}><BiArrowBack style={{marginRight:"10px"}} className="icon" /> Volver  </button>
                 <button className="submit-button"> Reservar <CgCheckO className="icon"  style={{marginLeft:"10px"}} /> </button>
               </div>
             </form>
