@@ -8,6 +8,7 @@ import { BiUserCircle , BiArrowBack} from "react-icons/bi";
 import {MdOutlinePhoneIphone} from "react-icons/md";
 import {HiOutlineMail} from "react-icons/hi";
 import {CgCheckO} from "react-icons/cg";
+import {MdNavigateNext} from "react-icons/md";
 
 const FormPasaje = () => {
   const [count, setCount] = useState(0);
@@ -246,10 +247,10 @@ const FormPasaje = () => {
 
             <div className="form-group">
               <button className="submit-button">
-                Siguiente{" "}
-                <GrLinkNext
+                Siguiente{" "} 
+                <MdNavigateNext
                   className="icon"
-                  style={{ borderRadius: "none", color:"white" , marginLeft:"15px" }}
+                  style={{ borderRadius: "none", stroke:"#ffff", marginLeft:"5px", fontSize:" 30px"}}
                 />{" "}
               </button>
             </div>

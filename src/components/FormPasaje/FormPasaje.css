@@ -27,8 +27,12 @@ input[type="radio"] {
   margin-left: 15px;
 }
 
-.spam {
+.span {
   color: white;
+  font-family: 'Visby', sans-serif;
+  font-size: 14.5px;
+
+
 }
 
 .form-group {
@@ -36,9 +40,7 @@ input[type="radio"] {
   align-items: center;
   margin-bottom: 10px;
 }
-.span {
-  color: white;
-}
+
 .label-icon {
   background-color: #ffffff51;
   padding: 10px;
@@ -52,6 +54,7 @@ input[type="radio"] {
   font-size: 25px;
   color: white;
 }
+
 
 .input-field,
 .input-field-passenger {
