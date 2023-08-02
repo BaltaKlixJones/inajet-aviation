@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Flota from "./pages/Flota/Flota";
 import Services from "./pages/Services/Services";
 import Footer from "./pages/Footer/Footer";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001";
 function App() {
   return (
     <>
