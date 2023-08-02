@@ -1,0 +1,92 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px;
+    height: 20vh;
+   
+  }
+  
+  .footer-content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px; */
+    margin-left: 150px;
+    /* flex-direction: column; */
+  }
+ */
+  .copy-rights {
+    margin-top: 5px;
+  }
+  
+  .copy-text {
+    font-size: 12px;
+    color: #bdbdbd;
+  }
+  
+  .contact-info,
+  .opening-hours {
+    flex: 1 1 45%;
+    margin-left: 30px;
+  }
+  
+  .contact-heading,
+  .hours-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .contact-details,
+  .hours-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact-email {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+  .contact-instagram {
+    color: #bdbdbd;
+    text-decoration: none;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+}
+  .contact-instagram:hover {
+    color: #8b8b8f;
+    text-decoration: none;
+}
+  .contact-address,
+  .hours-text {
+    margin: 0;
+    color: #bdbdbd;
+  }
+  .logo_h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-right: 200px;
+}
+  @media (max-width: 768px) {
+    .contact-info,
+    .opening-hours {
+      flex: 1 1 100%;
+    }
+  }
+  

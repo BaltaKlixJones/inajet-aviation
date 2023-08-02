@@ -394,3 +394,13 @@ input[type="radio"] {
   transform: translate(0rem, 0);
   display: none;
 }
+
+.gradient-overlay2 {
+  position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
+  background-image: linear-gradient(to top,  #242424 ,  rgba(9, 9, 9, 0.079));
+  }
+

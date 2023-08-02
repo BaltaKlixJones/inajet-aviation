@@ -360,6 +360,7 @@ const FormPasaje = () => {
             </form>
           </div>
         )}
+        <div className="gradient-overlay2"></div>
       </div>
     </div>
   );
