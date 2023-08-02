@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./FormPasaje.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
-import {  GrLinkNext } from "react-icons/gr";
-import { BiUserCircle , BiArrowBack} from "react-icons/bi";
-import {MdOutlinePhoneIphone} from "react-icons/md";
-import {HiOutlineMail} from "react-icons/hi";
-import {CgCheckO} from "react-icons/cg";
-import {MdNavigateNext} from "react-icons/md";
+import { GrLinkNext } from "react-icons/gr";
+import { BiUserCircle, BiArrowBack } from "react-icons/bi";
+import { MdOutlinePhoneIphone } from "react-icons/md";
+import { HiOutlineMail } from "react-icons/hi";
+import { CgCheckO } from "react-icons/cg";
+import { MdNavigateNext } from "react-icons/md";
 
 const FormPasaje = () => {
   const [count, setCount] = useState(0);
@@ -154,7 +156,7 @@ const FormPasaje = () => {
                     <GiAirplaneDeparture className="icon" />
                   </label>
                   <input
-                  required
+                    required
                     type="text"
                     placeholder="ORIGEN"
                     value={origin}
@@ -224,7 +226,7 @@ const FormPasaje = () => {
                   min="0"
                   readOnly
                   value={`${count}`}
-                  required= {count === 0}
+                  required={count === 0}
                 />
                 <button
                   type="button"
@@ -246,22 +248,33 @@ const FormPasaje = () => {
             </div>
 
             <div className="form-group">
-              <button className="submit-button">
+              {/* <button className="submit-button">
                 Siguiente{" "} 
                 <MdNavigateNext
                   className="icon"
                   style={{ borderRadius: "none", stroke:"#ffff", marginLeft:"5px", fontSize:" 30px"}}
                 />{" "}
+              </button> */}
+              <button className="learn-more" id="btn">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
+                </span>
+                <span className="button-text">Siguiente</span>
               </button>
             </div>
           </form>
         ) : (
-          <div className="form" id="form2" onSubmit={handleSubmit} style={{margin: "10px"}}>
-            <form >
+          <div
+            className="form"
+            id="form2"
+            onSubmit={handleSubmit}
+            style={{ margin: "10px" }}
+          >
+            <form>
               <div className="form-group">
-              <label className="label-icon">
-                <BiUserCircle className="icon" />
-              </label>
+                <label className="label-icon">
+                  <BiUserCircle className="icon" />
+                </label>
                 <input
                   type="text"
                   placeholder="NOMBRE"
@@ -269,9 +282,9 @@ const FormPasaje = () => {
                 />
               </div>
               <div className="form-group">
-              <label className="label-icon">
-                <BiUserCircle className="icon" />
-              </label>
+                <label className="label-icon">
+                  <BiUserCircle className="icon" />
+                </label>
                 <input
                   type="text"
                   placeholder="APELLIDO"
@@ -279,9 +292,9 @@ const FormPasaje = () => {
                 />
               </div>
               <div className="form-group">
-              <label className="label-icon">
-                <MdOutlinePhoneIphone className="icon" />
-              </label>
+                <label className="label-icon">
+                  <MdOutlinePhoneIphone className="icon" />
+                </label>
                 <input
                   type="text"
                   placeholder="TELEFONO"
@@ -298,13 +311,51 @@ const FormPasaje = () => {
                   className="input-field"
                 />
               </div>
-              
+
               <div className="form-group">
-                <textarea rows="8"  style={{ resize: "none", width:"100%" }}  className="input-field" placeholder="MENSAJE"  />
+                <textarea
+                  rows="8"
+                  style={{ resize: "none", width: "80%" }}
+                  className="input-field"
+                  placeholder="MENSAJE"
+                />
               </div>
               <div className="form-group">
-                <button className="submit-button"  style={{marginRight:"10px" }}onClick={() => setSecondForm(false)}><BiArrowBack style={{marginRight:"10px"}} className="icon" /> Volver  </button>
-                <button className="submit-button"> Reservar <CgCheckO className="icon"  style={{marginLeft:"10px"}} /> </button>
+                {/* <button
+                  className="submit-button"
+                  style={{ marginRight: "10px" }}
+                  onClick={() => setSecondForm(false)}
+                >
+                  <BiArrowBack
+                    style={{ marginRight: "10px" }}
+                    className="icon"
+                  />{" "}
+                  Volver{" "}
+                </button> */}
+                <button
+                  className="custom-button"
+                  id="btn2"
+                  onClick={() => setSecondForm(false)}
+                >
+                  <span className="circle" aria-hidden="true">
+                      <BiArrowBack style={{fontSize: "24px", marginTop:"12px"}} className="iconback" />
+                  </span>
+                  <span className="button-text">Volver</span>
+                </button>
+                {/* <button className="submit-button">
+                  {" "}
+                  Reservar{" "}
+                  <CgCheckO
+                    className="icon"
+                    style={{ marginLeft: "10px" }}
+                  />{" "}
+                </button> */}
+                <button className="learn-more" id="btn">
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
+                  </span>
+                  <span className="button-text">Enviar</span>
+                </button>
               </div>
             </form>
           </div>

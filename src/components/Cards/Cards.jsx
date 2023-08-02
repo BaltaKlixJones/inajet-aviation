@@ -8,7 +8,7 @@ import avion5 from "../../assets/images/aircraft/avion5.jpg";
 import avion6 from "../../assets/images/aircraft/avion6.jpg";
 import avion7 from "../../assets/images/aircraft/avion7.jpg";
 import avion8 from "../../assets/images/aircraft/avion8.png";
-import {FiUsers, FiMapPin, FiWind} from "react-icons/fi";
+import {FiUsers, FiWind} from "react-icons/fi";
 import {GiRadarSweep} from "react-icons/gi";
 
 const Cards = () => {
