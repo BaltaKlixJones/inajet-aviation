@@ -10,9 +10,9 @@ const Flota = () => {
       <div className="container-titulo">
         <h1 className="titulo-flota">
           <span style={{ fontWeight: "bold", marginRight: "15px" }}>VIVÍ</span>
-          LA EXPERIENCIA CON INAJET
+          LA EXPERIENCIA  INAJET
         </h1>
-        <h3 className="parrafo-flota">Elegí la aeronave que más te convenga</h3>
+       
       </div>
       <div className="gradient-overlay"></div>
     </div>

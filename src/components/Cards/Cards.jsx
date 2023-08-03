@@ -2,36 +2,47 @@ import React, {useEffect} from "react";
 import "./Cards.css";
 import {FiUsers, FiWind} from "react-icons/fi";
 import {GiRadarSweep} from "react-icons/gi";
-
-import { getAllAirCrafts } from "../../redux/Actions";
+import { useNavigate} from "react-router-dom";
+import { getAllAirCrafts, getAirCraftById } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Cards = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getAllAirCrafts())
-  }, [dispatch])
+    dispatch(getAllAirCrafts());
+  }, [dispatch]);
 
   const extractKilometers = (data) => {
-    const kmRegex = /\d+\s*km/; 
+    const kmRegex = /\d+\s*km/;
     const kmMatch = data.match(kmRegex);
     return kmMatch ? kmMatch[0] : "";
   };
 
   const extractKilometersH = (data) => {
-    const kmRegex = /\d+\s*km\/h/g; 
+    const kmRegex = /\d+\s*km\/h/g;
     const kmMatch = data.match(kmRegex);
     return kmMatch ? kmMatch[0] : "";
   };
 
-  console.log(allAircrafts.map((airplane) => airplane.type))
+  const handleOnClick = (id) => {
+    dispatch(getAirCraftById(id));
+    console.log(id);
+    navigate(`/aircraft/${id}`);
+  };
+
   return (
     <div className="cards-container">
       {allAircrafts.map((aircraft) => (
         <div className="card" key={aircraft.id}>
-          <img src={aircraft.image} alt={aircraft.name} className="card-image" />
+          <img
+            src={aircraft.image}
+            alt={aircraft.name}
+            className="card-image"
+            onClick={() => handleOnClick(aircraft.id)} 
+          />
           <h2 className="card-title">{aircraft.name}</h2>
           <h4 className="card-type">{aircraft.type}</h4>
           <div className="radio-input">

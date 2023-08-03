@@ -29,6 +29,12 @@
   max-height: 250px;
 }
 
+.card-image:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 .card-title {
   display: flex;
   justify-content: center;
