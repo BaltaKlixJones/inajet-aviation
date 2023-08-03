@@ -1,13 +1,5 @@
 import React, {useEffect} from "react";
 import "./Cards.css";
-import avion1 from "../../assets/images/aircraft/avion1.jpg";
-import avion2 from "../../assets/images/aircraft/avion2.jpg";
-import avion3 from "../../assets/images/aircraft/avion3.jpg";
-import avion4 from "../../assets/images/aircraft/avion4.jpg";
-import avion5 from "../../assets/images/aircraft/avion5.jpg";
-import avion6 from "../../assets/images/aircraft/avion6.jpg";
-import avion7 from "../../assets/images/aircraft/avion7.jpg";
-import avion8 from "../../assets/images/aircraft/avion8.png";
 import {FiUsers, FiWind} from "react-icons/fi";
 import {GiRadarSweep} from "react-icons/gi";
 

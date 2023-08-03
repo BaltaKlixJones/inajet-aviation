@@ -11,6 +11,8 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { CgCheckO } from "react-icons/cg";
 import { MdNavigateNext } from "react-icons/md";
+import { getAllAirCrafts } from "../../redux/Actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const FormPasaje = () => {
   const [count, setCount] = useState(0);
@@ -19,6 +21,13 @@ const FormPasaje = () => {
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
+
+  const dispatch = useDispatch();
+  const allAircrafts = useSelector((state) => state.allAircrafts);
+
+  useEffect(() => {
+    dispatch(getAllAirCrafts());
+  }, [dispatch]);
 
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
@@ -240,10 +249,11 @@ const FormPasaje = () => {
                 <option value="" disabled selected>
                   Seleccionar avión
                 </option>
-                <option value="avion1">AVION 1</option>
-                <option value="avion2">AVION 2</option>
-                <option value="avion3">AVION 3</option>
-                <option value="avion4">AVION 4</option>
+                {allAircrafts.map((aircraft) => (
+                  <option key={aircraft.id} value={aircraft.id}>
+                    {aircraft.name}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -338,7 +348,10 @@ const FormPasaje = () => {
                   onClick={() => setSecondForm(false)}
                 >
                   <span className="circle" aria-hidden="true">
-                      <BiArrowBack style={{fontSize: "24px", marginTop:"12px"}} className="iconback" />
+                    <BiArrowBack
+                      style={{ fontSize: "24px", marginTop: "12px" }}
+                      className="iconback"
+                    />
                   </span>
                   <span className="button-text">Volver</span>
                 </button>
