@@ -10,7 +10,7 @@
     background-attachment: fixed; */
 }
 .container-fondo {
-  background-image: url("../../assets/images/wallpaper/wallpaperProfile3webp.webp");
+  background-image: url("../../assets/images/wallpaper/sunset.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -123,19 +123,19 @@ h2 {
 }
 
 .gradient-overlay3 {
-    position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
+    position: absolute; 
     bottom: 110px;
     left: 0;
     right: 0;
-    height: 15px; /* Altura del degradado oscuro que desvanece hacia arriba */
+    height: 15px; 
     background-image: linear-gradient(to top,  rgba(15, 107, 141, 0.279) ,  #242424);
   }
 .gradient-overlay4 {
-    position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
+    position: absolute; 
     bottom: -305px;
     left: 0;
     right: 0;
-    height: 15px; /* Altura del degradado oscuro que desvanece hacia arriba */
+    height: 15px; 
     background-image: linear-gradient(to top,  #242424 , rgba(202, 129, 95, 0.279) );
   }
 
