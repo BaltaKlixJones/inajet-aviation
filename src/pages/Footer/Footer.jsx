@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="contact-info">
             <h2 className="contact-heading">Contacto:</h2>
             <div className="contact-details">
-              <BiMailSend className="icon" />
+              <BiMailSend className="icon3" />
               <a
                 href="mailto:inajetaviation@gmail.com"
                 className="contact-email"
@@ -27,7 +27,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="contact-details">
-              <BsBroadcastPin className="icon" />
+              <BsBroadcastPin className="icon3" />
               <p className="contact-address">
                 Aeroparque Jorge Newbery, Ciudad Autónoma de Buenos Aires,
                 Argentina
@@ -37,14 +37,14 @@ const Footer = () => {
           <div className="opening-hours">
             <h2 className="hours-heading">Horario:</h2>
             <div className="hours-details">
-              <BsClock className="icon" />
+              <BsClock className="icon3" />
               <p className="hours-text">24hs x 365</p>
             </div>
             <div >
               <h2 className="hours-heading">Instagram</h2>
               <div className="instagram">
 
-                <BsInstagram className="icon" />
+                <BsInstagram className="icon3" />
                 <a href="https://www.instagram.com/inajetaviation/" target="_blank" className="contact-instagram">
                 <p className="contact-instagram">inajetaviation</p>
                 </a>

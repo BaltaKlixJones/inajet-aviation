@@ -66,15 +66,17 @@ const Perfil = () => {
           </div>
         </div>
       </div>
-      <div className="gradient-overlay2"></div>
-      </div>
- 
+      {/* <div className="gradient-overlay2"></div> */}
       <hr style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }} />{" "}
       <MdOutlineAirplaneTicket
         style={{ fontSize: "34px", marginLeft: "-80px", marginRight: "-80px" }}
-      />
+        />
       <hr style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }} />
-      <div className="gradient-overlay3"></div>
+      </div>
+
+
+  
+      {/* <div className="gradient-overlay3"></div> */}
       <div className="container-range">
         <div className="range">
           <img src={aircraft.rangeRing} alt="" className="imagen-ring" />
@@ -114,7 +116,7 @@ const Perfil = () => {
       </div>
      
     </div>
-      <div className="gradient-overlay4"></div>
+      {/* <div className="gradient-overlay4"></div> */}
       </>
   );
 };

@@ -3,23 +3,27 @@
   flex-wrap: wrap;
   justify-content: space-between;
   /* padding: 5px; */
-  /* background-image: url("../../assets/images/wallpaper/fondoProfile.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; */
-}
-.container-fondo {
-  background-image: url("../../assets/images/wallpaper/sunset.jpg");
+  background-image: url("../../assets/images/wallpaper/hangar3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
+  
+}
+
+
+.container-fondo {
+  /* background-image: url("../../assets/images/wallpaper/cafayatewallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px;
+  background-color: #0505054f;
   /* height: 80vh; */
 }
 
@@ -38,6 +42,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  /* color: black; */
   width: 100%;
 }
 .titulo-aircraft h1 {
@@ -88,17 +93,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
   color: white;
 }
 
 .interior {
   width: 50%;
-  /* border-radius: 15px; */
-  /* background-color: #fafafadd; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
   color: white;
 }
 .inicio-description h1,
@@ -145,11 +150,13 @@ h2 {
   justify-content: flex-end;
   width: 100%;
   /* background-color: #fafafadd; */
+  color: black;
   color: white;
-  background-image: url("../../assets/images/wallpaper/wallpaperProfile2.jpg");
+  background-color: #0505054f;
+  /* background-image: url("../../assets/images/wallpaper/wallpaperProfile2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   height: 50vh;
 }
 .titulo-range {
@@ -165,6 +172,7 @@ h2 {
 }
 .range-description h5 {
   letter-spacing: .5px;
+  color: rgb(192, 192, 192);
 }
 
 #range-title {
