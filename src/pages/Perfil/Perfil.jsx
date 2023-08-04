@@ -116,7 +116,7 @@ const Perfil = () => {
       </div>
      
     </div>
-      {/* <div className="gradient-overlay4"></div> */}
+      <div className="gradient-overlay4"></div>
       </>
   );
 };

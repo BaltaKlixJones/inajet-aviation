@@ -44,6 +44,7 @@
   color: white;
   /* color: black; */
   width: 100%;
+  margin-bottom: 20px;
 }
 .titulo-aircraft h1 {
   font-family: "Oswald", sans-serif;
@@ -95,6 +96,7 @@
   align-items: center;
   color: black;
   color: white;
+  
 }
 
 .interior {
@@ -137,11 +139,11 @@ h2 {
   }
 .gradient-overlay4 {
     position: absolute; 
-    bottom: -305px;
+    bottom: -325px;
     left: 0;
     right: 0;
-    height: 15px; 
-    background-image: linear-gradient(to top,  #242424 , rgba(202, 129, 95, 0.279) );
+    height: 25px; 
+    background-image: linear-gradient(to top,  #242424 , rgba(115, 114, 114, 0.097) );
   }
 
 .container-range {

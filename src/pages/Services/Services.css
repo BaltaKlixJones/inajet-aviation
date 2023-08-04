@@ -1,0 +1,88 @@
+.fondo-service {
+    /* background-color: #f0f0f000;  */
+    background-image: url("../../assets/images/services/fondoServices2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    align-items: center;
+    height: 90dvh;
+
+  }
+  .gradient-overlay6 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
+    background-image: linear-gradient(to top,  rgba(238, 238, 238, 0.176)  , #24242499);
+    
+  
+}
+  .services-container {
+   
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.501);
+    border-radius: 10px;
+    padding: 0px;
+    
+  }
+  
+  .service {
+    width: 100%;
+    max-width: 370px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1e1d1db1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3;
+    height: 380px;
+    
+    transition: .4s ease-in-out;
+    /* margin-bottom: 100px; */
+  }
+  .service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(50, 50, 50, 0.691);
+    background-size: cover;
+    filter: blur(15px); 
+    z-index: -1;
+  }
+  
+  .service:hover {
+    transform: translateY(-5px);
+   
+  }
+  
+  .service img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .service h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    color: white;
+  }
+  
+  .service p {
+    font-size: 1rem;
+    color: #666;
+    color: rgb(223, 220, 220);
+  }
+  
