@@ -43,16 +43,20 @@ input[type="radio"] {
 
 .label-icon {
   background-color: #ffffff51;
+ 
   padding: 10px;
   border-radius: 50%;
   margin-right: 10px;
   display: flex;
+  text-align: center;
+  justify-content: center;
   align-items: center;
 }
 
 .icon {
   font-size: 25px;
   color: white;
+ margin-right: 0px;
 }
 
 
@@ -395,7 +399,7 @@ input[type="radio"] {
   display: none;
 }
 
-.gradient-overlay2 {
+.gradient-overlay {
   position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
   bottom: 0;
   left: 0;
@@ -403,4 +407,5 @@ input[type="radio"] {
   height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
   background-image: linear-gradient(to top,  #242424 ,  rgba(9, 9, 9, 0.079));
   }
+
 

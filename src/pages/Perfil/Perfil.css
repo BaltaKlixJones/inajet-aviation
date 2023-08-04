@@ -226,7 +226,7 @@ h2 {
   box-shadow: 0 0 20px 0px #2e2e2e3a;
 }
 
-.btn .icon {
+.btn .iconos2 {
   position: absolute;
   height: 40px;
   width: 70px;
@@ -240,7 +240,7 @@ h2 {
   transform: translateX(55px);
 }
 
-.btn:hover .icon {
+.btn:hover .iconos2 {
   width: 175px;
 }
 

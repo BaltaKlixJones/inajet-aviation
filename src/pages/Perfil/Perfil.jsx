@@ -95,7 +95,7 @@ const Perfil = () => {
         </div>
       <div className="btn-reservar">
         <button className="btn" onClick={handleClick}>
-          <span className="icon">
+          <span className="iconos2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
