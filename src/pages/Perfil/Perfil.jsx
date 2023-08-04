@@ -25,7 +25,10 @@ const Perfil = () => {
   };
 
   return (
+    <>
     <div className="container-profile">
+    <div className="container-fondo">
+
     
 
       <div className="titulo-aircraft">
@@ -63,12 +66,15 @@ const Perfil = () => {
           </div>
         </div>
       </div>
+      <div className="gradient-overlay2"></div>
+      </div>
  
       <hr style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }} />{" "}
       <MdOutlineAirplaneTicket
         style={{ fontSize: "34px", marginLeft: "-80px", marginRight: "-80px" }}
       />
       <hr style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }} />
+      <div className="gradient-overlay3"></div>
       <div className="container-range">
         <div className="range">
           <img src={aircraft.rangeRing} alt="" className="imagen-ring" />
@@ -87,7 +93,6 @@ const Perfil = () => {
             </h5>
           </div>
         </div>
-      </div>
       <div className="btn-reservar">
         <button className="btn" onClick={handleClick}>
           <span className="icon">
@@ -106,7 +111,11 @@ const Perfil = () => {
           <span className="text">Consultar</span>
         </button>
       </div>
+      </div>
+     
     </div>
+      <div className="gradient-overlay4"></div>
+      </>
   );
 };
 
