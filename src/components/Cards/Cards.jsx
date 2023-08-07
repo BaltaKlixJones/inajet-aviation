@@ -1,5 +1,6 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "./Cards.css";
+
 import {FiUsers, FiWind} from "react-icons/fi";
 import {GiRadarSweep} from "react-icons/gi";
 import { useNavigate} from "react-router-dom";
@@ -7,13 +8,14 @@ import { getAllAirCrafts, getAirCraftById } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Cards = () => {
+  
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getAllAirCrafts());
-  }, [dispatch]);
+    dispatch(getAllAirCrafts())
+    }, [dispatch]);
 
   const extractKilometers = (data) => {
     const kmRegex = /\d+\s*km/;
@@ -29,9 +31,11 @@ const Cards = () => {
 
   const handleOnClick = (id) => {
     dispatch(getAirCraftById(id));
-    console.log(id);
+    // console.log(id);
     navigate(`/aircraft/${id}`);
   };
+
+  
 
   return (
     <div className="cards-container">

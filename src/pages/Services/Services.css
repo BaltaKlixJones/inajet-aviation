@@ -86,3 +86,12 @@
     color: rgb(223, 220, 220);
   }
   
+
+  .gradient-overlay-services {
+    position: absolute; 
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-image: linear-gradient(to top,   #24242499 , rgba(48, 48, 48, 0.234));
+  }

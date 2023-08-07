@@ -7,6 +7,7 @@ import Flota from "./pages/Flota/Flota";
 import Services from "./pages/Services/Services";
 import Footer from "./pages/Footer/Footer";
 import Perfil from "./pages/Perfil/Perfil";
+import Loading from "./pages/Loading/Loading";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3001";
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route exact path="/flota" element={<Flota/>} />
         <Route exact path="/services" element={<Services/>} />
         <Route exact path="/aircraft/:id" element={<Perfil/>} />
+        <Route exact path="/loading" element={<Loading/>} />
+        <Route exact path="/consultar/:id" element={<Home/>} />
       </Routes>
     
       <Footer />

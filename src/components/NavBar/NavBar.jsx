@@ -56,9 +56,19 @@ const NavBar = () => {
           </button>
         </div>
         <div className={style.img_logo}>
-          <Link to="/" onClick={closeNav}>
-          <h1 className={style.logo_h1} >ınaȷet</h1>
-          </Link>
+          
+          <h1 className={style.logo_h1} ><Link
+  to="/"
+  style={{
+    textDecoration: "none",
+    color: "white",
+    transition: "color 0.3s",
+  }}
+  onClick={closeNav}
+  // onMouseOver={(e) => e.target.style.color = "black"}
+  // onMouseOut={(e) => e.target.style.color = "white"}
+>ınaȷet</Link></h1>
+          
         </div>
         <ul className={style.nav__ul}>
           <li className={style.nav__item}>

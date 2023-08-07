@@ -13,6 +13,7 @@ import { CgCheckO } from "react-icons/cg";
 import { MdNavigateNext } from "react-icons/md";
 import { getAllAirCrafts } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 const FormPasaje = () => {
   const [count, setCount] = useState(0);
@@ -21,6 +22,8 @@ const FormPasaje = () => {
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
+  const [selectedAircraftId, setSelectedAircraftId] = useState("");
+  const { id } = useParams();
 
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
@@ -32,7 +35,10 @@ const FormPasaje = () => {
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
     setMinDate(currentDate);
-  }, []);
+    if (id) {
+      setSelectedAircraftId(id);
+    }
+  }, [id]);
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -45,6 +51,10 @@ const FormPasaje = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSecondForm(true);
+  };
+
+  const handleSelectChange = (event) => {
+    setSelectedAircraftId(event.target.value);
   };
 
   const handleOriginChange = async (e) => {
@@ -245,8 +255,14 @@ const FormPasaje = () => {
                   +
                 </button>
               </div>
-              <select name="avion" id="avion" required>
-                <option value="" disabled selected>
+              <select
+                name="avion"
+                id="avion"
+                value={selectedAircraftId}
+                onChange={handleSelectChange}
+                required
+              >
+                <option value="" disabled>
                   Seleccionar avión
                 </option>
                 {allAircrafts.map((aircraft) => (
@@ -258,13 +274,7 @@ const FormPasaje = () => {
             </div>
 
             <div className="form-group">
-              {/* <button className="submit-button">
-                Siguiente{" "} 
-                <MdNavigateNext
-                  className="icon"
-                  style={{ borderRadius: "none", stroke:"#ffff", marginLeft:"5px", fontSize:" 30px"}}
-                />{" "}
-              </button> */}
+
               <button className="learn-more" id="btn">
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
@@ -331,17 +341,6 @@ const FormPasaje = () => {
                 />
               </div>
               <div className="form-group">
-                {/* <button
-                  className="submit-button"
-                  style={{ marginRight: "10px" }}
-                  onClick={() => setSecondForm(false)}
-                >
-                  <BiArrowBack
-                    style={{ marginRight: "10px" }}
-                    className="icon"
-                  />{" "}
-                  Volver{" "}
-                </button> */}
                 <button
                   className="custom-button"
                   id="btn2"
@@ -355,14 +354,7 @@ const FormPasaje = () => {
                   </span>
                   <span className="button-text">Volver</span>
                 </button>
-                {/* <button className="submit-button">
-                  {" "}
-                  Reservar{" "}
-                  <CgCheckO
-                    className="icon"
-                    style={{ marginLeft: "10px" }}
-                  />{" "}
-                </button> */}
+                
                 <button className="learn-more" id="btn">
                   <span className="circle" aria-hidden="true">
                     <span className="icon arrow"></span>

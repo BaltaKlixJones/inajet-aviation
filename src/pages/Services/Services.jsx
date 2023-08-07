@@ -7,13 +7,14 @@ import consulting from "../../assets/images/services/consulting.jpg"
 
 const Services = () => {
   return (
+    <>
     <div className='fondo-service'>
       <div className= "gradient-overlay6"></div>
     <div className="services-container">
       <section className="service">
         <img src={businessJet} alt="Vuelos Ejecutivos" />
         <h2>Vuelos Ejecutivos</h2>
-        <p>Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento y con el mejor soporte.</p>
+        <p>Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, Le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento, en total reserva y con el mejor soporte</p>
       </section>
 
       <section className="service">
@@ -34,7 +35,10 @@ const Services = () => {
         <p>¿Quieres comprar o vender un avión? Nosotros te asesoramos.</p>
       </section>
     </div>
+    
     </div>
+    <div className='gradient-overlay-services'></div>
+    </>
   );
 }
 

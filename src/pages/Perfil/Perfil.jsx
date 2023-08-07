@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Perfil.css";
-
+import Loading from "../Loading/Loading";
 import { getAirCraftById } from "../../redux/Actions";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,18 +11,29 @@ import { GiRadarSweep } from "react-icons/gi";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { MdOutlineAirplaneTicket } from "react-icons/md";
 const Perfil = () => {
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
   const aircraft = useSelector((state) => state.aircraft);
 
   useEffect(() => {
-    dispatch(getAirCraftById(id));
+    dispatch(getAirCraftById(id))
+    // .then(() => setLoading(false))
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    
+    
   }, [dispatch, id]);
 
   const handleClick = () => {
-    navigate("/");
+    navigate(`/consultar/${id}`);
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>

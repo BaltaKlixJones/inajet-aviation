@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import "./Flota.css";
+import { useDispatch } from "react-redux";
 import Cards from "../../components/Cards/Cards";
+import { getAllAirCrafts } from "../../redux/Actions";
+import Loading from "../Loading/Loading";
 
 
 const Flota = () => {
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllAirCrafts())
+    // setTimeout(() => {
+    //   setLoading(false)
+    // }, 1000)
+    .then(() => {
+      setLoading(false)
+    })
+  },[])
+
+  if(loading) return <Loading/>
+
   return (
     <>
     <div className="container-flota">
