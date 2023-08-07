@@ -4,8 +4,10 @@ import businessJet from "../../assets/images/services/businessJet.jpg"
 import traslado from "../../assets/images/services/traslado.jpg"
 import refuel from "../../assets/images/services/refuel.avif"
 import consulting from "../../assets/images/services/consulting.jpg"
+import {useTranslation} from 'react-i18next';
 
 const Services = () => {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
     <div className='fondo-service'>
@@ -13,26 +15,26 @@ const Services = () => {
     <div className="services-container">
       <section className="service">
         <img src={businessJet} alt="Vuelos Ejecutivos" />
-        <h2>Vuelos Ejecutivos</h2>
-        <p>Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, Le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento, en total reserva y con el mejor soporte</p>
+        <h2>{t("services.vuelosEjecutivos")}</h2>
+        <p>{t("services.textEjecutivos")}</p>
       </section>
 
       <section className="service">
         <img src={traslado} alt="Vuelos Sanitarios" />
-        <h2>Vuelos Sanitarios</h2>
-        <p>Coordinamos vuelos sanitarios y traslados aéreos de órganos.</p>
+        <h2>{t("services.vuelosSanitarios")}</h2>
+        <p>{t("services.textSanitary")}</p>
       </section>
 
       <section className="service">
         <img src={refuel} alt="Soporte en Tierra" />
-        <h2>Soporte en Tierra</h2>
-        <p>¿Necesitas asistencia en tierra? Contáctanos.</p>
+        <h2>{t("services.soporteTierra")}</h2>
+        <p>{t("services.textTierra")}</p>
       </section>
 
       <section className="service">
         <img src={consulting} alt="Asesoramiento" />
-        <h2>Asesoramiento</h2>
-        <p>¿Quieres comprar o vender un avión? Nosotros te asesoramos.</p>
+        <h2>{t("services.asesoramiento")}</h2>
+        <p>{t("services.textAsesoramiento")}</p>
       </section>
     </div>
     

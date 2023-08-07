@@ -31,5 +31,16 @@
     "contacto": "Contacto",
     "horario": "Horario",
     "derechos": "Todos los derechos reservados"
+},
+"services" : {
+  "vuelosEjecutivos" : "Vuelos Ejecutivos",
+  "vuelosSanitarios" : "Vuelos Sanitarios",
+  "soporteTierra": "Soporte en Tierra",
+  "asesoramiento" : "Asesoramiento",
+  "textEjecutivos" : "Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, Le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento, en total reserva y con el mejor soportes.",
+  "textSanitary": "Coordinamos vuelos sanitarios y traslados aéreos de órganos.",
+  "textTierra" : "¿Necesitas asistencia en tierra? Contáctanos.",
+  "textAsesoramiento" : "¿Quieres comprar o vender un avión? Nosotros te asesoramos."
 }
+
 }

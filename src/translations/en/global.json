@@ -31,5 +31,15 @@
     "contacto": "Contact",
     "horario": "Schedule",
     "derechos": "All rights reserved"
+},
+"services" : {
+  "vuelosEjecutivos" : "Executive Flights",
+  "vuelosSanitarios" : "Sanitary Flights",
+  "soporteTierra": "Ground Soport",
+  "asesoramiento" : "Advisory",
+  "textEjecutivos" : "We provide transfers to any part of the world. With a wide variety of aircraft, we offer customers the possibility to book a flight at any time, with complete confidentiality and the best support.",
+  "textSanitary": "We coordinate medical flights and organ air transfers.",
+  "textTierra" : "Need ground assistance? Contact us.",
+  "textAsesoramiento" : "Looking to buy or sell an aircraft? We provide advisory services."
 }
 }
