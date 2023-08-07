@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import style from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const [t, i18n] = useTranslation("global");
+
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -73,28 +76,30 @@ const NavBar = () => {
         <ul className={style.nav__ul}>
           <li className={style.nav__item}>
             <Link to="/flota" className={style.nav__link} onClick={closeNav}>
-              FLOTA
+              {t("navbar.flot")}
             </Link>
           </li>
           <li className={style.nav__item}>
             <Link to="/services" className={style.nav__link} onClick={closeNav}>
-              SERVICIOS
+            {t("navbar.services")}
             </Link>
           </li>
           <li className={style.nav__item}>
             <Link to="/contacto" className={style.nav__link} onClick={closeNav}>
-              CONTACTO
+              {t("navbar.contact")}
             </Link>
           </li>
           <hr className={style.hr} style={{margin: "0px 10px -20px 30px", height: "40px", fontWeight: "bold" } } />
           <li className={style.nav__item_btn}>
             <button className={style.btn_traduce}
             style={{marginRight: "-50px"}}
+            onClick={() => i18n.changeLanguage("es")}
              >ES</button>
           </li>
           <li className={style.nav__item_btn}>
             <button className={style.btn_traduce} 
             style={{marginRight: "-80px"}}
+            onClick={() => i18n.changeLanguage("en")}
             >EN</button>
           </li>
         </ul>

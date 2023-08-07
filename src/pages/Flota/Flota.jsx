@@ -4,9 +4,10 @@ import { useDispatch } from "react-redux";
 import Cards from "../../components/Cards/Cards";
 import { getAllAirCrafts } from "../../redux/Actions";
 import Loading from "../Loading/Loading";
-
+import { useTranslation } from "react-i18next";
 
 const Flota = () => {
+  const [t, i18n] = useTranslation("global");
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch();
 
@@ -27,8 +28,8 @@ const Flota = () => {
     <div className="container-flota">
       <div className="container-titulo">
         <h1 className="titulo-flota">
-          <span style={{ fontWeight: "bold", marginRight: "15px" }}>VIVÍ</span>
-          LA EXPERIENCIA  INAJET
+          <span style={{ fontWeight: "bold", marginRight: "15px" }}>{t("text.live")}</span>
+          {t("text.experience")}{" "} INAJET
         </h1>
        
       </div>

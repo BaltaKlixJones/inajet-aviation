@@ -10,7 +10,11 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { GiRadarSweep } from "react-icons/gi";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import { MdOutlineAirplaneTicket } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+
+
 const Perfil = () => {
+  const [t, i18n] = useTranslation("global");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -93,16 +97,13 @@ const Perfil = () => {
           <img src={aircraft.rangeRing} alt="" className="imagen-ring" />
           <div className="range-description">
             <div className="titulo-range">
-              <h1 id="range-title">Range</h1>
+              <h1 id="range-title">{t("text.range")}</h1>
             </div>
             <h1>
               <GiRadarSweep /> {aircraft.range}
             </h1>
             <h5>
-              Aclaración: Esta herramienta es solo para fines de comparación.
-              Rango calculado sin viento en ruta y con atmósfera estándar. Fue
-              tomado como referencia el Aeroparque Jorge Newbery, Buenos Aires
-              Argentina
+             {t("text.clarification")}
             </h5>
           </div>
         </div>
@@ -121,7 +122,7 @@ const Perfil = () => {
             </svg>
           </span>
 
-          <span className="text">Consultar</span>
+          <span className="text">{t("text.consult")}</span>
         </button>
       </div>
       </div>

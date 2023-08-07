@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Footer.css";
 import { BiMailSend } from "react-icons/bi";
 import { BsBroadcastPin, BsClock, BsInstagram } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <hr style={{ width: "85%" }} />
@@ -12,11 +14,11 @@ const Footer = () => {
           <div className="div-logo">
             <h1 className="logo_h1">ınaȷet </h1>
             <div className="copy-rights">
-              <p className="copy-text">&#169; All rights reserved</p>
+              <p className="copy-text">&#169; {t("footer.derechos")}</p>
             </div>
           </div>
           <div className="contact-info">
-            <h2 className="contact-heading">Contacto:</h2>
+            <h2 className="contact-heading">{t("footer.contacto")}:</h2>
             <div className="contact-details">
               <BiMailSend className="icon3" />
               <a
@@ -35,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="opening-hours">
-            <h2 className="hours-heading">Horario:</h2>
+            <h2 className="hours-heading">{t("footer.horario")}:</h2>
             <div className="hours-details">
               <BsClock className="icon3" />
               <p className="hours-text">24hs x 365</p>

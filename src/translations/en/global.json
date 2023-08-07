@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "flot": "FLOT",
+    "contact": "CONTACT",
+    "services": "SERVICES"
+  },
+  "formPasaje": {
+    "ida": "ONE WAT",
+    "idaVuelta": "ROUND TRIP",
+    "origen": "FROM",
+    "destino": "TO",
+    "SeleccionarAvion": "Select Airplane",
+    "siguiente": "Next",
+    "volver": "Back",
+    "enviar": "Send"
+  },
+  "data": {
+    "name": "NAME",
+    "last-name": "LAST NAME",
+    "phone": "PHONE",
+    "message": "MESSAGE"
+  },
+  "text": {
+    "clarification": "Clarification: This tool is for comparison purposes only. Calculated range without wind en route and using standard atmosphere. Aeroparque Jorge Newbery, Buenos Aires, Argentina, was taken as a reference.",
+    "consult": "TO CONSULT",
+    "range": "Range",
+    "experience": "THE EXPERIENCE",
+    "live": "LIVE"
+  },
+  "footer": {
+    "contacto": "Contact",
+    "horario": "Schedule",
+    "derechos": "All rights reserved"
+}
+}

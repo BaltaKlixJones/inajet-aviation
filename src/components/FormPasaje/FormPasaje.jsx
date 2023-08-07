@@ -14,8 +14,10 @@ import { MdNavigateNext } from "react-icons/md";
 import { getAllAirCrafts } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const FormPasaje = () => {
+  const [t, i18n] = useTranslation("global");
   const [count, setCount] = useState(0);
   const [origin, setOrigin] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -103,7 +105,7 @@ const FormPasaje = () => {
                   onChange={handleTripTypeChange}
                   required
                 />
-                <span className="span">IDA</span>
+                <span className="span">{t("formPasaje.ida")}</span>
               </label>
               &nbsp;
               <label>
@@ -114,7 +116,7 @@ const FormPasaje = () => {
                   onChange={handleTripTypeChange}
                   required
                 />
-                <span className="span">IDA Y VUELTA</span>
+                <span className="span">{t("formPasaje.idaVuelta")}</span>
               </label>{" "}
               &nbsp;
               <label>
@@ -134,7 +136,7 @@ const FormPasaje = () => {
               </label>
               <input
                 type="text"
-                placeholder="ORIGEN"
+                placeholder={t("formPasaje.origen")}
                 value={origin}
                 onChange={handleOriginChange}
                 list="origin-suggestions"
@@ -148,7 +150,7 @@ const FormPasaje = () => {
               </label>
               <input
                 type="text"
-                placeholder="DESTINO"
+                placeholder={t("formPasaje.destino")}
                 className="input-field"
                 required
               />
@@ -177,7 +179,7 @@ const FormPasaje = () => {
                   <input
                     required
                     type="text"
-                    placeholder="ORIGEN"
+                    placeholder={t("formPasaje.origen")}
                     value={origin}
                     onChange={handleOriginChange}
                     list="origin-suggestions"
@@ -190,7 +192,7 @@ const FormPasaje = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="DESTINO"
+                    placeholder={t("formPasaje.destino")}
                     className="input-field"
                     required
                   />
@@ -263,7 +265,7 @@ const FormPasaje = () => {
                 required
               >
                 <option value="" disabled>
-                  Seleccionar avión
+                  {t("formPasaje.SeleccionarAvion")}
                 </option>
                 {allAircrafts.map((aircraft) => (
                   <option key={aircraft.id} value={aircraft.id}>
@@ -274,12 +276,11 @@ const FormPasaje = () => {
             </div>
 
             <div className="form-group">
-
               <button className="learn-more" id="btn">
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
                 </span>
-                <span className="button-text">Siguiente</span>
+                <span className="button-text">{t("formPasaje.siguiente")}</span>
               </button>
             </div>
           </form>
@@ -297,7 +298,7 @@ const FormPasaje = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="NOMBRE"
+                  placeholder={t("data.name")}
                   className="input-field"
                 />
               </div>
@@ -307,7 +308,7 @@ const FormPasaje = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="APELLIDO"
+                  placeholder={t("data.last-name")}
                   className="input-field"
                 />
               </div>
@@ -317,7 +318,7 @@ const FormPasaje = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="TELEFONO"
+                  placeholder={t("data.phone")}
                   className="input-field"
                 />
               </div>
@@ -337,7 +338,7 @@ const FormPasaje = () => {
                   rows="8"
                   style={{ resize: "none", width: "80%" }}
                   className="input-field"
-                  placeholder="MENSAJE"
+                  placeholder={t("data.message")}
                 />
               </div>
               <div className="form-group">
@@ -352,14 +353,14 @@ const FormPasaje = () => {
                       className="iconback"
                     />
                   </span>
-                  <span className="button-text">Volver</span>
+                  <span className="button-text">{t("formPasaje.volver")}</span>
                 </button>
-                
+
                 <button className="learn-more" id="btn">
                   <span className="circle" aria-hidden="true">
                     <span className="icon arrow"></span>
                   </span>
-                  <span className="button-text">Enviar</span>
+                  <span className="button-text">{t("formPasaje.enviar")}</span>
                 </button>
               </div>
             </form>

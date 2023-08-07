@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "flot": "FLOTA",
+    "contact": "CONTACTO",
+    "services": "SERVICIOS"
+  },
+  "formPasaje": {
+    "ida": "IDA",
+    "idaVuelta": "IDA Y VUELTA",
+    "origen": "ORIGEN",
+    "destino": "DESTINO",
+    "SeleccionarAvion": "Seleccionar avión",
+    "siguiente": "Siguiente",
+    "volver": "Volver",
+    "enviar": "Enviar"
+  },
+  "data": {
+    "name": "NOMBRE",
+    "last-name": "APELLIDO",
+    "phone": "TELEFONO",
+    "message": "MENSAJE"
+  },
+  "text": {
+    "clarification": "Aclaración: Esta herramienta es solo para fines de comparación. Rango calculado sin viento en ruta y con atmósfera estándar. Fue tomado como referencia el Aeroparque Jorge Newbery, Buenos Aires Argentina",
+    "consult": "CONSULTAR",
+    "range": "Rango",
+    "experience": "LA EXPERIENCIA",
+    "live": "VIVÍ"
+  },
+  "footer": {
+    "contacto": "Contacto",
+    "horario": "Horario",
+    "derechos": "Todos los derechos reservados"
+}
+}
