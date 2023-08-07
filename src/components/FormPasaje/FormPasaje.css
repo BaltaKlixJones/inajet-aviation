@@ -409,3 +409,41 @@ input[type="radio"] {
   }
 
 
+/* Estilo para los botones de radio */
+.radio-container {
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  /* margin-bottom: 5px;
+  margin-top: 5px; */
+  justify-content: center;
+  /* width: 110%; */
+  text-align: center;
+ 
+  margin-right: 15px;
+}
+
+.radio-label {
+  font-size: 16px;
+  margin-left: 15px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Titillium Web", sans-serif;
+ 
+ 
+}
+
+/* Estilo para el botón de radio seleccionado */
+.radio-input:checked + .radio-label {
+  color: #3c3f43; /* Cambia el color a tu preferencia */
+  font-weight: bold;
+
+}
+
+/* Estilo para el botón de radio al pasar el cursor sobre él */
+.radio-input:hover + .radio-label {
+  text-decoration: none;
+color: #858282;
+  cursor: pointer;
+}
+
+

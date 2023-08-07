@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./FormPasaje.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
-import { GrLinkNext } from "react-icons/gr";
 import { BiUserCircle, BiArrowBack } from "react-icons/bi";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import { CgCheckO } from "react-icons/cg";
-import { MdNavigateNext } from "react-icons/md";
 import { getAllAirCrafts } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -60,31 +54,7 @@ const FormPasaje = () => {
   };
 
   const handleOriginChange = async (e) => {
-    const value = e.target.value;
-    setOrigin(value);
-
-    if (value.length > 2) {
-      try {
-        const response = await axios.get(
-          `https://airport.api.aero/airport/city/${value}`,
-          {
-            headers: {
-              apikey: "TU_API_KEY", // Reemplaza "TU_API_KEY" con tu clave de API
-            },
-          }
-        );
-
-        // Extraer los nombres de las ciudades de los resultados de la API
-        const cityNames = response.data.airports.map((airport) => airport.city);
-        console.log("sugerencias", cityNames);
-
-        setSuggestions(cityNames);
-      } catch (error) {
-        console.error("Error fetching city suggestions:", error);
-      }
-    } else {
-      setSuggestions([]);
-    }
+    setOrigin(e.target.value);
   };
 
   const handleTripTypeChange = (e) => {
@@ -97,38 +67,51 @@ const FormPasaje = () => {
         {!secondForm ? (
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>
+              <div className="radio-container">
                 <input
                   type="radio"
+                  id="ida"
+                  className="radio-input"
                   value="Ida"
                   checked={tripType === "Ida"}
                   onChange={handleTripTypeChange}
                   required
                 />
-                <span className="span">{t("formPasaje.ida")}</span>
-              </label>
+                <label htmlFor="ida" className="radio-label">
+                  {t("formPasaje.ida")}
+                </label>
+              </div>
               &nbsp;
-              <label>
+              <div className="radio-container" >
                 <input
                   type="radio"
+                  id="idayvuelta"
+                  className="radio-input"
+                 
                   value="idayvuelta"
                   checked={tripType === "idayvuelta"}
                   onChange={handleTripTypeChange}
                   required
                 />
-                <span className="span">{t("formPasaje.idaVuelta")}</span>
-              </label>{" "}
+                <label htmlFor="idayvuelta" className="radio-label">
+                {t("formPasaje.idaVuelta")}
+                </label>
+              </div>
               &nbsp;
-              <label>
+              <div className="radio-container">
                 <input
                   type="radio"
+                  id="multileg"
+                  className="radio-input"
                   value="Multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}
                   required
                 />
-                <span className="span">MULTILEG</span>
-              </label>
+                <label for="multileg" className="radio-label">
+                  MULTILEG
+                </label>
+              </div>
             </div>
             <div className="form-group">
               <label className="label-icon">
@@ -164,7 +147,7 @@ const FormPasaje = () => {
                   </label>
                   <input
                     type="date"
-                    placeholder="FECHA DE IDA"
+                    placeholder="DEPARTURE DATE"
                     className="input-field"
                     min={minDate}
                     required

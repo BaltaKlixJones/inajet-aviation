@@ -77,7 +77,7 @@ const Perfil = () => {
           </div>
           <div className="iconos">
             <PiToiletLight style={{ fontSize: "34px", marginRight: "5px" }} />
-            <h3>{aircraft.toilet}</h3>
+            <h3>{aircraft.toilet == "SI" ? t("text.yes"): "NO"}</h3>
           </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
 {
   "navbar": {
-    "flot": "FLOT",
+    "flot": "FLEET",
     "contact": "CONTACT",
     "services": "SERVICES"
   },
   "formPasaje": {
-    "ida": "ONE WAT",
+    "ida": "ONE WAY",
     "idaVuelta": "ROUND TRIP",
     "origen": "FROM",
     "destino": "TO",
-    "SeleccionarAvion": "Select Airplane",
+    "SeleccionarAvion": "Aircraft",
     "siguiente": "Next",
     "volver": "Back",
     "enviar": "Send"
@@ -21,11 +21,13 @@
     "message": "MESSAGE"
   },
   "text": {
-    "clarification": "Clarification: This tool is for comparison purposes only. Calculated range without wind en route and using standard atmosphere. Aeroparque Jorge Newbery, Buenos Aires, Argentina, was taken as a reference.",
-    "consult": "TO CONSULT",
+    "clarification": "Clarification: This tool is for comparison purposes only. Calculated range without wind in route and standard atmosphere. Aeroparque Jorge Newbery, Buenos Aires, Argentina, was taken as a Airport reference.",
+    "consult": "CONSULT",
     "range": "Range",
     "experience": "THE EXPERIENCE",
-    "live": "LIVE"
+    "live": "LIVE",
+    "yes": "YES"
+ 
   },
   "footer": {
     "contacto": "Contact",
@@ -35,11 +37,11 @@
 "services" : {
   "vuelosEjecutivos" : "Executive Flights",
   "vuelosSanitarios" : "Sanitary Flights",
-  "soporteTierra": "Ground Soport",
-  "asesoramiento" : "Advisory",
+  "soporteTierra": "Ground Support",
+  "asesoramiento" : "Consulting",
   "textEjecutivos" : "We provide transfers to any part of the world. With a wide variety of aircraft, we offer customers the possibility to book a flight at any time, with complete confidentiality and the best support.",
   "textSanitary": "We coordinate medical flights and organ air transfers.",
   "textTierra" : "Need ground assistance? Contact us.",
-  "textAsesoramiento" : "Looking to buy or sell an aircraft? We provide advisory services."
+  "textAsesoramiento" : "Looking to buy or sell an aircraft? We provide Aviation Consulting."
 }
 }
