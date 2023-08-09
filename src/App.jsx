@@ -9,6 +9,7 @@ import Footer from "./pages/Footer/Footer";
 import Perfil from "./pages/Perfil/Perfil";
 import Loading from "./pages/Loading/Loading";
 import axios from "axios";
+import Contacto from "./pages/Contacto/Contacto";
 axios.defaults.baseURL = "http://localhost:3001";
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/aircraft/:id" element={<Perfil/>} />
         <Route exact path="/loading" element={<Loading/>} />
         <Route exact path="/consultar/:id" element={<Home/>} />
+        <Route exact path="/contacto" element={<Contacto/>} />
       </Routes>
     
       <Footer />
