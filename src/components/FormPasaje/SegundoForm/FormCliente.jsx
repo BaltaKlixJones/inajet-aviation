@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BiUserCircle, BiArrowBack } from "react-icons/bi";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 
-const FormCliente = ({ form, handleSubmit, setSecondForm }) => {
+const FormCliente = ({ setSecondForm }) => {
   const [t, i18n] = useTranslation("global");
+
+
   return (
     <>
       <div className="form-group">

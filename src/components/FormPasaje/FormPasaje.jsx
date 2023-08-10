@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./FormPasaje.css";
-import { BsFillCalendarRangeFill } from "react-icons/bs";
-import { BiUserCircle, BiArrowBack } from "react-icons/bi";
+import { BiUserCircle } from "react-icons/bi";
 import { getAllAirCrafts } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 import FormCliente from "./SegundoForm/FormCliente";
 import OneWay from "./OneWay/OneWay";
 import RoundTrip from "./RoundTrip/RoundTrip";
@@ -72,9 +72,8 @@ const FormPasaje = () => {
       user_to_2: user_to_2 ? user_to_2.value : null,
       user_passengers: user_passengers ? user_passengers.value : null,
       user_aircraft: user_aircraft ? user_aircraft.value : null,
-      multileg: multileg ? multileg.value  : null,
+      multileg: multileg ? multileg.value : null,
     };
-    console.log(newData);
     setFormData1(newData);
     setSecondForm(true);
   };
@@ -103,6 +102,14 @@ const FormPasaje = () => {
     // console.log(combinedData);
 
     try {
+      Swal.fire({
+        title: "Enviando consulta...",
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        onBeforeOpen: () => {
+          Swal.showLoading();
+        },
+      });
       await emailjs.send(
         `${import.meta.env.VITE_SERVICE_EMAIL}`,
         `${import.meta.env.VITE_TEMPLATE_ID}`,
@@ -110,11 +117,21 @@ const FormPasaje = () => {
         `${import.meta.env.VITE_PUBLIC_KEY}`
       );
 
-      alert("Su consulta ha sido enviada con éxito");
+      Swal.fire({
+        icon: "success",
+        title: "Su consulta ha sido enviada con éxito",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    
       setSecondForm(false);
     } catch (error) {
       console.log(error);
-      alert("Ha ocurrido un error, por favor intente nuevamente");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algo salió mal!",
+      });
     }
   };
 
@@ -193,10 +210,7 @@ const FormPasaje = () => {
               />
             )}
 
-            {tripType === "Multileg" && (
-              <Multileg />
-             
-            )}
+            {tripType === "Multileg" && <Multileg />}
             {/* Botones de pasajeros  */}
             <div className="form-group">
               <label className="label-icon">
