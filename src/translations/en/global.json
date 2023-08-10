@@ -12,13 +12,15 @@
     "SeleccionarAvion": "Aircraft",
     "siguiente": "Next",
     "volver": "Back",
-    "enviar": "Send"
+    "enviar": "Send",
+    "multilegText" : "Please, let us know what flights you need to make. We will contact you as soon as possible."
   },
   "data": {
     "name": "NAME",
     "last-name": "LAST NAME",
     "phone": "PHONE",
-    "message": "MESSAGE"
+    "message": "MESSAGE",
+    "and" : "AND"
   },
   "text": {
     "clarification": "Clarification: This tool is for comparison purposes only. Calculated range without wind in route and standard atmosphere. Aeroparque Jorge Newbery, Buenos Aires, Argentina, was taken as a Airport reference.",

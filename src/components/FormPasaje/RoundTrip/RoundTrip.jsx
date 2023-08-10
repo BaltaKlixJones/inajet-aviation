@@ -19,7 +19,7 @@ const RoundTrip = ({ handleOriginChange, handleOriginChange2, minDate , origin2,
         <input
           required
           type="text"
-          name="user_from"
+          name="user_from_2"
           placeholder={t("formPasaje.origen")}
           value={origin2}
           onChange={handleOriginChange2}
@@ -35,7 +35,7 @@ const RoundTrip = ({ handleOriginChange, handleOriginChange2, minDate , origin2,
           type="text"
           placeholder={t("formPasaje.destino")}
           className="input-field"
-          name="user_to"
+          name="user_to_2"
           required
         />
       </div>

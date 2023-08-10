@@ -1,11 +1,27 @@
-import React from 'react'
+import React, {useState} from "react";
+import { useTranslation } from "react-i18next";
 
 const Multileg = () => {
-  return (
-    <div>
-        <textarea name="" id="" cols="30" rows="10" placeholder='Por favor indicanos que vuelos necesitas'></textarea>
-    </div>
-  )
-}
+  const [t, i18n] = useTranslation("global");
+  const [multilegState, setMultilegState] = useState("");
 
-export default Multileg
+  const handleMultilegChange = (e) => {
+    setMultilegState(e.target.value);
+    console.log(multilegState)
+  };
+
+
+  return (
+    <div className="form-group">
+    <textarea
+      className="input-field"
+      name="multileg"
+      style={{ resize: "none", width: "80%", height: "200px" }}
+      placeholder={t("formPasaje.multilegText")}
+      
+    />
+  </div>
+  );
+};
+
+export default Multileg;

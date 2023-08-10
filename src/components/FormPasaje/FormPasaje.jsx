@@ -15,18 +15,18 @@ import Multileg from "./Multileg/Multileg";
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
   const [count, setCount] = useState(0);
-  
+
   const [origin2, setOrigin2] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
   const [selectedAircraftId, setSelectedAircraftId] = useState("");
-  const [form1Data, setForm1Data] = useState({});
+
   const { id } = useParams();
   const form = useRef();
   const [formDat1, setFormData1] = useState({});
-  const [formDat2, setFormData2] = useState({});
+  // const [formDat2, setFormData2] = useState({});
 
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
@@ -51,31 +51,6 @@ const FormPasaje = () => {
     setCount(count - 1);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const combinedData = { ...formDat1, ...formDat2 };
-
-    emailjs
-      .sendForm(
-        "service_upt0v8j",
-        "template_giym42l",
-        form.current,
-        "0M_Yk1zMYiYtPpfkz"
-      )
-      .then(
-        (result) => {
-          alert("Su consulta ha sido enviada con éxito");
-        },
-        (error) => {
-          console.log(error);
-          alert("Ha ocurrido un error, por favor intente nuevamente");
-        }
-      );
-
-    setSecondForm(false);
-  };
-
   const handleSubmit2 = (e) => {
     e.preventDefault();
 
@@ -83,30 +58,73 @@ const FormPasaje = () => {
       user_from,
       user_to,
       user_date_from,
-      user_date_to,
+      user_date_back,
       user_passengers,
       user_aircraft,
+      user_from_2,
+      user_to_2,
+      // multileg,
     } = e.target;
 
     const newData = {
-      userFrom: user_from.value,
-      userTo: user_to.value,
-      user_date_from: user_date_from.value,
-      user_date_to: user_date_to ? user_date_to.value : null,
-      user_passengers: user_passengers.value,
-      user_aircraft: user_aircraft.value,
+      user_from: user_from ? user_from.value : null,
+      user_to: user_to ? user_to.value : null,
+      user_date_from: user_date_from.value ? user_date_from.value : null,
+      user_date_back: user_date_back ? user_date_back.value : null,
+      user_from_2: user_from_2 ? user_from_2.value : null,
+      user_to_2: user_to_2 ? user_to_2.value : null,
+      user_passengers: user_passengers ? user_passengers.value : null,
+      user_aircraft: user_aircraft ? user_aircraft.value : null,
+      // multileg: multileg ? multileg.value  : null,
+    };
+    console.log(newData);
+    setFormData1(newData);
+    setSecondForm(true);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { from_name, from_lastname, email_id, user_phone, message } =
+      e.target;
+
+    const newData2 = {
+      from_name: from_name ? from_name.value : null,
+      from_lastname: from_lastname ? from_lastname.value : null,
+      message: message ? message.value : null,
+      email_id: email_id.value ? email_id.value : null,
+      user_phone: user_phone.value ? user_phone.value : null,
+    };
+    console.log(newData2);
+
+    const combinedData = {
+      ...formDat1,
+      ...newData2,
     };
 
-    setFormData1(newData);
-    console.log(newData);
-    setSecondForm(true);
+    setFormData1(combinedData);
+    console.log(combinedData);
+
+    try {
+      await emailjs.send(
+        `${import.meta.env.VITE_SERVICE_EMAIL}`,
+        `${import.meta.env.VITE_TEMPLATE_ID}`,
+        combinedData,
+        `${import.meta.env.VITE_PUBLIC_KEY}`
+      );
+
+      alert("Su consulta ha sido enviada con éxito");
+      setSecondForm(false);
+    } catch (error) {
+      console.log(error);
+      alert("Ha ocurrido un error, por favor intente nuevamente");
+    }
   };
 
   const handleSelectChange = (event) => {
     setSelectedAircraftId(event.target.value);
   };
 
- 
   const handleOriginChange2 = async (e) => {
     setOrigin2(e.target.value);
   };
@@ -156,7 +174,7 @@ const FormPasaje = () => {
                   type="radio"
                   id="multileg"
                   className="radio-input"
-                  value="Multileg"
+                  value="multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}
                   required
@@ -167,20 +185,30 @@ const FormPasaje = () => {
               </div>
             </div>
             {/* // Formulario de ida */}
-            {tripType === "Ida" && (
-           <OneWay minDate={minDate} />
-            )}
+            {tripType === "Ida" && <OneWay minDate={minDate} />}
 
-           {/* Formulario de ida y vuelta */}
+            {/* Formulario de ida y vuelta */}
             {tripType === "idayvuelta" && (
-              <RoundTrip handleOriginChange2={handleOriginChange2} minDate={minDate} origin={origin2}/>
+              <RoundTrip
+                handleOriginChange2={handleOriginChange2}
+                minDate={minDate}
+                origin={origin2}
+              />
             )}
 
-             {tripType === "Multileg" && (
-            <Multileg/>
-            
+            {tripType === "Multileg" && (
+              // <Multileg />
+              <div className="form-group">
+                <textarea
+                  rows="8"
+                  style={{ resize: "none", width: "80%" }}
+                  className="input-field"
+                  placeholder={t("formPasaje.multilegText")}
+                  name="multileg"
+                />
+              </div>
             )}
-               {/* Botones de pasajeros  */}
+            {/* Botones de pasajeros  */}
             <div className="form-group">
               <label className="label-icon">
                 <BiUserCircle className="icon" />
@@ -225,7 +253,7 @@ const FormPasaje = () => {
                   {t("formPasaje.SeleccionarAvion")}
                 </option>
                 {allAircrafts.map((aircraft) => (
-                  <option key={aircraft.id} value={aircraft.id}>
+                  <option key={aircraft.id} value={aircraft.name}>
                     {aircraft.name}
                   </option>
                 ))}
@@ -243,7 +271,9 @@ const FormPasaje = () => {
           </form>
         ) : (
           <div className="form" id="form2">
-            <FormCliente form={form} handleSubmit={handleSubmit} setSecondForm={setSecondForm}/>
+            <form ref={form} onSubmit={handleSubmit}>
+              <FormCliente setSecondForm={setSecondForm} />
+            </form>
           </div>
         )}
         <div className="gradient-overlay"></div>

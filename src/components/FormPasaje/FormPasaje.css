@@ -60,6 +60,30 @@ input[type="radio"] {
  margin-right: 0px;
 }
 
+.text_area_multileg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  /* text-align: center; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: rgba(3, 3, 3, 0.527);
+  border: .6px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.text_area_multileg placeholder {
+  color: white;
+}
+
+.text_area_multileg:focus {
+  outline: none;
+}
+
 
 .input-field,
 .input-field-passenger {

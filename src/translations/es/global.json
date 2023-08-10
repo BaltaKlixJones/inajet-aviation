@@ -9,16 +9,18 @@
     "idaVuelta": "IDA Y VUELTA",
     "origen": "ORIGEN",
     "destino": "DESTINO",
-    "SeleccionarAvion": "Seleccionar avión",
+    "SeleccionarAvion": "Avión",
     "siguiente": "Siguiente",
     "volver": "Volver",
-    "enviar": "Enviar"
+    "enviar": "Enviar",
+    "multilegText" : "Por favor, índicanos que vuelos necesitas para tu viaje y nos contactaremos a la brevedad"
   },
   "data": {
     "name": "NOMBRE",
     "last-name": "APELLIDO",
     "phone": "TELEFONO",
-    "message": "MENSAJE"
+    "message": "MENSAJE",
+    "and" : "Y"
   },
   "text": {
     "clarification": "Aclaración: Esta herramienta es solo para fines de comparación. Rango calculado sin viento en ruta y con atmósfera estándar. Fue tomado como referencia el Aeroparque Jorge Newbery, Buenos Aires Argentina",
