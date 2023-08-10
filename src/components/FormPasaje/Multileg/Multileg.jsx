@@ -7,18 +7,19 @@ const Multileg = () => {
 
   const handleMultilegChange = (e) => {
     setMultilegState(e.target.value);
-    console.log(multilegState)
   };
 
 
   return (
     <div className="form-group">
     <textarea
+      rows="8"
+      style={{ resize: "none", width: "80%" }}
       className="input-field"
-      name="multileg"
-      style={{ resize: "none", width: "80%", height: "200px" }}
       placeholder={t("formPasaje.multilegText")}
-      
+      onChange={handleMultilegChange}
+      value={multilegState}
+      name="multileg"
     />
   </div>
   );

@@ -15,19 +15,16 @@ import Multileg from "./Multileg/Multileg";
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
   const [count, setCount] = useState(0);
-
+  const [multilegState, setMultilegState] = useState();
   const [origin2, setOrigin2] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
   const [selectedAircraftId, setSelectedAircraftId] = useState("");
-
   const { id } = useParams();
   const form = useRef();
   const [formDat1, setFormData1] = useState({});
-  // const [formDat2, setFormData2] = useState({});
-
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
 
@@ -63,19 +60,19 @@ const FormPasaje = () => {
       user_aircraft,
       user_from_2,
       user_to_2,
-      // multileg,
+      multileg,
     } = e.target;
 
     const newData = {
       user_from: user_from ? user_from.value : null,
       user_to: user_to ? user_to.value : null,
-      user_date_from: user_date_from.value ? user_date_from.value : null,
+      user_date_from: user_date_from ? user_date_from.value : null,
       user_date_back: user_date_back ? user_date_back.value : null,
       user_from_2: user_from_2 ? user_from_2.value : null,
       user_to_2: user_to_2 ? user_to_2.value : null,
       user_passengers: user_passengers ? user_passengers.value : null,
       user_aircraft: user_aircraft ? user_aircraft.value : null,
-      // multileg: multileg ? multileg.value  : null,
+      multileg: multileg ? multileg.value  : null,
     };
     console.log(newData);
     setFormData1(newData);
@@ -95,7 +92,7 @@ const FormPasaje = () => {
       email_id: email_id.value ? email_id.value : null,
       user_phone: user_phone.value ? user_phone.value : null,
     };
-    console.log(newData2);
+    // console.log(newData2);
 
     const combinedData = {
       ...formDat1,
@@ -103,7 +100,7 @@ const FormPasaje = () => {
     };
 
     setFormData1(combinedData);
-    console.log(combinedData);
+    // console.log(combinedData);
 
     try {
       await emailjs.send(
@@ -125,7 +122,7 @@ const FormPasaje = () => {
     setSelectedAircraftId(event.target.value);
   };
 
-  const handleOriginChange2 = async (e) => {
+  const handleOriginChange2 = (e) => {
     setOrigin2(e.target.value);
   };
 
@@ -172,14 +169,14 @@ const FormPasaje = () => {
               <div className="radio-container">
                 <input
                   type="radio"
-                  id="multileg"
+                  id="Multileg"
                   className="radio-input"
-                  value="multileg"
+                  value="Multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}
                   required
                 />
-                <label for="multileg" className="radio-label">
+                <label htmlFor="Multileg" className="radio-label">
                   MULTILEG
                 </label>
               </div>
@@ -197,16 +194,8 @@ const FormPasaje = () => {
             )}
 
             {tripType === "Multileg" && (
-              // <Multileg />
-              <div className="form-group">
-                <textarea
-                  rows="8"
-                  style={{ resize: "none", width: "80%" }}
-                  className="input-field"
-                  placeholder={t("formPasaje.multilegText")}
-                  name="multileg"
-                />
-              </div>
+              <Multileg />
+             
             )}
             {/* Botones de pasajeros  */}
             <div className="form-group">
