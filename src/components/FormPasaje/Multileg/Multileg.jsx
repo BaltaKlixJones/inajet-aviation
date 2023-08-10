@@ -2,7 +2,9 @@ import React from 'react'
 
 const Multileg = () => {
   return (
-    <div>Multileg</div>
+    <div>
+        <textarea name="" id="" cols="30" rows="10" placeholder='Por favor indicanos que vuelos necesitas'></textarea>
+    </div>
   )
 }
 

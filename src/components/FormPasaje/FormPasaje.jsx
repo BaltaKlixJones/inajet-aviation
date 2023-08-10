@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./FormPasaje.css";
-import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { BiUserCircle, BiArrowBack } from "react-icons/bi";
-import { MdOutlinePhoneIphone } from "react-icons/md";
-import { HiOutlineMail } from "react-icons/hi";
 import { getAllAirCrafts } from "../../redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
+import FormCliente from "./SegundoForm/FormCliente";
+import OneWay from "./OneWay/OneWay";
+import RoundTrip from "./RoundTrip/RoundTrip";
+import Multileg from "./Multileg/Multileg";
 
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
   const [count, setCount] = useState(0);
-  const [origin, setOrigin] = useState("");
+  
+  const [origin2, setOrigin2] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
   const [selectedAircraftId, setSelectedAircraftId] = useState("");
+  const [form1Data, setForm1Data] = useState({});
   const { id } = useParams();
+  const form = useRef();
+  const [formDat1, setFormData1] = useState({});
+  const [formDat2, setFormData2] = useState({});
 
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
@@ -46,6 +53,52 @@ const FormPasaje = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const combinedData = { ...formDat1, ...formDat2 };
+
+    emailjs
+      .sendForm(
+        "service_upt0v8j",
+        "template_giym42l",
+        form.current,
+        "0M_Yk1zMYiYtPpfkz"
+      )
+      .then(
+        (result) => {
+          alert("Su consulta ha sido enviada con éxito");
+        },
+        (error) => {
+          console.log(error);
+          alert("Ha ocurrido un error, por favor intente nuevamente");
+        }
+      );
+
+    setSecondForm(false);
+  };
+
+  const handleSubmit2 = (e) => {
+    e.preventDefault();
+
+    const {
+      user_from,
+      user_to,
+      user_date_from,
+      user_date_to,
+      user_passengers,
+      user_aircraft,
+    } = e.target;
+
+    const newData = {
+      userFrom: user_from.value,
+      userTo: user_to.value,
+      user_date_from: user_date_from.value,
+      user_date_to: user_date_to ? user_date_to.value : null,
+      user_passengers: user_passengers.value,
+      user_aircraft: user_aircraft.value,
+    };
+
+    setFormData1(newData);
+    console.log(newData);
     setSecondForm(true);
   };
 
@@ -53,8 +106,9 @@ const FormPasaje = () => {
     setSelectedAircraftId(event.target.value);
   };
 
-  const handleOriginChange = async (e) => {
-    setOrigin(e.target.value);
+ 
+  const handleOriginChange2 = async (e) => {
+    setOrigin2(e.target.value);
   };
 
   const handleTripTypeChange = (e) => {
@@ -65,7 +119,7 @@ const FormPasaje = () => {
     <div className="container-home">
       <div className="form">
         {!secondForm ? (
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit2}>
             <div className="form-group">
               <div className="radio-container">
                 <input
@@ -82,19 +136,18 @@ const FormPasaje = () => {
                 </label>
               </div>
               &nbsp;
-              <div className="radio-container" >
+              <div className="radio-container">
                 <input
                   type="radio"
                   id="idayvuelta"
                   className="radio-input"
-                 
                   value="idayvuelta"
                   checked={tripType === "idayvuelta"}
                   onChange={handleTripTypeChange}
                   required
                 />
                 <label htmlFor="idayvuelta" className="radio-label">
-                {t("formPasaje.idaVuelta")}
+                  {t("formPasaje.idaVuelta")}
                 </label>
               </div>
               &nbsp;
@@ -113,103 +166,21 @@ const FormPasaje = () => {
                 </label>
               </div>
             </div>
-            <div className="form-group">
-              <label className="label-icon">
-                <GiAirplaneDeparture className="icon" />
-              </label>
-              <input
-                type="text"
-                placeholder={t("formPasaje.origen")}
-                value={origin}
-                onChange={handleOriginChange}
-                list="origin-suggestions"
-                className="input-field"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label className="label-icon">
-                <GiAirplaneArrival className="icon" />
-              </label>
-              <input
-                type="text"
-                placeholder={t("formPasaje.destino")}
-                className="input-field"
-                required
-              />
-            </div>
+            {/* // Formulario de ida */}
+            {tripType === "Ida" && (
+           <OneWay minDate={minDate} />
+            )}
 
+           {/* Formulario de ida y vuelta */}
             {tripType === "idayvuelta" && (
-              <div>
-                <div className="form-group">
-                  <label className="label-icon">
-                    <BsFillCalendarRangeFill className="icon" />
-                  </label>
-                  <input
-                    type="date"
-                    placeholder="DEPARTURE DATE"
-                    className="input-field"
-                    min={minDate}
-                    required
-                  />
-                </div>
-                <hr style={{ margin: "25px" }} />
-
-                <div className="form-group">
-                  <label className="label-icon">
-                    <GiAirplaneDeparture className="icon" />
-                  </label>
-                  <input
-                    required
-                    type="text"
-                    placeholder={t("formPasaje.origen")}
-                    value={origin}
-                    onChange={handleOriginChange}
-                    list="origin-suggestions"
-                    className="input-field"
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="label-icon">
-                    <GiAirplaneArrival className="icon" />
-                  </label>
-                  <input
-                    type="text"
-                    placeholder={t("formPasaje.destino")}
-                    className="input-field"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="label-icon">
-                    <BsFillCalendarRangeFill className="icon" />
-                  </label>
-                  <input
-                    type="date"
-                    placeholder="FECHA DE REGRESO"
-                    min={minDate}
-                    className="input-field"
-                    required
-                  />
-                </div>
-              </div>
+              <RoundTrip handleOriginChange2={handleOriginChange2} minDate={minDate} origin={origin2}/>
             )}
 
-            {tripType !== "idayvuelta" && (
-              <div className="form-group">
-                <label className="label-icon">
-                  <BsFillCalendarRangeFill className="icon" />
-                </label>
-                <input
-                  type="date"
-                  placeholder="FECHA DE IDA"
-                  min={minDate}
-                  className="input-field"
-                  required
-                />
-              </div>
+             {tripType === "Multileg" && (
+            <Multileg/>
+            
             )}
-
+               {/* Botones de pasajeros  */}
             <div className="form-group">
               <label className="label-icon">
                 <BiUserCircle className="icon" />
@@ -228,6 +199,7 @@ const FormPasaje = () => {
                   className="input-field-passenger"
                   style={{ width: "15px", textAlign: "center" }}
                   min="0"
+                  name="user_passengers"
                   readOnly
                   value={`${count}`}
                   required={count === 0}
@@ -240,14 +212,16 @@ const FormPasaje = () => {
                   +
                 </button>
               </div>
+
+              {/* Seleccion de avion  */}
               <select
-                name="avion"
                 id="avion"
+                name="user_aircraft"
                 value={selectedAircraftId}
                 onChange={handleSelectChange}
                 required
               >
-                <option value="" disabled>
+                <option value="" name="user_aircraft" disabled>
                   {t("formPasaje.SeleccionarAvion")}
                 </option>
                 {allAircrafts.map((aircraft) => (
@@ -268,85 +242,8 @@ const FormPasaje = () => {
             </div>
           </form>
         ) : (
-          <div
-            className="form"
-            id="form2"
-            onSubmit={handleSubmit}
-            style={{ margin: "10px" }}
-          >
-            <form>
-              <div className="form-group">
-                <label className="label-icon">
-                  <BiUserCircle className="icon" />
-                </label>
-                <input
-                  type="text"
-                  placeholder={t("data.name")}
-                  className="input-field"
-                />
-              </div>
-              <div className="form-group">
-                <label className="label-icon">
-                  <BiUserCircle className="icon" />
-                </label>
-                <input
-                  type="text"
-                  placeholder={t("data.last-name")}
-                  className="input-field"
-                />
-              </div>
-              <div className="form-group">
-                <label className="label-icon">
-                  <MdOutlinePhoneIphone className="icon" />
-                </label>
-                <input
-                  type="text"
-                  placeholder={t("data.phone")}
-                  className="input-field"
-                />
-              </div>
-              <div className="form-group">
-                <label className="label-icon">
-                  <HiOutlineMail className="icon" />
-                </label>
-                <input
-                  type="text"
-                  placeholder="EMAIL"
-                  className="input-field"
-                />
-              </div>
-
-              <div className="form-group">
-                <textarea
-                  rows="8"
-                  style={{ resize: "none", width: "80%" }}
-                  className="input-field"
-                  placeholder={t("data.message")}
-                />
-              </div>
-              <div className="form-group">
-                <button
-                  className="custom-button"
-                  id="btn2"
-                  onClick={() => setSecondForm(false)}
-                >
-                  <span className="circle" aria-hidden="true">
-                    <BiArrowBack
-                      style={{ fontSize: "24px", marginTop: "12px" }}
-                      className="iconback"
-                    />
-                  </span>
-                  <span className="button-text">{t("formPasaje.volver")}</span>
-                </button>
-
-                <button className="learn-more" id="btn">
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text">{t("formPasaje.enviar")}</span>
-                </button>
-              </div>
-            </form>
+          <div className="form" id="form2">
+            <FormCliente form={form} handleSubmit={handleSubmit} setSecondForm={setSecondForm}/>
           </div>
         )}
         <div className="gradient-overlay"></div>
