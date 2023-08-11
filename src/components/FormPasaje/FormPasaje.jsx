@@ -11,6 +11,7 @@ import FormCliente from "./SegundoForm/FormCliente";
 import OneWay from "./OneWay/OneWay";
 import RoundTrip from "./RoundTrip/RoundTrip";
 import Multileg from "./Multileg/Multileg";
+import { useLocation } from "react-router-dom";
 
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
@@ -27,6 +28,7 @@ const FormPasaje = () => {
   const [formDat1, setFormData1] = useState({});
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
+  const [allAircraftsState, setAllAircraftsState] = useState("");
 
   useEffect(() => {
     dispatch(getAllAirCrafts());
@@ -74,6 +76,7 @@ const FormPasaje = () => {
       user_aircraft: user_aircraft ? user_aircraft.value : null,
       multileg: multileg ? multileg.value : null,
     };
+
     setFormData1(newData);
     setSecondForm(true);
   };
@@ -91,7 +94,6 @@ const FormPasaje = () => {
       email_id: email_id.value ? email_id.value : null,
       user_phone: user_phone.value ? user_phone.value : null,
     };
-    // console.log(newData2);
 
     const combinedData = {
       ...formDat1,
@@ -99,11 +101,12 @@ const FormPasaje = () => {
     };
 
     setFormData1(combinedData);
-    // console.log(combinedData);
+    
 
     try {
       Swal.fire({
         title: "Enviando consulta...",
+        text: "Espere un momento por favor...",
         allowOutsideClick: false,
         showConfirmButton: false,
         onBeforeOpen: () => {
@@ -123,7 +126,7 @@ const FormPasaje = () => {
         showConfirmButton: false,
         timer: 2000,
       });
-    
+
       setSecondForm(false);
     } catch (error) {
       console.log(error);
@@ -134,6 +137,12 @@ const FormPasaje = () => {
       });
     }
   };
+  
+  const selectedAircraft = allAircrafts.find(
+    (aircraft) => aircraft.id === selectedAircraftId
+  );
+
+  const selectedAircraftName = selectedAircraft ? selectedAircraft.name : "";
 
   const handleSelectChange = (event) => {
     setSelectedAircraftId(event.target.value);
@@ -248,11 +257,12 @@ const FormPasaje = () => {
               <select
                 id="avion"
                 name="user_aircraft"
-                value={selectedAircraftId}
+                value={id ? selectedAircraftName : selectedAircraftId}
                 onChange={handleSelectChange}
                 required
+                // disabled={id ? true : false}
               >
-                <option value="" name="user_aircraft" disabled>
+                <option value="" disabled>
                   {t("formPasaje.SeleccionarAvion")}
                 </option>
                 {allAircrafts.map((aircraft) => (
