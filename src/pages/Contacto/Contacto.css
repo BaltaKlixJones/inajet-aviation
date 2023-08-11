@@ -1,22 +1,87 @@
 /* En ContactForm.css */
 
-.container-contacto {
-    background-image: url("../../assets/images/wallpaper/contact-wallpaper.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    color: black;
-  }
+.fondo-contacto {
+  background-image: url("../../assets/images/wallpaper/contact-wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+}
 
-  .contact-container {
-    background-color: rgba(0, 0, 0, 0.493);
+.trasfondo-contacto {
+  background-color: rgba(0, 0, 0, 0.493);
+  
+}
+
+.formulario-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  /* border: 1px solid #ccc; */
+  padding: 20px;
+  width: 80%;
+  margin-left: 50px;
+}
+
+.campo-doble {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.message-contact {
+  width: 90%;
+  height: 100px;
+  resize: none;
 }
 
 
+.campo {
+width: 50%;
+}
 
- 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.input-contact,
+textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+.div-contact-bnt {
+  
+display: flex;
+justify-content: center;
+/* align-items:flex-end */
+}
+
+.btn-contact {
+  background-color: #abadb0;
+  color: #292828;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.btn-contact:hover {
+  background-color: #0056b3;
+}

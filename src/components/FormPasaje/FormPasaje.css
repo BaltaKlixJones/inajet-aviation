@@ -271,7 +271,7 @@ select:disabled {
   opacity: 2;
   color: white;
   cursor: not-allowed;
-  border: 1px solid rgb(5, 62, 123);
+  border: 1.5px solid rgb(35, 71, 109);
   border-radius: 5px;
   height: 30px;
 }
