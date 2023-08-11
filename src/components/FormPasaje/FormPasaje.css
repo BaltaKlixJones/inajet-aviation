@@ -21,7 +21,7 @@
   height: auto;
   border-radius: 10px;
   opacity: 0.8;
-  margin:10px
+  margin: 10px;
 }
 
 input[type="radio"] {
@@ -30,10 +30,8 @@ input[type="radio"] {
 
 .span {
   color: white;
-  font-family: 'Visby', sans-serif;
+  font-family: "Visby", sans-serif;
   font-size: 14.5px;
-
-
 }
 
 .form-group {
@@ -44,7 +42,7 @@ input[type="radio"] {
 
 .label-icon {
   background-color: #ffffff51;
- 
+
   padding: 10px;
   border-radius: 50%;
   margin-right: 10px;
@@ -57,7 +55,7 @@ input[type="radio"] {
 .icon {
   font-size: 25px;
   color: white;
- margin-right: 0px;
+  margin-right: 0px;
 }
 
 .text_area_multileg {
@@ -71,7 +69,7 @@ input[type="radio"] {
   margin-bottom: 50px;
   color: white;
   background-color: rgba(3, 3, 3, 0.527);
-  border: .6px solid white;
+  border: 0.6px solid white;
   border-radius: 5px;
   padding: 10px;
 }
@@ -83,7 +81,6 @@ input[type="radio"] {
 .text_area_multileg:focus {
   outline: none;
 }
-
 
 .input-field,
 .input-field-passenger {
@@ -141,7 +138,6 @@ input[type="radio"] {
   align-items: center;
 }
 
-
 #btn {
   position: relative;
   display: inline-block;
@@ -155,16 +151,14 @@ input[type="radio"] {
   font-size: inherit;
   font-family: inherit;
   margin-bottom: 20px;
- }
+}
 
-
- 
- #btn.learn-more {
+#btn.learn-more {
   width: 12rem;
   height: auto;
- }
- 
- #btn.learn-more .circle {
+}
+
+#btn.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -173,26 +167,26 @@ input[type="radio"] {
   height: 3rem;
   background: #292a33;
   border-radius: 1.625rem;
- }
- 
- #btn.learn-more .circle .icon {
+}
+
+#btn.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
   background: #fff;
- }
- 
- #btn.learn-more .circle .icon.arrow {
+}
+
+#btn.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
- }
- 
- #btn.learn-more .circle .icon.arrow::before {
+}
+
+#btn.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.29rem;
@@ -202,9 +196,9 @@ input[type="radio"] {
   border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
- }
- 
- #btn.learn-more .button-text {
+}
+
+#btn.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -214,30 +208,29 @@ input[type="radio"] {
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
   color: #bdbdc0;
-  
+
   /* line-height: 1.6; */
   letter-spacing: 1px;
   text-align: center;
   font-size: 18px;
   /* text-transform: uppercase; */
- }
- 
- #btn:hover .circle {
+}
+
+#btn:hover .circle {
   width: 100%;
- }
- 
- #btn:hover .circle .icon.arrow {
+}
+
+#btn:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(1rem, 0);
- }
- 
- #btn:hover .button-text {
+}
+
+#btn:hover .button-text {
   color: #fff;
   font-weight: 500;
- }
+}
 
-
- /* Estilos para el botón */
+/* Estilos para el botón */
 .custom-button {
   width: 12rem;
   height: auto;
@@ -260,7 +253,8 @@ input[type="radio"] {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
-  margin-bottom: 20px;}
+  margin-bottom: 20px;
+}
 
 .custom-button .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -271,6 +265,23 @@ input[type="radio"] {
   height: 3rem;
   background: #292a33;
   border-radius: 1.625rem;
+}
+
+select:disabled {
+  opacity: 2;
+  color: white;
+  cursor: not-allowed;
+  border: 1px solid rgb(5, 62, 123);
+  border-radius: 5px;
+  height: 30px;
+}
+
+select {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 14px;
 }
 
 .custom-button .circle .icon {
@@ -330,13 +341,12 @@ input[type="radio"] {
   font-weight: 500;
 }
 
-
 #btn2.learn-more {
   width: 12rem;
   height: auto;
- }
- 
- #btn2.learn-more .circle {
+}
+
+#btn2.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -345,25 +355,25 @@ input[type="radio"] {
   height: 3rem;
   background: #292a33;
   border-radius: 1.625rem;
- }
- 
- #btn2.learn-more .circle .icon {
+}
+
+#btn2.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
   background: #fff;
- } 
- 
- #btn2.learn-more .circle .icon.arrow {
+}
+
+#btn2.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
- } 
- 
+}
+
 #btn2.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
@@ -374,9 +384,9 @@ input[type="radio"] {
   border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
- } 
- 
- #btn2.learn-more .button-text {
+}
+
+#btn2.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -386,38 +396,32 @@ input[type="radio"] {
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
   color: #bdbdc0;
-  
+
   /* line-height: 1.6; */
   letter-spacing: 1px;
   text-align: center;
   font-size: 18px;
   /* text-transform: uppercase; */
- }
- 
- #btn2:hover .circle {
+}
+
+#btn2:hover .circle {
   width: 100%;
-  
- }
- #btn2:hover .iconback {
-  display:none
-  
- }
+}
+#btn2:hover .iconback {
+  display: none;
+}
 
-
- 
- #btn2:hover .circle .icon.arrow {
-  
+#btn2:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(0rem, 0);
- } 
+}
 
- #btn2:hover .button-text {
+#btn2:hover .button-text {
   color: #fff;
   font-weight: 500;
- }
+}
 
- 
- .iconback:hover {
+.iconback:hover {
   color: #fff;
   font-weight: 500;
   transform: translate(0rem, 0);
@@ -430,9 +434,8 @@ input[type="radio"] {
   left: 0;
   right: 0;
   height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
-  background-image: linear-gradient(to top,  #242424 ,  rgba(9, 9, 9, 0.079));
-  }
-
+  background-image: linear-gradient(to top, #242424, rgba(9, 9, 9, 0.079));
+}
 
 /* Estilo para los botones de radio */
 .radio-container {
@@ -444,7 +447,7 @@ input[type="radio"] {
   justify-content: center;
   /* width: 110%; */
   text-align: center;
- 
+
   margin-right: 15px;
 }
 
@@ -453,22 +456,17 @@ input[type="radio"] {
   margin-left: 15px;
   /* font-family: "Roboto", sans-serif; */
   font-family: "Titillium Web", sans-serif;
- 
- 
 }
 
 /* Estilo para el botón de radio seleccionado */
 .radio-input:checked + .radio-label {
   color: #3c3f43; /* Cambia el color a tu preferencia */
   font-weight: bold;
-
 }
 
 /* Estilo para el botón de radio al pasar el cursor sobre él */
 .radio-input:hover + .radio-label {
   text-decoration: none;
-color: #858282;
+  color: #858282;
   cursor: pointer;
 }
-
-

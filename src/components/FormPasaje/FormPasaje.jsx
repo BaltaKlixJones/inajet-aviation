@@ -260,7 +260,7 @@ const FormPasaje = () => {
                 value={id ? selectedAircraftName : selectedAircraftId}
                 onChange={handleSelectChange}
                 required
-                // disabled={id ? true : false}
+                disabled={id ? true : false}
               >
                 <option value="" disabled>
                   {t("formPasaje.SeleccionarAvion")}
