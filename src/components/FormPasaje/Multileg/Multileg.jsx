@@ -20,6 +20,7 @@ const Multileg = () => {
       onChange={handleMultilegChange}
       value={multilegState}
       name="multileg"
+      required
     />
   </div>
   );

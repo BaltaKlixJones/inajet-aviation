@@ -10,7 +10,7 @@
     margin-bottom: 40px;
     /* Propiedades de la animación */
     opacity: 0;
-    animation: fade-up 1s ease-out forwards;
+    animation: fade-up 1.5s ease-out forwards;
   }
   @keyframes fade-up {
     from {

@@ -240,9 +240,9 @@ const FormPasaje = () => {
                   style={{ width: "15px", textAlign: "center" }}
                   min="0"
                   name="user_passengers"
+                  required={count < 0}
                   readOnly
                   value={`${count}`}
-                  required={count === 0}
                 />
                 <button
                   type="button"

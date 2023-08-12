@@ -20,7 +20,7 @@ const Formulario = () => {
       {/* <h1>Contacto</h1> */}
         <div className="campo-doble">
           <div className="campo">
-            <label>Nombre</label>
+            <label className='label'>Nombre</label>
             <input
               type="text"
               className="input-contact"
@@ -30,7 +30,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label>Apellido</label>
+            <label className='label'>Apellido</label>
             <input
               type="text"
               className="input-contact"
@@ -42,7 +42,7 @@ const Formulario = () => {
         </div>
         <div className="campo-doble">
           <div className="campo">
-            <label>Email</label>
+            <label className='label'>Email</label>
             <input
               type="email"
               className="input-contact"
@@ -52,7 +52,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label>Teléfono</label>
+            <label className='label'>Teléfono</label>
             <input
               type="tel"
               className="input-contact"
@@ -63,7 +63,7 @@ const Formulario = () => {
           </div>
         </div>
         <div className="campo2">
-          <label>Mensaje</label>
+          <label className='label'>Mensaje</label>
           <textarea
             value={mensaje}
             className='message-contact'
