@@ -16,9 +16,6 @@ import { useLocation } from "react-router-dom";
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
   const [count, setCount] = useState(0);
-  const [multilegState, setMultilegState] = useState();
-  const [origin2, setOrigin2] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
   const [tripType, setTripType] = useState("Ida");
   const [minDate, setMinDate] = useState("");
   const [secondForm, setSecondForm] = useState(false);
@@ -28,7 +25,7 @@ const FormPasaje = () => {
   const [formDat1, setFormData1] = useState({});
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
-  const [allAircraftsState, setAllAircraftsState] = useState("");
+
 
   useEffect(() => {
     dispatch(getAllAirCrafts());
@@ -144,17 +141,16 @@ const FormPasaje = () => {
 
   const selectedAircraftName = selectedAircraft ? selectedAircraft.name : "";
 
+
   const handleSelectChange = (event) => {
     setSelectedAircraftId(event.target.value);
   };
 
-  const handleOriginChange2 = (e) => {
-    setOrigin2(e.target.value);
-  };
 
   const handleTripTypeChange = (e) => {
     setTripType(e.target.value);
   };
+
 
   return (
     <div className="container-home">
@@ -213,9 +209,7 @@ const FormPasaje = () => {
             {/* Formulario de ida y vuelta */}
             {tripType === "idayvuelta" && (
               <RoundTrip
-                handleOriginChange2={handleOriginChange2}
                 minDate={minDate}
-                origin={origin2}
               />
             )}
 
@@ -240,7 +234,7 @@ const FormPasaje = () => {
                   style={{ width: "15px", textAlign: "center" }}
                   min="0"
                   name="user_passengers"
-                  required={count < 0}
+                  required={count === 0}
                   readOnly
                   value={`${count}`}
                 />
