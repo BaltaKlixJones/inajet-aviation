@@ -4,7 +4,6 @@ import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
 import OneWay from "../OneWay/OneWay";
-import {IoLocationOutline} from "react-icons/io5";
 
 const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [t, i18n] = useTranslation("global");
@@ -37,7 +36,11 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
 
   return (
     <div>
-      <OneWay handleOriginChange={handleOriginChange} origin={origin} minDate={minDate} />
+      <OneWay
+        handleOriginChange={handleOriginChange}
+        origin={origin}
+        minDate={minDate}
+      />
       <hr style={{ margin: "25px" }} />
 
       <div className="form-group">
@@ -54,12 +57,11 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
           list="origin-suggestions4"
           className="input-field"
         />
-      <datalist id="origin-suggestions4">
+        <datalist id="origin-suggestions4">
           {suggestions2.map((suggestion2, index) => (
             <option key={index} value={suggestion2} />
           ))}
         </datalist>
-
       </div>
       <div className="form-group">
         <label className="label-icon">
@@ -75,10 +77,10 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
           onChange={handleDestinationChange2}
         />
         <datalist id="destination-suggestions3">
-    {destinationSuggestions2.map((suggestion2, index) => (
-      <option key={index} value={suggestion2} />
-    ))}
-  </datalist>
+          {destinationSuggestions2.map((suggestion2, index) => (
+            <option key={index} value={suggestion2} />
+          ))}
+        </datalist>
       </div>
       <div className="form-group">
         <label className="label-icon">
