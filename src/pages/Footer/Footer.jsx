@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="contact-details">
-              <BsBroadcastPin className="icon3" />
+              <BsBroadcastPin className="icon4" />
               <p className="contact-address">
                 Aeroparque Jorge Newbery, Ciudad Autónoma de Buenos Aires,
                 Argentina
