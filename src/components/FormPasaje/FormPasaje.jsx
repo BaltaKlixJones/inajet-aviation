@@ -102,6 +102,7 @@ const FormPasaje = () => {
 
     try {
       Swal.fire({
+        icon:"info",
         title: "Enviando consulta...",
         text: "Espere un momento por favor...",
         allowOutsideClick: false,

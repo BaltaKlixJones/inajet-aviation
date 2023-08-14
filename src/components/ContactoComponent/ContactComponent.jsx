@@ -10,12 +10,14 @@ const Formulario = () => {
   const [telefono, setTelefono] = useState("");
   const [mensaje, setMensaje] = useState("");
 
+
   const handleSubmit = async  (e) => {
     e.preventDefault();
     // Aquí puedes agregar la lógica para enviar los datos del formulario
     // a través de una API, por ejemplo.
     try {
       Swal.fire({
+        icon: "info",
         title: "Enviando consulta...",
         text: "Espere un momento por favor...",
         allowOutsideClick: false,
@@ -51,7 +53,7 @@ const Formulario = () => {
 
   return (
     <div className="formulario-container">
-      <form className="formulario" onSubmit={handleSubmit}>
+      <form ref={form} className="formulario" onSubmit={handleSubmit}>
         {/* <h1>Contacto</h1> */}
         <div className="campo-doble">
           <div className="campo">
