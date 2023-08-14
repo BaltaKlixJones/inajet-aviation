@@ -8,8 +8,8 @@ const Footer = () => {
   const [t, i18n] = useTranslation("global");
   return (
     <>
-      <hr style={{ width: "85%" }} />
       <footer className="footer">
+      <hr  className="hr-footer" />
         <div className="footer-content">
           <div className="div-logo">
             <h1 className="logo_h1">ınaȷet </h1>

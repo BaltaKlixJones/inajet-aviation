@@ -62,3 +62,13 @@
    animation-delay: 0.3s;
    animation-fill-mode: forwards;
 }
+
+@media (max-width: 768px) {
+  .container-flota {
+    height: 50dvh;
+    width: 100%;
+  }
+  .titulo-flota  {
+    font-size: 25px;
+  }
+}

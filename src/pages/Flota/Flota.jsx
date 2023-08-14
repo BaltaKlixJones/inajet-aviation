@@ -36,10 +36,10 @@ const Flota = () => {
       <div className="gradient-overlay"></div>
     </div>
     {/* <h1 className="titulo-flota" style={{display:"flex", alignItems:"center", justifyContent: "center"}}>FLOTA</h1> */}
-      <div className="container-cards">
+      
 
       <Cards />
-      </div>
+     
 </>
   );
 };

@@ -12,7 +12,7 @@
 
 .card {
   max-width: 400px;
-  width: 500px;
+  width: 400px;
   background-color: rgba(211, 211, 211, 0.038); 
 
   border: 1px solid rgba(3, 3, 3, 0.28);
@@ -137,4 +137,25 @@
 
 .radio-input label:nth-child(3):has(input:checked) ~ .selection {
   transform: translateX(calc(var(--container_width) * 2 / 3));
+}
+
+
+
+@media (max-width: 768px) {
+  .radio-input {
+    width: 90%;
+    }
+    .cards-container {
+      width: 100%;
+    }
+    .card-image {
+      height: auto;
+      width: 90%;
+      max-height: 200px;
+      height: auto;
+    }
+    .card {
+      /* background-color: red; */
+      width: 70%;
+    }
 }
