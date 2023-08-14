@@ -186,6 +186,7 @@
     margin-left: 0px;
     color: #f7f7f7af;
   }
+
 }
 
 @media (min-width: 1401px) {
@@ -251,4 +252,5 @@
   .nav__link {
     color: #f7f7f7;
   }
+ 
 }

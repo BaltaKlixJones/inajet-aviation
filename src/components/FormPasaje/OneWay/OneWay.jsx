@@ -3,6 +3,7 @@ import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
+import locations from "../../../data/locations";
 
 const OneWay = ({ minDate }) => {
   const [t, i18n] = useTranslation("global");
@@ -11,27 +12,21 @@ const OneWay = ({ minDate }) => {
   const [destinationSuggestions, setDestinationSuggestions] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
 
-  const locations = [
-    "Salta, Argentina",
-    "Jujuy, Argentina",
-    "Chaco, Argentina",
-    "Buenos Aires, Argentina",
-    "Cordoba, Argentina",
-    "Tucumán, Argentina",
-    "Mendoza, Argentina",
-  ];
+ 
+
+ 
 
   const handleOriginChange = (e) => {
     const inputValue = e.target.value;
     setOrigin(inputValue);
-    const filteredSuggestions = getSuggestions(inputValue, locations); // Usa la función reutilizable
+    const filteredSuggestions = getSuggestions(inputValue, locations);
     setSuggestions(filteredSuggestions);
   };
 
   const handleDestinationChange = (e) => {
     const inputValue = e.target.value;
     setDestination(inputValue);
-    const filteredSuggestions = getSuggestions(inputValue, locations); // Usa la función reutilizable
+    const filteredSuggestions = getSuggestions(inputValue, locations); 
     setDestinationSuggestions(filteredSuggestions);
   };
 
@@ -50,6 +45,7 @@ const OneWay = ({ minDate }) => {
           className="input-field"
           required
           list="origin-suggestions"
+          autoComplete="off"
         />
         <datalist id="origin-suggestions">
           {suggestions.map((suggestion, index) => (
@@ -70,6 +66,7 @@ const OneWay = ({ minDate }) => {
           onChange={handleDestinationChange}
           required
           list="destination-suggestions"
+          autoComplete="off"
         />
         <datalist id="destination-suggestions">
           {destinationSuggestions.map((suggestion, index) => (

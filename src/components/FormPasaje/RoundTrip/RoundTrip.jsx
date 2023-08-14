@@ -4,6 +4,7 @@ import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
 import OneWay from "../OneWay/OneWay";
+import locations from "../../../data/locations";
 
 const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [t, i18n] = useTranslation("global");
@@ -11,15 +12,6 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [destinationSuggestions2, setDestinationSuggestions2] = useState([]);
   const [origin2, setOrigin2] = useState("");
 
-  const locations = [
-    "Salta, Argentina",
-    "Jujuy, Argentina",
-    "Chaco, Argentina",
-    "Buenos Aires, Argentina",
-    "Cordoba, Argentina",
-    "Tucumán, Argentina",
-    "Mendoza, Argentina",
-  ];
 
   const handleOriginChange2 = (e) => {
     const inputValue = e.target.value;
@@ -56,6 +48,7 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
           onChange={handleOriginChange2}
           list="origin-suggestions4"
           className="input-field"
+          autoComplete="off"
         />
         <datalist id="origin-suggestions4">
           {suggestions2.map((suggestion2, index) => (
@@ -75,6 +68,7 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
           required
           list="destination-suggestions3"
           onChange={handleDestinationChange2}
+          autoComplete="off"
         />
         <datalist id="destination-suggestions3">
           {destinationSuggestions2.map((suggestion2, index) => (
