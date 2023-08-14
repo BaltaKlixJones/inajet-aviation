@@ -69,6 +69,7 @@
   height: 350px;
   margin: 0 auto;
   transition: 0.5s;
+  max-width: 650px;
 }
 
 .container-profile-inicio  img {
