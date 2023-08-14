@@ -11,10 +11,8 @@ const Formulario = () => {
   const [mensaje, setMensaje] = useState("");
 
 
-  const handleSubmit = async  (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos del formulario
-    // a través de una API, por ejemplo.
     try {
       Swal.fire({
         icon: "info",
@@ -47,8 +45,7 @@ const Formulario = () => {
         title: "Oops...",
         text: "Algo salió mal!",
       });
-    }
-    
+    }   
   };
 
   return (
