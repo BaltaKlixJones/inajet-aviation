@@ -1,7 +1,11 @@
-export const GET_AIRCRAFTS = "GET_AIRCRAFTS";
-export const GET_AIRCRAFTS_BYID = "GET_AIRCRAFTS_BYID";
 import axios from "axios";
 
+// Exportaciones 
+export const GET_AIRCRAFTS = "GET_AIRCRAFTS";
+export const GET_AIRCRAFTS_BYID = "GET_AIRCRAFTS_BYID";
+export const GET_LOCATIONS = "GET_LOCATIONS"
+
+// Funciones
 export const getAllAirCrafts = () => {
     return async function (dispatch) {
       const bdInfo = await axios.get("/aircraft");
@@ -16,4 +20,12 @@ export const getAllAirCrafts = () => {
       const plane = bdInfo.data;
       dispatch({ type: GET_AIRCRAFTS_BYID, payload: plane });
     };
+  }
+
+  export const getAllLocations = () => {
+    return async function (dispatch) {
+      const locationsBd = await axios.get("/locations")
+      const locations = locationsBd.data
+      dispatch({type: GET_LOCATIONS, payload: locations})
+    }
   }

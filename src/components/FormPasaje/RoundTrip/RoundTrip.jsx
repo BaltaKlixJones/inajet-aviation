@@ -1,28 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
 import OneWay from "../OneWay/OneWay";
-import locations from "../../../data/locations";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllLocations } from "../../../Redux/Actions";
+// import locations from "../../../data/locations";
 
 const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [t, i18n] = useTranslation("global");
   const [suggestions2, setSuggestions2] = useState([]);
   const [destinationSuggestions2, setDestinationSuggestions2] = useState([]);
   const [origin2, setOrigin2] = useState("");
+  const allLocations = useSelector((state) => state.locations);
+  const dispatch = useDispatch();
 
+  useEffect (() => {
+    dispatch(getAllLocations())
+  },[dispatch])
 
   const handleOriginChange2 = (e) => {
     const inputValue = e.target.value;
     setOrigin2(inputValue);
-    const filteredSuggestions = getSuggestions(inputValue, locations);
+    const filteredSuggestions = getSuggestions(inputValue, allLocations);
     setSuggestions2(filteredSuggestions);
   };
 
   const handleDestinationChange2 = (e) => {
     const inputValue = e.target.value;
-    const filteredSuggestions = getSuggestions(inputValue, locations);
+    const filteredSuggestions = getSuggestions(inputValue, allLocations);
     setDestinationSuggestions2(filteredSuggestions);
   };
 

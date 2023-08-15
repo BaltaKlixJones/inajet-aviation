@@ -1,11 +1,13 @@
 import {
 GET_AIRCRAFTS,
-GET_AIRCRAFTS_BYID
+GET_AIRCRAFTS_BYID,
+GET_LOCATIONS
 } from "./Actions";
 
 const initialState = {
     allAircrafts: [],
-    aircraft : []
+    aircraft : [],
+    locations: []
   };
   
   const rootReducer = (state = initialState, action) => {
@@ -21,6 +23,11 @@ const initialState = {
             ...state,
             aircraft: action.payload,
         };
+        case GET_LOCATIONS:
+          return {
+            ...state,
+            locations: action.payload
+          }
 
       default:
         return {

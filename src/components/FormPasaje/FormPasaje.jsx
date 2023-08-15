@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./FormPasaje.css";
 import { BiUserCircle } from "react-icons/bi";
-import { getAllAirCrafts } from "../../redux/Actions";
+import { getAllAirCrafts  } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -27,6 +27,7 @@ const FormPasaje = () => {
   const allAircrafts = useSelector((state) => state.allAircrafts);
 
 
+
   useEffect(() => {
     dispatch(getAllAirCrafts());
   }, [dispatch]);
@@ -42,6 +43,8 @@ const FormPasaje = () => {
   const handleIncrement = () => {
     setCount(count + 1);
   };
+
+
 
   const handleDecrement = () => {
     setCount(count - 1);

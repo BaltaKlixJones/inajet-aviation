@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Multileg = () => {
@@ -9,20 +9,19 @@ const Multileg = () => {
     setMultilegState(e.target.value);
   };
 
-
   return (
     <div className="form-group">
-    <textarea
-      rows="8"
-      style={{ resize: "none", width: "80%" }}
-      className="input-field"
-      placeholder={t("formPasaje.multilegText")}
-      onChange={handleMultilegChange}
-      value={multilegState}
-      name="multileg"
-      required
-    />
-  </div>
+      <textarea
+        rows="8"
+        style={{ resize: "none", width: "80%" }}
+        className="input-field"
+        placeholder={t("formPasaje.multilegText")}
+        onChange={handleMultilegChange}
+        value={multilegState}
+        name="multileg"
+        required
+      />
+    </div>
   );
 };
 
