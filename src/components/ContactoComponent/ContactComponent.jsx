@@ -77,7 +77,7 @@ const Formulario = () => {
         </div>
         <div className="campo-doble">
           <div className="campo">
-            <label className="label">Email:</label>
+            <label className="label">EMAIL:</label>
             <input
               type="email"
               name="email_contact"

@@ -12,7 +12,6 @@
 
 .trasfondo-contacto {
   background-color: rgba(0, 0, 0, 0.493);
-  
 }
 
 .formulario-container {
@@ -46,9 +45,8 @@
   resize: none;
 }
 
-
 .campo {
-width: 50%;
+  width: 50%;
 }
 
 .label {
@@ -61,7 +59,7 @@ width: 50%;
 }
 
 .input-contact,
-textarea {
+.message_contact {
   width: 80%;
   padding: 10px;
   border: transparent;
@@ -74,31 +72,33 @@ textarea {
   margin-top: 5px;
 }
 
-.input-contact:focus, textarea:focus {
+.input-contact:focus,
+.message_contact:focus {
   outline: none;
   border: 1px solid #0d0d0d;
 }
 
-
 .div-contact-bnt {
-display: flex;
-justify-content: center;
-/* align-items:flex-end */
+  display: flex;
+  justify-content: center;
+  /* align-items:flex-end */
 }
 
 .select-contact-container {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px;
-margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-top: 30px;
 }
 .select-contact {
-  margin-left: 30px ;
+  margin-left: 30px;
   background-color: #fbfbfb9e;
   color: black;
   margin-top: 10px;
+  padding: 5px;
 }
+
 .select-contact:focus {
   outline: none;
   border: 1px solid #0d0d0d;
@@ -117,11 +117,10 @@ margin-top: 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.8 all ease-in;
-  
 }
 
 .btn-contact:hover {
-  transition: 0.8 all ;
+  transition: 0.8 all;
   background-color: #6f7172;
   color: rgb(4, 4, 4);
 }
