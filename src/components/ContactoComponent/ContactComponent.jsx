@@ -10,7 +10,6 @@ const Formulario = () => {
   const [telefono, setTelefono] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -24,28 +23,26 @@ const Formulario = () => {
           Swal.showLoading();
         },
       });
-      await  emailjs
-      .sendForm(
+      await emailjs.sendForm(
         `${import.meta.env.VITE_SERVICE_EMAIL}`,
         `${import.meta.env.VITE_TEMPLATE2_ID}`,
         form.current,
         `${import.meta.env.VITE_PUBLIC_KEY}`
-      )
+      );
       Swal.fire({
         icon: "success",
         title: "Su consulta ha sido enviada con éxito",
         showConfirmButton: false,
         timer: 2000,
       });
-      
     } catch (error) {
-      console.log(error)
+      console.log(error);
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Algo salió mal!",
       });
-    }   
+    }
   };
 
   return (
@@ -54,7 +51,7 @@ const Formulario = () => {
         {/* <h1>Contacto</h1> */}
         <div className="campo-doble">
           <div className="campo">
-            <label className="label">Nombre</label>
+            <label className="label">Nombre:</label>
             <input
               name="name_contact"
               type="text"
@@ -65,7 +62,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label className="label">Apellido</label>
+            <label className="label">Apellido:</label>
             <input
               name="lastname_contact"
               type="text"
@@ -78,7 +75,7 @@ const Formulario = () => {
         </div>
         <div className="campo-doble">
           <div className="campo">
-            <label className="label">Email</label>
+            <label className="label">Email:</label>
             <input
               type="email"
               name="email_contact"
@@ -89,7 +86,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label className="label">Teléfono</label>
+            <label className="label">Teléfono:</label>
             <input
               type="tel"
               name="phone_contact"
@@ -100,8 +97,18 @@ const Formulario = () => {
             />
           </div>
         </div>
+        <div className="select-contact-container">
+         <h2 className="select-service-text">Motivo de consulta</h2> 
+          <select className="select-contact">
+            <option value="0" disabled>Seleccione un motivo</option>
+            <option value="1">Servicio 1</option>
+            <option value="2">Servicio 2</option>
+            <option value="3">Servicio 3</option>
+
+          </select>
+        </div>
         <div className="campo2">
-          <label className="label">Mensaje</label>
+          <label className="label">Mensaje:</label>
           <textarea
             name="message_contact"
             value={mensaje}

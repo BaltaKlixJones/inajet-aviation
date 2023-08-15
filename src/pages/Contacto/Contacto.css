@@ -22,10 +22,13 @@
   flex-direction: row;
   height: auto;
   margin-bottom: 30px;
+  /* background-color: red; */
 }
 
 .formulario {
-  /* border: 1px solid #ccc; */
+  background-color: #0c0c0c8d;
+  border: 1px solid #ccc;
+  border-radius: 15px;
   padding: 20px;
   width: 80%;
   margin-left: 50px;
@@ -37,7 +40,7 @@
   margin-bottom: 15px;
 }
 
-.message-contact {
+.message_contact {
   width: 90%;
   height: 100px;
   resize: none;
@@ -54,34 +57,71 @@ width: 50%;
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: bold;
+  color: #d9d7d7;
 }
 
 .input-contact,
 textarea {
   width: 80%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: transparent;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
-  
+  margin-left: 30px;
+  font-size: 20px;
+  background-color: #fbfbfb9e;
+  color: black;
+  margin-top: 5px;
 }
+
+.input-contact:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #0d0d0d;
+}
+
+
 .div-contact-bnt {
-  
 display: flex;
 justify-content: center;
 /* align-items:flex-end */
 }
 
+.select-contact-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px;
+margin-top: 30px;
+}
+.select-contact {
+  margin-left: 30px ;
+  background-color: #fbfbfb9e;
+  color: black;
+  margin-top: 10px;
+}
+.select-contact:focus {
+  outline: none;
+  border: 1px solid #0d0d0d;
+}
+.select-service-text {
+  font-size: 20px;
+}
+
 .btn-contact {
-  background-color: #abadb0;
-  color: #292828;
+  background-color: #535151;
+  color: #ffffff;
   border: none;
+  margin-top: 30px;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.8 all ease-in;
   
 }
 
 .btn-contact:hover {
-  background-color: #0056b3;
+  transition: 0.8 all ;
+  background-color: #6f7172;
+  color: rgb(4, 4, 4);
 }
