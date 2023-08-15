@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Footer.css";
 import { BiMailSend } from "react-icons/bi";
 import { BsBroadcastPin, BsClock, BsInstagram } from "react-icons/bs";
@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="div-logo">
             <h1 className="logo_h1">ınaȷet </h1>
             <div className="copy-rights">
-              <p className="copy-text">&#169; {t("footer.derechos")}</p>
+              <p className="copy-text">&#169; {t("footer.derechos")} <br /> <br/>{t("footer.terms")}</p>
             </div>
           </div>
           <div className="contact-info">

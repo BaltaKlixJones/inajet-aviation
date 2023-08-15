@@ -2,7 +2,6 @@ import React from "react";
 import "./Contacto.css";
 import Quienes from "../QuienesSomos/Quienes";
 import ContactComponent from "../../components/ContactoComponent/ContactComponent";
-import { MdAirplaneTicket } from "react-icons/md";
 
 const Contacto = () => {
   return (
@@ -12,7 +11,7 @@ const Contacto = () => {
         <br />
         <br />
         <br />
-        <br />
+    <hr />
         <Quienes />
         <ContactComponent />
       </div>

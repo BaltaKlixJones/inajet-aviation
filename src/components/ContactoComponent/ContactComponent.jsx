@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Formulario = () => {
   const [t, i18n] = useTranslation("global");
@@ -14,6 +14,8 @@ const Formulario = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
+
     try {
       Swal.fire({
         icon: "info",
@@ -45,6 +47,11 @@ const Formulario = () => {
         text: "Algo salió mal!",
       });
     }
+    setNombre("");
+    setApellido("");
+    setEmail("");
+    setTelefono("");
+    setMensaje("");
   };
 
   return (
@@ -100,13 +107,14 @@ const Formulario = () => {
           </div>
         </div>
         <div className="select-contact-container">
-         <h2 className="select-service-text">{t("text.consulting")}</h2> 
-          <select className="select-contact">
-            <option value="0" disabled>Seleccione un motivo</option>
-            <option value="1">Servicio 1</option>
-            <option value="2">Servicio 2</option>
-            <option value="3">Servicio 3</option>
-
+          <h2 className="select-service-text">{t("text.consulting")} :</h2>
+          <select className="select-contact" name="select_contact">
+            <option value="0" disabled>
+              Seleccione un motivo
+            </option>
+            <option value="Servicio 1">Servicio 1</option>
+            <option value="Servicio 2">Servicio 2</option>
+            <option value="Servicio 3">Servicio 3</option>
           </select>
         </div>
         <div className="campo2">

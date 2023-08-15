@@ -34,7 +34,8 @@
   "footer": {
     "contacto": "Contact",
     "horario": "Time",
-    "derechos": "All rights reserved"
+    "derechos": "All rights reserved",
+    "terms" : "Terms and conditions"
 },
 "services" : {
   "vuelosEjecutivos" : "PRIVATE FLIGHTS",

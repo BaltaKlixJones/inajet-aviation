@@ -34,7 +34,8 @@
   "footer": {
     "contacto": "Contacto",
     "horario": "Horario",
-    "derechos": "Todos los derechos reservados"
+    "derechos": "Todos los derechos reservados",
+    "terms" : "Términos y condiciones"
   },
   "services": {
     "vuelosEjecutivos": "VUELOS EJECUTIVOS",

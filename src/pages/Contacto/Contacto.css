@@ -39,11 +39,7 @@
   margin-bottom: 15px;
 }
 
-.message_contact {
-  width: 90%;
-  height: 100px;
-  resize: none;
-}
+
 
 .campo {
   width: 50%;
@@ -76,6 +72,11 @@
 .message_contact:focus {
   outline: none;
   border: 1px solid #0d0d0d;
+}
+.message_contact {
+  width: 90%;
+  height: 100px;
+  resize: none;
 }
 
 .div-contact-bnt {
