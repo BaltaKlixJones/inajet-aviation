@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="contact-info">
-            <h2 className="contact-heading">{t("footer.contacto")}:</h2>
+            <h2 className="contact-heading">{t("footer.contacto")}</h2>
             <div className="contact-details">
               <BiMailSend className="icon3" />
               <a
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="opening-hours">
-            <h2 className="hours-heading">{t("footer.horario")}:</h2>
+            <h2 className="hours-heading">{t("footer.horario")}</h2>
             <div className="hours-details">
               <BsClock className="icon3" />
               <p className="hours-text">24hs x 365</p>

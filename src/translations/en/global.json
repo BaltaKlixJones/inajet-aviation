@@ -33,17 +33,25 @@
   },
   "footer": {
     "contacto": "Contact",
-    "horario": "Schedule",
+    "horario": "Time",
     "derechos": "All rights reserved"
 },
 "services" : {
-  "vuelosEjecutivos" : "Executive Flights",
-  "vuelosSanitarios" : "Sanitary Flights",
-  "soporteTierra": "Ground Support",
-  "asesoramiento" : "Consulting",
-  "textEjecutivos" : "We provide transfers to any part of the world. With a wide variety of aircraft, we offer customers the possibility to book a flight at any time, with complete confidentiality and the best support.",
-  "textSanitary": "We coordinate medical flights and organ air transfers.",
-  "textTierra" : "Need ground assistance? Contact us.",
-  "textAsesoramiento" : "Looking to buy or sell an aircraft? We provide Aviation Consulting."
-}
+  "vuelosEjecutivos" : "PRIVATE FLIGHTS",
+  "vuelosSanitarios" : "SANITARY FLIGHTS | AIR AMBULANCE",
+  "soporteTierra": "GROUND SUPPORT",
+  "asesoramiento" : "AVIATION CONSULTING",
+  "textEjecutivos" : "We do charter flights to any part of the world. With a wide variety of aircrafts, we offer the client the possibility of flight at any time, with the best support and in a confidential way.",
+  "textSanitary": "We coordinate medical flights. Urgent medical evacuations, transfers between hospitals or specialized care.",
+  "textTierra" : "Ramp services, flight coordination, catering and customs procedures. Our team is available 24 hours a day, 7 days a week, to attend to your needs in real time and guarantee a quick response to any eventuality",
+  "textAsesoramiento" : "Do you want to buy or sell an aircraft? We can help you"
+},
+"contact" : {
+  "quienesSomos" : "We are Brokers with experience in the Aviation industry dedicated to the sale of short, medium and long executive flights. Offering the client the best solution for their requirement.",
+  "broker" : "A Broker is an aviation expert who has the knowledge, resources and contacts necessary to offer the best solutions for each client.",
+  "porqueInajet" : "Using a Broker service the client wins time, and ensures that he is contracting the right product for his needs. Unlike others Aviation Companies , the broker does not have planes, so it is not obliged to offer his own fleet (which might not be the best option for the mission).",
+  "quienesSomosTitle" : "About Us",
+  "brokerTitle" : "What is an Aeronautical Broker?",
+  "porqueInajetTitle" : "Why Inajet?"
+  }
 }

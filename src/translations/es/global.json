@@ -43,7 +43,16 @@
     "asesoramiento": "Asesoramiento",
     "textEjecutivos": "Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, Le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento, con el mejor soporte y de manera confidencial.",
     "textSanitary": "Coordinamos vuelos sanitarios y traslados aéreos de órganos. Ya sea para evacuaciones médicas urgentes, traslados entre hospitales o atención especializada",
-    "textTierra": "Servicios de rampa, coordinación de vuelos, catering y trámites aduaneros. Nuestro equipo está disponible las 24 horas, los 7 días de la semana, para atender sus necesidades en tiempo real y garantizar una respuesta rápida ante cualquier eventualidad.",
-    "textAsesoramiento": "Querés comprar o vender un avión? Nosotros te asesoramos"
+    "textTierra": "SServicios de rampa, coordinación de vuelos, catering y trámites aduaneros. Nuestro equipo está disponible las 24 horas, los 7 días de la semana, para atender sus necesidades en tiempo real y garantizar una respuesta rápida ante cualquier eventualidad.",
+    "textAsesoramiento": "¿Querés comprar o vender un avión? Nosotros te asesoramos"
+  },
+  "contact" : {
+  "quienesSomos" : "Somos Brokers con amplia trayectoria en el sector aeronáutico dedicados a la venta de vuelos privados de corto, mediano y largo alcance. Ofreciéndole al cliente la mejor solución para su requerimiento.",
+  "broker" : "Un Broker es un experto en aviación que cuenta con los conocimientos, los recursos y los contactos necesarios para ofrecer las soluciones que mejor se ajusten a las necesidades operativas y presupuestarias de cada cliente.",
+  "porqueInajet" : "Usando los servicios de un Broker el cliente ahorra tiempo y se asegura de estar contratando el producto adecuado a su necesidad. Ya que a diferencia de otras compañías aéreas, el bróker no tiene aviones, por lo que no está obligado a ofrecer los de su propia flota (que podrían no ser los más adecuados para la misión).",
+  "quienesSomosTitle" : "Quiénes Somos",
+  "brokerTitle" : "¿Qué es un Broker Aeronáutico?",
+  "porqueInajetTitle" : "¿Por qué contratar Inajet?"
   }
+
 }
