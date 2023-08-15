@@ -28,8 +28,8 @@
     "range": "Range",
     "experience": "THE EXPERIENCE",
     "live": "LIVE",
-    "yes": "YES"
- 
+    "yes": "YES",
+    "consulting" : "Reason for consultation"
   },
   "footer": {
     "contacto": "Contact",

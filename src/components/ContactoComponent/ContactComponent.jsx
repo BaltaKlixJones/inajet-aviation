@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import {useTranslation} from "react-i18next";
 
 const Formulario = () => {
+  const [t, i18n] = useTranslation("global");
   const form = useRef();
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -51,7 +53,7 @@ const Formulario = () => {
         {/* <h1>Contacto</h1> */}
         <div className="campo-doble">
           <div className="campo">
-            <label className="label">Nombre:</label>
+            <label className="label">{t("data.name")}:</label>
             <input
               name="name_contact"
               type="text"
@@ -62,7 +64,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label className="label">Apellido:</label>
+            <label className="label">{t("data.last-name")}:</label>
             <input
               name="lastname_contact"
               type="text"
@@ -86,7 +88,7 @@ const Formulario = () => {
             />
           </div>
           <div className="campo">
-            <label className="label">Teléfono:</label>
+            <label className="label">{t("data.phone")}:</label>
             <input
               type="tel"
               name="phone_contact"
@@ -98,7 +100,7 @@ const Formulario = () => {
           </div>
         </div>
         <div className="select-contact-container">
-         <h2 className="select-service-text">Motivo de consulta</h2> 
+         <h2 className="select-service-text">{t("text.consulting")}</h2> 
           <select className="select-contact">
             <option value="0" disabled>Seleccione un motivo</option>
             <option value="1">Servicio 1</option>
@@ -108,7 +110,7 @@ const Formulario = () => {
           </select>
         </div>
         <div className="campo2">
-          <label className="label">Mensaje:</label>
+          <label className="label">{t("data.message")}:</label>
           <textarea
             name="message_contact"
             value={mensaje}
@@ -119,7 +121,7 @@ const Formulario = () => {
         </div>
         <div className="div-contact-bnt">
           <button type="submit" className="btn-contact">
-            Enviar
+            {t("formPasaje.enviar")}
           </button>
         </div>
       </form>

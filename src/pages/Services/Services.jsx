@@ -15,25 +15,25 @@ const Services = () => {
     <div className="services-container">
       <section className="service">
         <img src={businessJet} alt="Vuelos Ejecutivos" />
-        <h2>{t("services.vuelosEjecutivos")}</h2>
+        <h3>{t("services.vuelosEjecutivos")}</h3>
         <p>{t("services.textEjecutivos")}</p>
       </section>
 
       <section className="service">
         <img src={traslado} alt="Vuelos Sanitarios" />
-        <h2>{t("services.vuelosSanitarios")}</h2>
+        <h3>{t("services.vuelosSanitarios")}</h3>
         <p>{t("services.textSanitary")}</p>
       </section>
 
       <section className="service">
         <img src={refuel} alt="Soporte en Tierra" />
-        <h2>{t("services.soporteTierra")}</h2>
+        <h3>{t("services.soporteTierra")}</h3>
         <p>{t("services.textTierra")}</p>
       </section>
 
       <section className="service">
         <img src={consulting} alt="Asesoramiento" />
-        <h2>{t("services.asesoramiento")}</h2>
+        <h3>{t("services.asesoramiento")}</h3>
         <p>{t("services.textAsesoramiento")}</p>
       </section>
     </div>

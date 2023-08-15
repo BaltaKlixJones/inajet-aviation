@@ -28,8 +28,8 @@
     "range": "Rango",
     "experience": "LA EXPERIENCIA",
     "live": "VIVÍ",
-    "yes": "SI"
-   
+    "yes": "SI",
+    "consulting" : "Motivo de consulta"
   },
   "footer": {
     "contacto": "Contacto",
@@ -37,10 +37,10 @@
     "derechos": "Todos los derechos reservados"
   },
   "services": {
-    "vuelosEjecutivos": "Vuelos Ejecutivos",
-    "vuelosSanitarios": "Vuelos Sanitarios",
-    "soporteTierra": "Soporte en Tierra",
-    "asesoramiento": "Asesoramiento",
+    "vuelosEjecutivos": "VUELOS EJECUTIVOS",
+    "vuelosSanitarios": "VUELOS SANITARIOS",
+    "soporteTierra": "SOPORTE EN TIERRA",
+    "asesoramiento": "ASESORAMIENTO",
     "textEjecutivos": "Realizamos traslados a cualquier parte del mundo. Con una amplia variedad de aeronaves, Le brindamos al cliente la posibilidad de reservar un vuelo en cualquier momento, con el mejor soporte y de manera confidencial.",
     "textSanitary": "Coordinamos vuelos sanitarios y traslados aéreos de órganos. Ya sea para evacuaciones médicas urgentes, traslados entre hospitales o atención especializada",
     "textTierra": "SServicios de rampa, coordinación de vuelos, catering y trámites aduaneros. Nuestro equipo está disponible las 24 horas, los 7 días de la semana, para atender sus necesidades en tiempo real y garantizar una respuesta rápida ante cualquier eventualidad.",
