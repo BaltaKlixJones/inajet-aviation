@@ -93,14 +93,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    margin-top: 100px;
+    width: 100%;
+    margin-top: 50px;
     color: white;
   }
   .logo_h1 {
     color: white;
-    font-size:55px;
+    font-size:85px;
     margin-bottom: -60px;
+    z-index: 9999;
   }
 
   .hr {
@@ -141,7 +142,7 @@
   .header__buttonNavClose {
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px;
     background-color: transparent;
     border: none;
     font-size: 24px;
@@ -178,6 +179,8 @@
     color: #333;
     margin-left: 0px;
     color: #f7f7f7af;
+    margin-top: 0px;
+    height: 50px;
   }
   .nav__link2 {
     font-size: 26px;
@@ -186,6 +189,7 @@
     margin-left: 0px;
     color: #f7f7f7af;
   }
+
 
 }
 

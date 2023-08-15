@@ -59,19 +59,21 @@ const NavBar = () => {
           </button>
         </div>
         <div className={style.img_logo}>
-          
-          <h1 className={style.logo_h1} ><Link
-  to="/"
-  style={{
-    textDecoration: "none",
-    color: "white",
-    transition: "color 0.3s",
-  }}
-  onClick={closeNav}
-  // onMouseOver={(e) => e.target.style.color = "black"}
-  // onMouseOut={(e) => e.target.style.color = "white"}
->ınaȷet</Link></h1>
-          
+          <h1 className={style.logo_h1}>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "white",
+                transition: "color 0.3s",
+              }}
+              onClick={closeNav}
+              // onMouseOver={(e) => e.target.style.color = "black"}
+              // onMouseOut={(e) => e.target.style.color = "white"}
+            >
+              ınaȷet
+            </Link>
+          </h1>
         </div>
         <ul className={style.nav__ul}>
           <li className={style.nav__item}>
@@ -81,7 +83,7 @@ const NavBar = () => {
           </li>
           <li className={style.nav__item}>
             <Link to="/services" className={style.nav__link} onClick={closeNav}>
-            {t("navbar.services")}
+              {t("navbar.services")}
             </Link>
           </li>
           <li className={style.nav__item}>
@@ -89,18 +91,31 @@ const NavBar = () => {
               {t("navbar.contact")}
             </Link>
           </li>
-          <hr className={style.hr} style={{margin: "0px 10px -20px 30px", height: "40px", fontWeight: "bold" } } />
+          <hr
+            className={style.hr}
+            style={{
+              margin: "0px 10px -20px 30px",
+              height: "40px",
+              fontWeight: "bold",
+            }}
+          />
           <li className={style.nav__item_btn}>
-            <button className={style.btn_traduce}
-            style={{marginRight: "-50px"}}
-            onClick={() => i18n.changeLanguage("es")}
-             >ES</button>
+            <button
+              className={style.btn_traduce}
+              style={{ marginRight: "-50px" }}
+              onClick={() => i18n.changeLanguage("es")}
+            >
+              ES
+            </button>
           </li>
           <li className={style.nav__item_btn}>
-            <button className={style.btn_traduce} 
-            style={{marginRight: "-80px"}}
-            onClick={() => i18n.changeLanguage("en")}
-            >EN</button>
+            <button
+              className={style.btn_traduce}
+              style={{ marginRight: "-80px" }}
+              onClick={() => i18n.changeLanguage("en")}
+            >
+              EN
+            </button>
           </li>
         </ul>
       </nav>
