@@ -63,6 +63,11 @@
    animation-fill-mode: forwards;
 }
 
+.container_aclaracion {
+  text-align: center;
+  margin: 20px;
+}
+
 @media (max-width: 768px) {
   .container-flota {
     height: 50dvh;
