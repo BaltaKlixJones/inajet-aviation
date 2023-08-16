@@ -102,17 +102,21 @@ const NavBar = () => {
           <li className={style.nav__item_btn}>
             <button
               className={style.btn_traduce}
-              style={{ marginRight: "-50px" }}
-              onClick={() => i18n.changeLanguage("es")}
+              onClick={() => {
+                closeNav();
+                i18n.changeLanguage("es");
+              }}
             >
               ES
             </button>
           </li>
           <li className={style.nav__item_btn}>
             <button
-              className={style.btn_traduce}
-              style={{ marginRight: "-80px" }}
-              onClick={() => i18n.changeLanguage("en")}
+              className={style.btn_traduceEn}
+              onClick={() => {
+                closeNav();
+                i18n.changeLanguage("en");
+              }}
             >
               EN
             </button>
