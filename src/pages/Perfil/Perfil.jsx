@@ -91,6 +91,7 @@ const Perfil = () => {
             style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }}
           />{" "}
           <MdOutlineAirplaneTicket
+          className="icono-avion"
             style={{
               fontSize: "34px",
               marginLeft: "-80px",
@@ -110,7 +111,7 @@ const Perfil = () => {
               <div className="titulo-range">
                 <h1 id="range-title">{t("text.range")}</h1>
               </div>
-              <h1>
+              <h1 className="range_description">
                 <GiRadarSweep /> {aircraft.range}
               </h1>
               <h5>{t("text.clarification")}</h5>
