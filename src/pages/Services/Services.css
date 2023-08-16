@@ -100,3 +100,29 @@
     height: 10px;
     background-image: linear-gradient(to top,   #24242499 , rgba(48, 48, 48, 0.234));
   }
+
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      margin-top: 100px;
+      box-shadow: none;
+     
+    }
+    .fondo-service {
+      height: auto;
+    }
+    .service {
+      width: 90%;
+      margin: 20px auto;
+      height: auto;
+      max-height: none;
+      border: none;
+    }
+    .service h2 {
+      font-size: 1.2rem;
+
+    }
+    .service p {
+      font-size: 0.9rem; 
+    }
+  }
