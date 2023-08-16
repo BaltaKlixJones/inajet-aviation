@@ -45,8 +45,8 @@ const Perfil = () => {
             <h1>{aircraft.name}</h1>
           </div>
           <div className="container-profile-inicio">
-            <img src={aircraft.image} alt="" className="imagen" />
-            <img src={aircraft.imgInterior} alt="" className="imagen2" />
+            <img src={aircraft.image} alt="" className="imagen" loading="lazy" />
+            <img src={aircraft.imgInterior} alt="" className="imagen2" loading="lazy"/>
           </div>
           <div className="inicio-description">
             <div className="iconos">
@@ -105,7 +105,7 @@ const Perfil = () => {
         {/* <div className="gradient-overlay3"></div> */}
         <div className="container-range">
           <div className="range">
-            <img src={aircraft.rangeRing} alt="" className="imagen-ring" />
+            <img src={aircraft.rangeRing} alt="" className="imagen-ring" loading="lazy" />
             <div className="range-description">
               <div className="titulo-range">
                 <h1 id="range-title">{t("text.range")}</h1>

@@ -46,6 +46,7 @@ const Cards = () => {
             alt={aircraft.name}
             className="card-image"
             onClick={() => handleOnClick(aircraft.id)} 
+            loading="lazy"
           />
           <h2 className="card-title">{aircraft.name}</h2>
           <h4 className="card-type">{aircraft.type}</h4>
