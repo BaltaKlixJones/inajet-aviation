@@ -3,6 +3,8 @@ import "./Footer.css";
 import { BiMailSend } from "react-icons/bi";
 import { BsBroadcastPin, BsClock, BsInstagram } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   const [t, i18n] = useTranslation("global");
@@ -14,7 +16,7 @@ const Footer = () => {
           <div className="div-logo">
             <h1 className="logo_h1">ınaȷet </h1>
             <div className="copy-rights">
-              <p className="copy-text">&#169; {t("footer.derechos")} <br /> <br/>{t("footer.terms")}</p>
+              <p className="copy-text">&#169; {t("footer.derechos")} <br /> <br/> <Link to="/terminosyCondiciones" >{t("footer.terms")}</Link> </p>
             </div>
           </div>
           <div className="contact-info">

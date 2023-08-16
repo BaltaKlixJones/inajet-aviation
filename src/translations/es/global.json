@@ -55,6 +55,15 @@
   "quienesSomosTitle" : "Quiénes Somos",
   "brokerTitle" : "¿Qué es un Broker Aeronáutico?",
   "porqueInajetTitle" : "¿Por qué contratar Inajet?"
+  },
+  "terms" : {
+    "title" : "TERMINOS Y CONDICIONES",
+    "subtitle": "Información de identificación personal",
+    "info1" : "Cuando usted visita el sitio web de Inajet Aviation no recopilaremos ninguna información de identificación personal sobre usted (como su nombre, número de teléfono o dirección de correo electrónico). Si opta por proporcionarnos información de contacto corporativa, recopilaremos su información para nuestra información interna de la base de datos, que puede requerir más contacto con usted por teléfono o correo electrónico.",
+    "security" : "Seguridad",
+    "info2": "Inajet Aviation se compromete a mantener seguros los datos que nos proporciona y tomará precauciones razonables para proteger su información de identificación personal de la pérdida, mal uso o alteración. Los agentes o contratistas de Inajet Aviation que tienen acceso a su información de identificación personal en relación con la prestación de servicios están obligados a mantener la información confidencial y no se les permite utilizar esta información para ningún otro propósito que no sea llevar a cabo los servicios que están realizando para Inajet Aviation.",
+    "title2": "Menores de Edad",
+    "info3" : "Inajet Aviation no tiene intención de recopilar información de identificación personal de personas menores de edad. Cuando sea apropiado, Inajet Aviation instruirá específicamente a los niños a no enviar dicha información en nuestros sitios web o anuncios. Si un niño nos ha proporcionado información de identificación personal, un padre o tutor de ese niño puede ponerse en contacto con nosotros en la dirección que aparece en la parte inferior de esta Declaración de privacidad si desea que esta información se elimine de nuestros registros. Haremos esfuerzos razonables para eliminar la información del niño de nuestras bases de datos."
   }
 
 }

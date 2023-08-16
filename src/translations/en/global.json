@@ -55,5 +55,14 @@
   "quienesSomosTitle" : "About Us",
   "brokerTitle" : "What is an Aeronautical Broker?",
   "porqueInajetTitle" : "Why Inajet?"
+  },
+  "terms" : {
+    "title" : "PRIVACY POLICY",
+    "subtitle": "Personally Identifiable Information",
+    "info1" : "When you visit the Inajet Aviation website we will not collect any personally identifiable information about you (such as your name, phone number or email address). If you choose to provide us with corporate contact information, we will collect your information for our internal database information, which may require further contact with you by phone or email.",
+    "security" : "Security",
+    "info2": "Inajet Aviation is committed to keeping the data you provide us secure and will take reasonable precautions to protect your personally identifiable information from loss, misuse or alteration. Inajet Aviation agents or contractors who have access to your personally identifiable information in connection with the provision of services are required to keep the information confidential and are not permitted to use this information for any purpose other than to carry out the services they are performing for Inajet Aviation.",
+    "title2": "Children",
+    "info3" : "Inajet Aviation does not pretend to collect personally identifiable information from childrens. Where appropriate, Inajet Aviation will specifically instruct children not to submit such information on our websites or advertisements. If a child has provided us with personally"
   }
 }

@@ -10,6 +10,7 @@ import Perfil from "./pages/Perfil/Perfil";
 import Loading from "./pages/Loading/Loading";
 import axios from "axios";
 import Contacto from "./pages/Contacto/Contacto";
+import Terms from "./pages/Terms/Terms";
 axios.defaults.baseURL = "http://localhost:3001";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/loading" element={<Loading/>} />
         <Route exact path="/consultar/:id" element={<Home/>} />
         <Route exact path="/contacto" element={<Contacto/>} />
+        <Route exact path="/terminosyCondiciones" element={<Terms/>} />
       </Routes>
     
       <Footer />
