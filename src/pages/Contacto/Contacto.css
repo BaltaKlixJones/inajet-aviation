@@ -39,8 +39,6 @@
   margin-bottom: 15px;
 }
 
-
-
 .campo {
   width: 50%;
 }
@@ -125,4 +123,42 @@
   transition: 0.8 all;
   background-color: #6f7172;
   color: rgb(4, 4, 4);
+}
+
+@media (max-width: 768px) {
+  .formulario-container {
+    margin-top: -30px;
+  }
+   .formulario {
+    margin: 0 auto;
+  }
+  .campo-doble {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-contact, .message_contact {
+    width: 100%;
+    margin-left: 0px;
+   
+  }
+  .label {
+    margin-top: 15px;
+  }
+  .campo2 {
+  margin: 0 auto;
+  margin-left: 0px;
+ 
+  }
+  .message_contact {
+  width: 94%;
+  }
+  .campo {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  .select-contact-container {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
