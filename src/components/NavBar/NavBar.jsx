@@ -63,6 +63,7 @@ const NavBar = () => {
             <Link
               to="/"
               style={{
+                fontFamily:"Comfortaa",
                 textDecoration: "none",
                 color: "white",
                 transition: "color 0.3s",
