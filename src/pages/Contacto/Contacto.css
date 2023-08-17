@@ -159,6 +159,13 @@
   }
   .select-contact-container {
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
+  .select-contact {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+.select-service-text {
+  font-size: 18px;
+}
 }
