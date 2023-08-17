@@ -336,7 +336,7 @@ h5 {
 
   .range img {
     height: 300px;
-    width: 100%;
+    width: 102%;
   }
   .imagen-ring:hover {
     position: none;
@@ -344,10 +344,10 @@ h5 {
     left: -75%;
     transform: translate(0, -80%) scale(1.3);
     z-index: 1;
-    transition: 0.5s ease-in-out;
+    transition: none;
     margin-top: 430px;
     margin-left: 280px;
-    transition: 0.5s ease-in-out;
+    
   }
 
   .titulo-range {
@@ -377,5 +377,11 @@ h5 {
     width: 100%;
   }
   .titulo-aircraft h1 {
-  text-align: center;}
+  text-align: center;
+}
+/* .imagen-ring:hover {
+transition: none;
+  
+} */
+
 }
