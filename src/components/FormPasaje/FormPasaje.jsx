@@ -197,6 +197,7 @@ const FormPasaje = () => {
                   type="radio"
                   id="Multileg"
                   className="radio-input"
+                  style={{width: "0%"}}
                   value="Multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}

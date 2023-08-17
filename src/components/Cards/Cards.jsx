@@ -50,7 +50,7 @@ const Cards = () => {
           />
           <h2 className="card-title">{aircraft.name}</h2>
           <h4 className="card-type">{aircraft.type}</h4>
-          <div className="radio-input">
+          <div className="radio-input2">
             <label>
               <input
                 type="radio"

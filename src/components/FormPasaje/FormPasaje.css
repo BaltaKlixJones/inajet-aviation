@@ -429,11 +429,11 @@ select {
 }
 
 .gradient-overlay {
-  position: absolute; /* Posiciona el elemento en la parte superior del contenedor */
+  position: absolute; 
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px; /* Altura del degradado oscuro que desvanece hacia arriba */
+  height: 100px; 
   background-image: linear-gradient(to top, #242424, rgba(9, 9, 9, 0.079));
 }
 
@@ -442,12 +442,8 @@ select {
   display: flex;
   /* background-color: red; */
   align-items: center;
-  /* margin-bottom: 5px;
-  margin-top: 5px; */
   justify-content: center;
-  /* width: 110%; */
   text-align: center;
-
   margin-right: 15px;
 }
 
@@ -470,6 +466,9 @@ select {
   color: #858282;
   cursor: pointer;
 }
+.radio-input {
+  display: none;
+}
 
 #origin-suggestions option {
   font-size: 16px;
@@ -481,5 +480,6 @@ select {
  .form {
    width: 100%;
  }
+
 
 }
