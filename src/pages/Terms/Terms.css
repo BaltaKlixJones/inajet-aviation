@@ -1,12 +1,12 @@
 .container-terms {
   background-color: rgb(220, 227, 232);
-  height: auto;
   justify-content: center;
   align-items: center;
   margin: 50px;
   margin-top: 130px;
   color: black;
   border-radius: 20px;
+  
 }
 .title-terms {
   display: flex;
