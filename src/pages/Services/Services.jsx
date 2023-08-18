@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Services.css";
-import businessJet from "../../assets/images/services/businessJet.jpg"
-import traslado from "../../assets/images/services/traslado.jpg"
+import businessJet from "../../assets/images/services/businessjet1.jpg"
+import traslado from "../../assets/images/services/traslado1.jpg"
 import refuel from "../../assets/images/services/refuel.avif"
-import consulting from "../../assets/images/services/consulting.jpg"
+import consulting from "../../assets/images/services/consulting1.jpg"
 import {useTranslation} from 'react-i18next';
 
 const Services = () => {
