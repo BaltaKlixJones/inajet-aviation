@@ -16,7 +16,9 @@ axios.defaults.baseURL = `${import.meta.env.VITE_BASE_URL}`;
 import { inject } from "@vercel/analytics";
 
 function App() {
+
   inject();
+  
   return (
     <>
       <NavBar />
