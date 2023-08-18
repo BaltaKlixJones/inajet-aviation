@@ -261,7 +261,7 @@ const FormPasaje = () => {
                 required
                 disabled={id ? true : false}
               >
-                <option value="" disabled>
+                <option value="" disabled style={{textAlign:"center"}}>
                   {t("formPasaje.SeleccionarAvion")}
                 </option>
                 {allAircrafts.map((aircraft) => (
@@ -269,6 +269,7 @@ const FormPasaje = () => {
                     {aircraft.name}
                   </option>
                 ))}
+                <option value="">Otro</option>
               </select>
             </div>
 
