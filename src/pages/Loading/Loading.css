@@ -45,9 +45,12 @@
 
   @media (max-width: 768px) {
     .container-loader {
-      width: 100%;
-      background-color: red;
+      width: 50%;
       margin: 0;
+      }
+      .loader {
+        top: 50%;
+        left: 100%;
       }
 
   }

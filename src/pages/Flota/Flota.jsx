@@ -27,7 +27,7 @@ const Flota = () => {
             <span style={{ fontWeight: "bold", marginRight: "15px" }}>
               {t("text.live")}
             </span>
-            {t("text.experience")} INAJET
+            {t("text.experience")} 
           </h1>
         </div>
         <div className="gradient-overlay"></div>
