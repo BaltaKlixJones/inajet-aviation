@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./FormPasaje.css";
 import { BiUserCircle } from "react-icons/bi";
-import { getAllAirCrafts  } from "../../Redux/actions";
+import { getAllAirCrafts  } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";

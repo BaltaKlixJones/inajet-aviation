@@ -4,7 +4,7 @@ import "./Cards.css";
 import {FiUsers, FiWind} from "react-icons/fi";
 import {GiRadarSweep} from "react-icons/gi";
 import { useNavigate} from "react-router-dom";
-import { getAllAirCrafts, getAirCraftById } from "../../Redux/actions";
+import { getAllAirCrafts, getAirCraftById } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Cards = () => {

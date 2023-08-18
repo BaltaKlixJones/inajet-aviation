@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Flota.css";
 import { useDispatch } from "react-redux";
 import Cards from "../../components/Cards/Cards";
-import { getAllAirCrafts } from "../../Redux/actions";
+import { getAllAirCrafts } from "../../redux/actions";
 import Loading from "../Loading/Loading";
 import { useTranslation } from "react-i18next";
 

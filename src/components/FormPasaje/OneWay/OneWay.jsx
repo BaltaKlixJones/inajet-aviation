@@ -3,7 +3,7 @@ import { GiAirplaneDeparture, GiAirplaneArrival } from "react-icons/gi";
 import { BsFillCalendarRangeFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
-import { getAllLocations } from "../../../Redux/actions";
+import { getAllLocations } from "../../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const OneWay = ({ minDate }) => {

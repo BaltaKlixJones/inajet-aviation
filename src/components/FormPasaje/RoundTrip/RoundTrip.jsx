@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { getSuggestions } from "../../../utils/suggestions";
 import OneWay from "../OneWay/OneWay";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllLocations } from "../../../Redux/actions";
+import { getAllLocations } from "../../../redux/actions";
 // import locations from "../../../data/locations";
 
 const RoundTrip = ({ minDate, origin, handleOriginChange }) => {

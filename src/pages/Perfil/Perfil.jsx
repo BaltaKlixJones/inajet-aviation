@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Perfil.css";
 import Loading from "../Loading/Loading";
-import { getAirCraftById } from "../../Redux/actions";
+import { getAirCraftById } from "../../redux/actions";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { PiToiletLight } from "react-icons/pi";
