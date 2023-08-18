@@ -77,7 +77,7 @@
   height: 500px;
 }
 
-@media (max-width: 1401px) {
+@media (max-width: 1001px) {
   .header__nav {
     height: 80px;
   }
@@ -203,7 +203,7 @@
   }
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1001px) {
   .header__buttonNavOpen {
     display: none;
     background-color: #f7f7f7;
