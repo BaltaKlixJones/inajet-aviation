@@ -269,7 +269,7 @@ const FormPasaje = () => {
                     {aircraft.name}
                   </option>
                 ))}
-                <option value="">Otro</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
 
