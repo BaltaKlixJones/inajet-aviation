@@ -13,12 +13,19 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [suggestions2, setSuggestions2] = useState([]);
   const [destinationSuggestions2, setDestinationSuggestions2] = useState([]);
   const [origin2, setOrigin2] = useState("");
-  const allLocations = useSelector((state) => state.locations);
+  const allLocations = useSelector((state) => state.locations.map(location => ({
+    ...location,
+    name: removeAccents(location.name)
+})));
   const dispatch = useDispatch();
 
   useEffect (() => {
     dispatch(getAllLocations())
   },[dispatch])
+
+  function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
   const handleOriginChange2 = (e) => {
     const inputValue = e.target.value;

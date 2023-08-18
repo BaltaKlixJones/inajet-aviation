@@ -12,12 +12,19 @@ const OneWay = ({ minDate }) => {
   const [destination, setDestination] = useState("");
   const [destinationSuggestions, setDestinationSuggestions] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
-  const allLocations = useSelector((state) => state.locations);
+  const allLocations = useSelector((state) => state.locations.map(location => ({
+    ...location,
+    name: removeAccents(location.name)
+})));
   const dispatch = useDispatch();
 
   useEffect(() => {
       dispatch(getAllLocations())
   }, [dispatch])
+
+  function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
 
   const handleOriginChange = (e) => {
