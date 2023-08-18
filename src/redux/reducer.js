@@ -1,8 +1,4 @@
-import {
-GET_AIRCRAFTS,
-GET_AIRCRAFTS_BYID,
-GET_LOCATIONS
-} from "./Actions";
+import { GET_AIRCRAFTS, GET_AIRCRAFTS_BYID, GET_LOCATIONS} from "./actions";
 
 const initialState = {
     allAircrafts: [],
