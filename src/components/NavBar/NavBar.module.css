@@ -5,6 +5,8 @@
   z-index: 100;
   width: 100%;
   height: 100px;
+  margin-bottom: 100px;
+ 
 }
 .scrolled {
   background-color: #070505eb;

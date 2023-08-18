@@ -35,13 +35,13 @@ const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
 
   return (
     <div>
+
       <OneWay
         handleOriginChange={handleOriginChange}
         origin={origin}
         minDate={minDate}
       />
       <hr style={{ margin: "25px" }} />
-
       <div className="form-group">
         <label className="label-icon">
           <GiAirplaneDeparture className="icon" />
