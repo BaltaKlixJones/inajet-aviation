@@ -10,14 +10,14 @@
     min-height: 100dvh;
 
   }
-  /* .gradient-overlay6 {
+  .gradient-overlay6 {
     position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     height: 100px; 
     background-image: linear-gradient(to top,  rgba(238, 238, 238, 0.176)  , #24242499);
-} */
+}
   .services-container {
    
     display: flex;
@@ -88,14 +88,14 @@
   }
   
 
-  .gradient-overlay-services {
+  /* .gradient-overlay-services {
     position: absolute; 
-    bottom: 40px;
+    bottom: 0px;
     left: 0;
     right: 0;
     height: 10px;
     background-image: linear-gradient(to top,   #24242499 , rgba(48, 48, 48, 0.234));
-  }
+  } */
 
   @media (max-width: 768px) {
     .services-container {
