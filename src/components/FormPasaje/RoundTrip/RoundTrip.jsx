@@ -6,7 +6,7 @@ import { getSuggestions } from "../../../utils/suggestions";
 import OneWay from "../OneWay/OneWay";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllLocations } from "../../../redux/actions";
-// import locations from "../../../data/locations";
+
 
 const RoundTrip = ({ minDate, origin, handleOriginChange }) => {
   const [t, i18n] = useTranslation("global");
