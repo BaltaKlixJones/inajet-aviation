@@ -13,7 +13,8 @@
     "siguiente": "Next",
     "volver": "Back",
     "enviar": "Send",
-    "multilegText" : "Please, let us know what flights you need to make. We will contact you as soon as possible."
+    "multilegText" : "Please, let us know what flights you need to make. We will contact you as soon as possible.",
+    "otro": "Other"
   },
   "data": {
     "name": "NAME",

@@ -13,7 +13,8 @@
     "siguiente": "Siguiente",
     "volver": "Volver",
     "enviar": "Enviar",
-    "multilegText" : "Por favor, índicanos que vuelos necesitas para tu viaje y nos contactaremos a la brevedad"
+    "multilegText" : "Por favor, índicanos que vuelos necesitas para tu viaje y nos contactaremos a la brevedad",
+    "otro": "Otro"
   },
   "data": {
     "name": "NOMBRE",
