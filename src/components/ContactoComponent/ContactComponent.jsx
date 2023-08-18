@@ -112,9 +112,11 @@ const Formulario = () => {
             <option value="0" disabled>
               Seleccione un motivo
             </option>
-            <option value="Servicio 1">Servicio 1</option>
-            <option value="Servicio 2">Servicio 2</option>
-            <option value="Servicio 3">Servicio 3</option>
+            <option value={`${t("services.vuelosEjecutivos")}`} >{t("services.vuelosEjecutivos")}</option>
+            <option value={`${t("services.vuelosSanitarios")}`}>{t("services.vuelosSanitarios")}</option>
+            <option value={`${t("services.soporteTierra")}`}>{t("services.soporteTierra")}</option>
+            <option value={`${t("services.asesoramiento")}`}>{t("services.asesoramiento")}</option>
+            <option value={`${t("services.other")}`}>{t("services.other")}</option>
           </select>
         </div>
         <div className="campo2">
