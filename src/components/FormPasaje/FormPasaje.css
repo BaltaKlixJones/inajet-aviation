@@ -481,16 +481,8 @@ select {
 
 @media (max-width : 768px) {
   .container-home {
-    display: flex;
-    height: 100dvh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../assets/images/wallpaperhome.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: initial;
+    background-size: contain;
+    background-attachment: scroll;
   }
  .form {
    width: 100%;
