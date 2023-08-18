@@ -113,7 +113,7 @@
     align-items: center;
     border: none;
     font-size: 26px;
-    margin-left: 20%;
+    
     background-color: transparent;
     color: #c3c3c3;
     color: white;
@@ -161,6 +161,11 @@
     font-size: 24px;
     cursor: pointer;
   }
+  .nav__item_btn {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    }
 
   .nav__ul {
     display: flex;
@@ -178,14 +183,7 @@
     margin: 20px 0;
   }
 
-  .nav__item_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    margin-right: 100px;
-    color: white;
-  }
+
 
   .nav__link {
     font-size: 26px;
@@ -232,6 +230,7 @@
     margin-right: -80px;
     color: white;
   }
+  
 
   .logo_h1 {
     font-family: "Comfortaa", cursive;

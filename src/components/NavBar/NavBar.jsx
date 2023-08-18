@@ -100,7 +100,7 @@ const NavBar = () => {
               fontWeight: "bold",
             }}
           />
-          <li className={style.nav__item_btn}>
+          <li className={style.nav__item}>
             <button
               className={style.btn_traduce}
               onClick={() => {
@@ -111,7 +111,7 @@ const NavBar = () => {
               ES
             </button>
           </li>
-          <li className={style.nav__item_btn}>
+          <li className={style.nav__item}>
             <button
               className={style.btn_traduceEn}
               onClick={() => {

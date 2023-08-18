@@ -24,7 +24,7 @@ const Flota = () => {
       <div className="container-flota">
         <div className="container-titulo">
           <h1 className="titulo-flota">
-            <span style={{ fontWeight: "bold", marginRight: "15px" }}>
+            <span style={{ fontWeight: "bold" }}>
               {t("text.live")}
             </span>
             {t("text.experience")} 
