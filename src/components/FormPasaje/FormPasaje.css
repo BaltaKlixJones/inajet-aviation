@@ -23,7 +23,7 @@
   border-radius: 10px;
   opacity: 0.8;
   margin: 10px;
-  z-index: 9999;
+  margin-top: 60px;
 }
 
 input[type="radio"] {
