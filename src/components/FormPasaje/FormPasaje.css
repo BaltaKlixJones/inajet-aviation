@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* background-attachment: fixed; */
 }
 
 .form {
@@ -479,8 +480,6 @@ select {
 
 @media (max-width : 768px) {
   .container-home {
-    
-    background-size: 50%;
     height: auto;
     min-height: 100dvh;
     
