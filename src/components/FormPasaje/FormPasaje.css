@@ -477,7 +477,10 @@ select {
 }
 .input-field {
   height: 20px;
- 
+}
+
+input[type="date"] {
+  height: 20px;
 }
 
 #avion {
