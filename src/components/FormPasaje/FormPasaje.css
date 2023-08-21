@@ -475,9 +475,7 @@ select {
  .gradient-overlay1 {
   display: none;
 }
-.input-field {
-  height: 20px;
-}
+
 
 input[type="date"] {
   height: 20px;
