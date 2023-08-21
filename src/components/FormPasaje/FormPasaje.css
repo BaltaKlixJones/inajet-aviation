@@ -469,11 +469,15 @@ select {
 
 @media (max-width : 768px) {
  .form {
-   width: 100%;
+   width: 90%;
    margin-top: 80px;
  }
  .gradient-overlay1 {
   display: none;
+}
+#avion {
+  width: 37%;
+
 }
 
 
