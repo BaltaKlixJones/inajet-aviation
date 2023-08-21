@@ -475,9 +475,14 @@ select {
  .gradient-overlay1 {
   display: none;
 }
+.input-field {
+  height: 20px;
+ 
+}
+
 #avion {
   width: 37%;
-
+border: .5px solid white;
 }
 
 
