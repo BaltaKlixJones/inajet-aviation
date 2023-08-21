@@ -272,6 +272,7 @@ select {
   border-radius: 5px;
   height: 30px;
   font-size: 14px;
+  border: 1px solid white;
 }
 
 .custom-button .circle .icon {
@@ -483,7 +484,6 @@ input[type="date"] {
 
 #avion {
   width: 37%;
-border: .5px solid white;
 }
 
 
