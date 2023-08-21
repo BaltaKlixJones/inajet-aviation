@@ -87,7 +87,8 @@
     font-size: 44px;
     cursor: pointer;
     height: 80px;
-    background-color: #02020200;
+    margin-left: -10px;
+    background-color: transparent;
   }
   .img_logo {
     display: flex;
