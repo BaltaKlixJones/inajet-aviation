@@ -12,6 +12,7 @@
   opacity: 0.8;
   margin: 10px;
   margin-top: 60px;
+  
 }
 
 input[type="radio"] {
@@ -126,6 +127,7 @@ input[type="radio"] {
   margin-top: 20px;
   justify-content: center;
   align-items: center;
+  
 }
 
 #btn {
@@ -488,3 +490,16 @@ input[type="date"] {
 
 
 }
+@media (min-width : 769px) {
+  .form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+ #form2 {
+   height: auto;
+   margin-top: 0px;
+   margin-top: 0px;
+ }
+ }
+
+

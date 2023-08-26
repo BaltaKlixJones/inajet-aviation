@@ -80,6 +80,7 @@
 @media (max-width: 1001px) {
   .header__nav {
     height: 80px;
+    
   }
   .header__buttonNavOpen {
     width: 100px;
@@ -208,6 +209,11 @@
   .header__buttonNavOpen {
     display: none;
     background-color: #f7f7f7;
+    
+  }
+  .header__nav {
+    height: 80px;
+   
   }
   .btn_traduce {
     margin-top: 20px;
@@ -259,6 +265,7 @@
   .nav__button {
     display: none;
   }
+  
 
   .nav__ul {
     display: flex;
