@@ -97,7 +97,7 @@
     background-image: linear-gradient(to top,   #24242499 , rgba(48, 48, 48, 0.234));
   } */
 
-  @media (max-width: 768px) {
+  @media (max-width:1100px) {
     .services-container {
       flex-direction: column;
       margin-top: 100px;
