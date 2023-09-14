@@ -5,7 +5,7 @@ import { getAirCraftById } from "../../redux/actions";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { PiToiletLight } from "react-icons/pi";
-import { BsSpeedometer2 } from "react-icons/bs";
+import { BsSpeedometer2, BsClouds } from "react-icons/bs";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { GiRadarSweep } from "react-icons/gi";
 import { BiSolidPlaneAlt } from "react-icons/bi";
@@ -69,6 +69,23 @@ const Perfil = () => {
               />
               <h2> {aircraft.speed}</h2>
             </div>
+      
+
+          <div className="iconos">
+              <BsClouds
+                style={{
+                  display:"flex",
+                  justifyContent:"center",
+                  alignItems:"center",
+                  fontSize: "34px",
+                  marginTop: "10px",
+                  marginRight: "5px",
+                }}
+                />
+              <h2> {aircraft.serviceCeling}</h2>
+            </div>
+              
+           
           </div>
           <div className="interior">
             <div className="interior-description">
@@ -77,6 +94,8 @@ const Perfil = () => {
                   style={{ fontSize: "34px", marginRight: "5px" }}
                 />
                 <h3> {aircraft.capacity}</h3>
+                
+                
               </div>
               <div className="iconos">
                 <PiToiletLight
@@ -85,6 +104,7 @@ const Perfil = () => {
                 <h3>{aircraft.toilet == "SI" ? t("text.yes") : "NO"}</h3>
               </div>
             </div>
+          
           </div>
           {/* <div className="gradient-overlay2"></div> */}
           <hr
