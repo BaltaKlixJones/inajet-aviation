@@ -5,7 +5,7 @@ export const GET_AIRCRAFTS = "GET_AIRCRAFTS";
 export const GET_AIRCRAFTS_BYID = "GET_AIRCRAFTS_BYID";
 export const GET_LOCATIONS = "GET_LOCATIONS"
 
-// Functions
+// Functions 
 export const getAllAirCrafts = () => {
     return async function (dispatch) {
       const bdInfo = await axios.get("/aircraft");
