@@ -9,6 +9,7 @@ import { BsSpeedometer2, BsClouds } from "react-icons/bs";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { GiRadarSweep } from "react-icons/gi";
 import { BiSolidPlaneAlt } from "react-icons/bi";
+import { FaDog } from "react-icons/fa";
 import { MdOutlineAirplaneTicket } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
@@ -45,10 +46,20 @@ const Perfil = () => {
             <h1>{aircraft.name}</h1>
           </div>
           <div className="container-profile-inicio">
-            <img src={aircraft.image} alt="" className="imagen" loading="lazy" />
-            <img src={aircraft.imgInterior} alt="" className="imagen2" loading="lazy"/>
+            <img
+              src={aircraft.image}
+              alt=""
+              className="imagen"
+              loading="lazy"
+            />
+            <img
+              src={aircraft.imgInterior}
+              alt=""
+              className="imagen2"
+              loading="lazy"
+            />
           </div>
-          <div className="inicio-description">
+          <div className="inicio-description" style={{ marginTop: "20px" }}>
             <div className="iconos">
               <BiSolidPlaneAlt
                 style={{
@@ -57,7 +68,7 @@ const Perfil = () => {
                   marginRight: "5px",
                 }}
               />
-              <h2>{aircraft.type}</h2>
+              <h2 style={{ marginLeft: "0px" }}>{aircraft.type}</h2>
             </div>
             <div className="iconos">
               <BsSpeedometer2
@@ -67,51 +78,52 @@ const Perfil = () => {
                   marginRight: "5px",
                 }}
               />
-              <h2> {aircraft.speed}</h2>
+              <h2 style={{ marginLeft: "5px" }}> {aircraft.speed}</h2>
             </div>
-      
 
-          <div className="iconos">
+            <div className="iconos">
               <BsClouds
                 style={{
-                  display:"flex",
-                  justifyContent:"center",
-                  alignItems:"center",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                   fontSize: "34px",
                   marginTop: "10px",
                   marginRight: "5px",
                 }}
-                />
-              <h2> {aircraft.serviceCeling}</h2>
+              />
+              <h2 style={{ marginLeft: "5px" }}> {aircraft.serviceCeling}</h2>
             </div>
-              
-           
           </div>
           <div className="interior">
-            <div className="interior-description">
+            <div className="interior-description" style={{ marginTop: "20px" }}>
               <div className="iconos">
                 <AiOutlineUsergroupAdd
                   style={{ fontSize: "34px", marginRight: "5px" }}
                 />
-                <h3> {aircraft.capacity}</h3>
-                
-                
+                <h3 style={{ marginLeft: "5px" }}> {aircraft.capacity}</h3>
               </div>
               <div className="iconos">
                 <PiToiletLight
                   style={{ fontSize: "34px", marginRight: "5px" }}
                 />
-                <h3>{aircraft.toilet == "SI" ? t("text.yes") : "NO"}</h3>
+                <h3 style={{ marginLeft: "5px" }}>
+                  {aircraft.toilet == "SI" ? t("text.yes") : "NO"}
+                </h3>
+              </div>
+              <div className="iconos">
+                {/* <MdOutlinePets */}
+                <FaDog style={{ fontSize: "30px", marginRight: "5px" }} />
+                <h3 style={{ marginLeft: "5px" }}>{t("text.yes")}</h3>
               </div>
             </div>
-          
           </div>
           {/* <div className="gradient-overlay2"></div> */}
           <hr
             style={{ width: "40%", marginTop: "20px", marginBottom: "20px" }}
           />{" "}
           <MdOutlineAirplaneTicket
-          className="icono-avion"
+            className="icono-avion"
             style={{
               fontSize: "34px",
               marginLeft: "-80px",
@@ -126,7 +138,12 @@ const Perfil = () => {
         {/* <div className="gradient-overlay3"></div> */}
         <div className="container-range">
           <div className="range">
-            <img src={aircraft.rangeRing} alt="" className="imagen-ring" loading="lazy" />
+            <img
+              src={aircraft.rangeRing}
+              alt=""
+              className="imagen-ring"
+              loading="lazy"
+            />
             <div className="range-description">
               <div className="titulo-range">
                 <h1 id="range-title">{t("text.range")}</h1>

@@ -9,6 +9,7 @@ import Footer from "./pages/Footer/Footer";
 import Perfil from "./pages/Perfil/Perfil";
 import Terms from "./pages/Terms/Terms";
 import Contacto from "./pages/Contacto/Contacto";
+import ButtonWpp from "./components/ButtonWpp/ButtonWpp";
 
 import axios from "axios";
 axios.defaults.baseURL = `${import.meta.env.VITE_BASE_URL}`;
@@ -16,9 +17,8 @@ axios.defaults.baseURL = `${import.meta.env.VITE_BASE_URL}`;
 import { inject } from "@vercel/analytics";
 
 function App() {
-
   inject();
-  
+
   return (
     <>
       <NavBar />
@@ -32,7 +32,7 @@ function App() {
         <Route exact path="/contacto" element={<Contacto />} />
         <Route exact path="/terminosyCondiciones" element={<Terms />} />
       </Routes>
-
+      <ButtonWpp />
       <Footer />
     </>
   );
