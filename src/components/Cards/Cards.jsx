@@ -1,51 +1,43 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Cards.css";
 
-import {FiUsers, FiWind} from "react-icons/fi";
-import {GiRadarSweep} from "react-icons/gi";
-import { useNavigate} from "react-router-dom";
+import { FiUsers, FiWind } from "react-icons/fi";
+import { GiRadarSweep } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 import { getAllAirCrafts, getAirCraftById } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import { extractKilometers, extractKilometersH } from "../../utils/extractkm";
+import { aircraftOrder } from "../../utils/aircraftsOrder";
 
 const Cards = () => {
-  
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getAllAirCrafts())
-    }, [dispatch]);
-
-  const extractKilometers = (data) => {
-    const kmRegex = /\d+\s*km/;
-    const kmMatch = data.match(kmRegex);
-    return kmMatch ? kmMatch[0] : "";
-  };
-
-  const extractKilometersH = (data) => {
-    const kmRegex = /\d+\s*km\/h/g;
-    const kmMatch = data.match(kmRegex);
-    return kmMatch ? kmMatch[0] : "";
-  };
+    dispatch(getAllAirCrafts());
+  }, [dispatch]);
 
   const handleOnClick = (id) => {
     dispatch(getAirCraftById(id));
-    // console.log(id);
     navigate(`/aircraft/${id}`);
   };
 
-  
+  const sortByOrder = (a, b) => {
+    return aircraftOrder.indexOf(a.name) - aircraftOrder.indexOf(b.name);
+  };
+
+  const sortedAircrafts = allAircrafts.sort(sortByOrder);
 
   return (
     <div className="cards-container">
-      {allAircrafts.map((aircraft) => (
+      {sortedAircrafts?.map((aircraft) => (
         <div className="card" key={aircraft.id}>
           <img
             src={aircraft.image}
             alt={aircraft.name}
             className="card-image"
-            onClick={() => handleOnClick(aircraft.id)} 
+            onClick={() => handleOnClick(aircraft.id)}
             loading="lazy"
           />
           <h2 className="card-title">{aircraft.name}</h2>
