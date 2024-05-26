@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./FormPasaje.css";
 import { BiUserCircle } from "react-icons/bi";
-import { getAllAirCrafts  } from "../../redux/actions";
+import { getAllAirCrafts } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -11,7 +11,7 @@ import FormCliente from "./SegundoForm/FormCliente";
 import OneWay from "./OneWay/OneWay";
 import RoundTrip from "./RoundTrip/RoundTrip";
 import Multileg from "./Multileg/Multileg";
-import { useLocation } from "react-router-dom";
+import { aircraftOrder } from "../../utils/aircraftsOrder";
 
 const FormPasaje = () => {
   const [t, i18n] = useTranslation("global");
@@ -26,7 +26,12 @@ const FormPasaje = () => {
   const dispatch = useDispatch();
   const allAircrafts = useSelector((state) => state.allAircrafts);
 
+  const sortByOrder = (a, b) => {
+    return aircraftOrder.indexOf(a.name) - aircraftOrder.indexOf(b.name);
+  };
+  const sortedAircrafts = allAircrafts.sort(sortByOrder);
 
+  console.log(sortedAircrafts.map((aircraft) => aircraft.name));
 
   useEffect(() => {
     dispatch(getAllAirCrafts());
@@ -43,8 +48,6 @@ const FormPasaje = () => {
   const handleIncrement = () => {
     setCount(count + 1);
   };
-
-
 
   const handleDecrement = () => {
     setCount(count - 1);
@@ -101,11 +104,10 @@ const FormPasaje = () => {
     };
 
     setFormData1(combinedData);
-    
 
     try {
       Swal.fire({
-        icon:"info",
+        icon: "info",
         title: "Enviando consulta...",
         text: "Espere un momento por favor...",
         allowOutsideClick: false,
@@ -138,23 +140,20 @@ const FormPasaje = () => {
       });
     }
   };
-  
+
   const selectedAircraft = allAircrafts.find(
     (aircraft) => aircraft.id === selectedAircraftId
   );
 
   const selectedAircraftName = selectedAircraft ? selectedAircraft.name : "";
 
-
   const handleSelectChange = (event) => {
     setSelectedAircraftId(event.target.value);
   };
 
-
   const handleTripTypeChange = (e) => {
     setTripType(e.target.value);
   };
-
 
   return (
     <div className="container-home">
@@ -197,7 +196,7 @@ const FormPasaje = () => {
                   type="radio"
                   id="Multileg"
                   className="radio-input"
-                  style={{width: "0%"}}
+                  style={{ width: "0%" }}
                   value="Multileg"
                   checked={tripType === "Multileg"}
                   onChange={handleTripTypeChange}
@@ -212,11 +211,7 @@ const FormPasaje = () => {
             {tripType === "Ida" && <OneWay minDate={minDate} />}
 
             {/* Formulario de ida y vuelta */}
-            {tripType === "idayvuelta" && (
-              <RoundTrip
-                minDate={minDate}
-              />
-            )}
+            {tripType === "idayvuelta" && <RoundTrip minDate={minDate} />}
 
             {tripType === "Multileg" && <Multileg />}
             {/* Botones de pasajeros  */}
@@ -261,10 +256,10 @@ const FormPasaje = () => {
                 required
                 disabled={id ? true : false}
               >
-                <option value="" disabled style={{textAlign:"center"}}>
+                <option value="" disabled style={{ textAlign: "center" }}>
                   {t("formPasaje.SeleccionarAvion")}
                 </option>
-                {allAircrafts.map((aircraft) => (
+                {sortedAircrafts.map((aircraft) => (
                   <option key={aircraft.id} value={aircraft.name}>
                     {aircraft.name}
                   </option>

@@ -8,10 +8,10 @@ export const aircraftOrder = [
   "Cessna 525 Citation Jet ",
   "Bombardier Learjet 60 ",
   "Hawker 800XP ",
+  "Embraer ERJ145 ",
   "Embraer Legacy 600",
   "Gulfstream IV SP ",
   "Gulfstream V",
-  "Embraer ERJ145 ",
 ];
 // Piper PA-46R-350T Matrix
 // Cessna Caravan (NUEVO)
