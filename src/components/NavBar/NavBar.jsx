@@ -63,7 +63,7 @@ const NavBar = () => {
             <Link
               to="/"
               style={{
-                fontFamily:"Comfortaa",
+                fontFamily: "Comfortaa",
                 textDecoration: "none",
                 color: "white",
                 transition: "color 0.3s",
@@ -77,29 +77,22 @@ const NavBar = () => {
           </h1>
         </div>
         <ul className={style.nav__ul}>
-          <li className={style.nav__item}>
+          {/* <li className={style.nav__item}>
             <Link to="/flota" className={style.nav__link} onClick={closeNav}>
               {t("navbar.flot")}
             </Link>
-          </li>
+          </li> */}
           <li className={style.nav__item}>
             <Link to="/services" className={style.nav__link} onClick={closeNav}>
               {t("navbar.services")}
             </Link>
           </li>
           <li className={style.nav__item}>
-            <Link to="/contacto" className={style.nav__link} onClick={closeNav}>
+            <Link to="/contact" className={style.nav__link} onClick={closeNav}>
               {t("navbar.contact")}
             </Link>
           </li>
-          <hr
-            className={style.hr}
-            style={{
-              margin: "0px 10px -20px 30px",
-              height: "40px",
-              fontWeight: "bold",
-            }}
-          />
+          {/* 
           <li className={style.nav__item}>
             <button
               className={style.btn_traduce}
@@ -121,7 +114,7 @@ const NavBar = () => {
             >
               EN
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

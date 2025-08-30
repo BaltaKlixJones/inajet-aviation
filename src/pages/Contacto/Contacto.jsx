@@ -11,7 +11,7 @@ const Contacto = () => {
         <br />
         <br />
         <br />
-    <hr />
+        <hr />
         <Quienes />
         <ContactComponent />
       </div>

@@ -18,11 +18,11 @@ const Footer = () => {
             <div className="copy-rights">
               <p className="copy-text">
                 &#169; {t("footer.derechos")} <br /> <br />{" "}
-                <Link to="/terminosyCondiciones">{t("footer.terms")}</Link>{" "}
+                <Link to="/terms&conditions">{t("footer.terms")}</Link>{" "}
               </p>
             </div>
           </div>
-          <div className="contact-info">
+          <div className="contact-info" style={{ marginBottom: "80px" }}>
             <h2 className="contact-heading">{t("footer.contacto")}</h2>
             <div className="contact-details">
               <BiMailSend className="icon3" style={{ marginLeft: "-4px" }} />
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="contact-details">
-              <BsBroadcastPin
+              {/* <BsBroadcastPin
                 className="icon3"
                 style={{ marginLeft: "-4px", flexShrink: 0 }}
               />
@@ -47,10 +47,10 @@ const Footer = () => {
               >
                 Aeroparque Jorge Newbery, Ciudad Autónoma de Buenos Aires,
                 Argentina
-              </a>
+              </a> */}
             </div>
 
-            <div className="contact-details">
+            {/* <div className="contact-details">
               <AiOutlinePhone
                 className="icon3"
                 style={{ marginLeft: "-4px" }}
@@ -64,7 +64,7 @@ const Footer = () => {
               >
                 +54 9 11 5666-3957
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="opening-hours">
             <h2 className="hours-heading">{t("footer.horario")}</h2>

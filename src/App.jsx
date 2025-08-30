@@ -25,12 +25,13 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/flota" element={<Flota />} />
+        {/* <Route exact path="/flota" element={<Flota />} /> */}
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/aircraft/:id" element={<Perfil />} />
-        <Route exact path="/consultar/:id" element={<Home />} />
-        <Route exact path="/contacto" element={<Contacto />} />
-        <Route exact path="/terminosyCondiciones" element={<Terms />} />
+        <Route exact path="/consult/:id" element={<Home />} />
+        <Route exact path="/contact" element={<Contacto />} />
+        <Route exact path="/contact/:slug" element={<Contacto />} />
+        <Route exact path="/terms&conditions" element={<Terms />} />
       </Routes>
       <ButtonWpp />
       <Footer />
