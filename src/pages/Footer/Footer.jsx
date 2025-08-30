@@ -22,7 +22,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="contact-info">
+          <div className="contact-info" style={{ marginBottom: "30px" }}>
             <h2 className="contact-heading">{t("footer.contacto")}</h2>
             <div className="contact-details">
               <BiMailSend className="icon3" style={{ marginLeft: "-4px" }} />
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="contact-details">
-              <BsBroadcastPin
+              {/* <BsBroadcastPin
                 className="icon3"
                 style={{ marginLeft: "-4px", flexShrink: 0 }}
               />
@@ -47,7 +47,7 @@ const Footer = () => {
               >
                 Aeroparque Jorge Newbery, Ciudad Autónoma de Buenos Aires,
                 Argentina
-              </a>
+              </a> */}
             </div>
 
             <div className="contact-details">

@@ -158,7 +158,7 @@ const FormPasaje = () => {
   return (
     <div className="container-home">
       <div className="form">
-        {!secondForm ? (
+        {/* {!secondForm ? (
           <form ref={form} onSubmit={handleSubmit2}>
             <div className="form-group">
               <div className="radio-container">
@@ -207,14 +207,14 @@ const FormPasaje = () => {
                 </label>
               </div>
             </div>
-            {/* // Formulario de ida */}
+       
             {tripType === "Ida" && <OneWay minDate={minDate} />}
 
-            {/* Formulario de ida y vuelta */}
+      
             {tripType === "idayvuelta" && <RoundTrip minDate={minDate} />}
 
             {tripType === "Multileg" && <Multileg />}
-            {/* Botones de pasajeros  */}
+      
             <div className="form-group">
               <label className="label-icon">
                 <BiUserCircle className="icon" />
@@ -247,7 +247,7 @@ const FormPasaje = () => {
                 </button>
               </div>
 
-              {/* Seleccion de avion  */}
+         
               <select
                 id="avion"
                 name="user_aircraft"
@@ -283,7 +283,7 @@ const FormPasaje = () => {
               <FormCliente setSecondForm={setSecondForm} />
             </form>
           </div>
-        )}
+        )} */}
         <div className="gradient-overlay1"></div>
       </div>
     </div>
