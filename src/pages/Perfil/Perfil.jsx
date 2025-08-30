@@ -31,7 +31,7 @@ const Perfil = () => {
   // console.log(aircraft.name);
 
   const handleClick = () => {
-    navigate(`/consultar/${aircraft.id}`);
+    navigate(`/consult/${aircraft.id}`);
   };
 
   if (loading) {

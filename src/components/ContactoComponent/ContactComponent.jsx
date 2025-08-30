@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 
 const Formulario = () => {
   const [t, i18n] = useTranslation("global");
@@ -11,16 +12,46 @@ const Formulario = () => {
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const { slug: slugParam, opcion } = useParams();
+  // toma :slug o :opcion y normaliza
+  const slug = (slugParam ?? opcion ?? "").toLowerCase().trim();
+  // select controlado
+  const [selectedOption, setSelectedOption] = useState("0");
+
+  useEffect(() => {
+    const alias = {
+      "private-flights": "private-flights",
+      "aviations-parts": "aviation-parts",
+      "ground-support": "ground-support",
+      "aviation-consulting": "aviation-consulting",
+      other: "other",
+    };
+
+    const normalized = alias[slug];
+
+    const mapToLabel = {
+      "private-flights": t("services.vuelosEjecutivos"),
+      "aviation-parts": t("services.vuelosSanitarios"),
+      "ground-support": t("services.soporteTierra"),
+      "aviation-consulting": t("services.asesoramiento"),
+      other: t("services.other"),
+    };
+
+    if (normalized && mapToLabel[normalized]) {
+      setSelectedOption(mapToLabel[normalized]);
+    } else {
+      setSelectedOption("0");
+    }
+  }, [slug, i18n.language, t]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
 
     try {
       Swal.fire({
         icon: "info",
-        title: "Enviando consulta...",
-        text: "Espere un momento por favor...",
+        title: "Sending inquiry...",
+        text: "Please wait a moment...",
         allowOutsideClick: false,
         showConfirmButton: false,
         onBeforeOpen: () => {
@@ -35,7 +66,7 @@ const Formulario = () => {
       );
       Swal.fire({
         icon: "success",
-        title: "Su consulta ha sido enviada con éxito",
+        title: "Your query has been sent successfully",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -44,7 +75,7 @@ const Formulario = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Algo salió mal!",
+        text: "Something went wrong!",
       });
     }
     setNombre("");
@@ -108,15 +139,29 @@ const Formulario = () => {
         </div>
         <div className="select-contact-container">
           <h2 className="select-service-text">{t("text.consulting")} :</h2>
-          <select className="select-contact" name="select_contact">
+          <select
+            className="select-contact"
+            name="select_contact"
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
+            required
+          >
             <option value="0" disabled>
-              Seleccione un motivo
+              SELECT AN OPTION
             </option>
-            <option value={`${t("services.vuelosEjecutivos")}`} >{t("services.vuelosEjecutivos")}</option>
-            <option value={`${t("services.vuelosSanitarios")}`}>{t("services.vuelosSanitarios")}</option>
-            <option value={`${t("services.soporteTierra")}`}>{t("services.soporteTierra")}</option>
-            <option value={`${t("services.asesoramiento")}`}>{t("services.asesoramiento")}</option>
-            <option value={`${t("services.other")}`}>{t("services.other")}</option>
+            <option value={t("services.vuelosEjecutivos")}>
+              {t("services.vuelosEjecutivos")}
+            </option>
+            <option value={t("services.vuelosSanitarios")}>
+              AVIATION PARTS
+            </option>
+            <option value={t("services.soporteTierra")}>
+              {t("services.soporteTierra")}
+            </option>
+            <option value={t("services.asesoramiento")}>
+              {t("services.asesoramiento")}
+            </option>
+            <option value={t("services.other")}>{t("services.other")}</option>
           </select>
         </div>
         <div className="campo2">

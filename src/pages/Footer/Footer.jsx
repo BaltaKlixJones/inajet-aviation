@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="copy-rights">
               <p className="copy-text">
                 &#169; {t("footer.derechos")} <br /> <br />{" "}
-                <Link to="/terminosyCondiciones">{t("footer.terms")}</Link>{" "}
+                <Link to="/terms&conditions">{t("footer.terms")}</Link>{" "}
               </p>
             </div>
           </div>

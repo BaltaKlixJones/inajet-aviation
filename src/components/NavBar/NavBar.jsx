@@ -88,18 +88,11 @@ const NavBar = () => {
             </Link>
           </li>
           <li className={style.nav__item}>
-            <Link to="/contacto" className={style.nav__link} onClick={closeNav}>
+            <Link to="/contact" className={style.nav__link} onClick={closeNav}>
               {t("navbar.contact")}
             </Link>
           </li>
-          <hr
-            className={style.hr}
-            style={{
-              margin: "0px 10px -20px 30px",
-              height: "40px",
-              fontWeight: "bold",
-            }}
-          />
+          {/* 
           <li className={style.nav__item}>
             <button
               className={style.btn_traduce}
@@ -121,7 +114,7 @@ const NavBar = () => {
             >
               EN
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
