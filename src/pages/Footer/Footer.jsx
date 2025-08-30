@@ -22,7 +22,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="contact-info" style={{ marginBottom: "30px" }}>
+          <div className="contact-info" style={{ marginBottom: "80px" }}>
             <h2 className="contact-heading">{t("footer.contacto")}</h2>
             <div className="contact-details">
               <BiMailSend className="icon3" style={{ marginLeft: "-4px" }} />
@@ -50,7 +50,7 @@ const Footer = () => {
               </a> */}
             </div>
 
-            <div className="contact-details">
+            {/* <div className="contact-details">
               <AiOutlinePhone
                 className="icon3"
                 style={{ marginLeft: "-4px" }}
@@ -64,7 +64,7 @@ const Footer = () => {
               >
                 +54 9 11 5666-3957
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="opening-hours">
             <h2 className="hours-heading">{t("footer.horario")}</h2>
