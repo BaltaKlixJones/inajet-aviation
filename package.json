@@ -2,6 +2,10 @@
   "name": "inaject-proyect",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "22.x"
+  },
+  "packageManager": "npm@10.9.3",
   "type": "module",
   "homepage": ".",
   "scripts": {
