@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/contact/:slug" element={<Contacto />} />
         <Route exact path="/terms&conditions" element={<Terms />} />
       </Routes>
-      {/* <ButtonWpp /> */}
+      <ButtonWpp />
       <Footer />
     </>
   );
