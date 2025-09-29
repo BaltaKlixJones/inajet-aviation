@@ -50,21 +50,22 @@ const Footer = () => {
               </a> */}
             </div>
 
-            {/* <div className="contact-details">
+            <div className="contact-details">
               <AiOutlinePhone
                 className="icon3"
                 style={{ marginLeft: "-4px" }}
               />
 
               <a
-                href="https://wa.me/message/3IHDE2CZ6YZBE1"
+                // href="https://wa.me/message/3IHDE2CZ6YZBE1"
+                href="https://wa.me/13054292964"
                 target="_blank"
                 className="contact-email"
                 style={{ marginLeft: "5px" }}
               >
-                +54 9 11 5666-3957
+                +1 (305) 429-2964
               </a>
-            </div> */}
+            </div>
           </div>
           <div className="opening-hours">
             <h2 className="hours-heading">{t("footer.horario")}</h2>
